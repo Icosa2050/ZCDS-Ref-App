@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZETENR</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>ZETENR</DOMNAME>
+    <LOGFLAG>X</LOGFLAG>
+    <HEADLEN>04</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>20</SCRLEN3>
+    <DDTEXT>Schedule Line Number</DDTEXT>
+    <REPTEXT>SLNo</REPTEXT>
+    <SCRTEXT_S>Sched.Line</SCRTEXT_S>
+    <SCRTEXT_M>Schedule Line</SCRTEXT_M>
+    <SCRTEXT_L>Schedule Line Number</SCRTEXT_L>
+    <APPLCLASS>VA</APPLCLASS>
+    <DTELMASTER>D</DTELMASTER>
+    <DEFFDNAME>SCHED_LINE</DEFFDNAME>
+    <REFKIND>D</REFKIND>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>1</LANGU>
+    <LANGU>2</LANGU>
+    <LANGU>3</LANGU>
+    <LANGU>4</LANGU>
+    <LANGU>5</LANGU>
+    <LANGU>6</LANGU>
+    <LANGU>7</LANGU>
+    <LANGU>8</LANGU>
+    <LANGU>A</LANGU>
+    <LANGU>B</LANGU>
+    <LANGU>C</LANGU>
+    <LANGU>D</LANGU>
+    <LANGU>F</LANGU>
+    <LANGU>G</LANGU>
+    <LANGU>H</LANGU>
+    <LANGU>I</LANGU>
+    <LANGU>J</LANGU>
+    <LANGU>K</LANGU>
+    <LANGU>L</LANGU>
+    <LANGU>M</LANGU>
+    <LANGU>N</LANGU>
+    <LANGU>O</LANGU>
+    <LANGU>P</LANGU>
+    <LANGU>Q</LANGU>
+    <LANGU>R</LANGU>
+    <LANGU>S</LANGU>
+    <LANGU>T</LANGU>
+    <LANGU>U</LANGU>
+    <LANGU>V</LANGU>
+    <LANGU>W</LANGU>
+    <LANGU>d</LANGU>
+    <LANGU>뱋</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>1</DDLANGUAGE>
+     <DDTEXT>计划行号</DDTEXT>
+     <REPTEXT>编号</REPTEXT>
+     <SCRTEXT_S>计划行</SCRTEXT_S>
+     <SCRTEXT_M>计划行</SCRTEXT_M>
+     <SCRTEXT_L>计划行号</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>2</DDLANGUAGE>
+     <DDTEXT>เลขที่กำหนดการส่งมอบ</DDTEXT>
+     <REPTEXT>SLNo</REPTEXT>
+     <SCRTEXT_S>กำหนดการ</SCRTEXT_S>
+     <SCRTEXT_M>กำหนดการส่งมอบ</SCRTEXT_M>
+     <SCRTEXT_L>เลขที่กำหนดการส่งมอบ</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>3</DDLANGUAGE>
+     <DDTEXT>일정 라인 번호</DDTEXT>
+     <REPTEXT>SLNo</REPTEXT>
+     <SCRTEXT_S>일정 라인</SCRTEXT_S>
+     <SCRTEXT_M>일정 라인</SCRTEXT_M>
+     <SCRTEXT_L>일정 라인 번호</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>4</DDLANGUAGE>
+     <DDTEXT>Număr linie program</DDTEXT>
+     <REPTEXT>NrLP</REPTEXT>
+     <SCRTEXT_S>LinieProgr</SCRTEXT_S>
+     <SCRTEXT_M>Linie program</SCRTEXT_M>
+     <SCRTEXT_L>Număr linie program</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>5</DDLANGUAGE>
+     <DDTEXT>Štev. razdelitve</DDTEXT>
+     <REPTEXT>Razd</REPTEXT>
+     <SCRTEXT_S>Razdelitev</SCRTEXT_S>
+     <SCRTEXT_M>Razdelitev</SCRTEXT_M>
+     <SCRTEXT_L>Štev. razdelitve</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>6</DDLANGUAGE>
+     <DDTEXT>Broj retka rasporeda</DDTEXT>
+     <REPTEXT>R.r.</REPTEXT>
+     <SCRTEXT_S>Redak ras.</SCRTEXT_S>
+     <SCRTEXT_M>Redak rasporeda</SCRTEXT_M>
+     <SCRTEXT_L>Broj retka rasporeda</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>7</DDLANGUAGE>
+     <DDTEXT>Nombor Baris Jadual</DDTEXT>
+     <REPTEXT>NoBJ</REPTEXT>
+     <SCRTEXT_S>Brs Jadual</SCRTEXT_S>
+     <SCRTEXT_M>Baris Jadual</SCRTEXT_M>
+     <SCRTEXT_L>Nombor Baris Jadual</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>8</DDLANGUAGE>
+     <DDTEXT>Номер партії поставки</DDTEXT>
+     <REPTEXT>№ ПП</REPTEXT>
+     <SCRTEXT_S>Парт.пост.</SCRTEXT_S>
+     <SCRTEXT_M>Партія поставки</SCRTEXT_M>
+     <SCRTEXT_L>Номер партії постав.</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>A</DDLANGUAGE>
+     <DDTEXT>رقم سطر الجدول</DDTEXT>
+     <REPTEXT>سطر</REPTEXT>
+     <SCRTEXT_S>سطر الجدول</SCRTEXT_S>
+     <SCRTEXT_M>سطر الجدول</SCRTEXT_M>
+     <SCRTEXT_L>رقم سطر الجدول</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>B</DDLANGUAGE>
+     <DDTEXT>מספר שורת לו&quot;ז</DDTEXT>
+     <REPTEXT>מס.ש</REPTEXT>
+     <SCRTEXT_S>שורת זימון</SCRTEXT_S>
+     <SCRTEXT_M>שורת תזמון</SCRTEXT_M>
+     <SCRTEXT_L>מספר שורת לו&quot;ז</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>C</DDLANGUAGE>
+     <DDTEXT>Číslo rozvržení</DDTEXT>
+     <REPTEXT>Rozv</REPTEXT>
+     <SCRTEXT_S>Rozvržení</SCRTEXT_S>
+     <SCRTEXT_M>Rozvržení</SCRTEXT_M>
+     <SCRTEXT_L>Číslo rozvržení</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DDTEXT>Einteilungsnummer</DDTEXT>
+     <REPTEXT>Eint</REPTEXT>
+     <SCRTEXT_S>Einteilung</SCRTEXT_S>
+     <SCRTEXT_M>Einteilung</SCRTEXT_M>
+     <SCRTEXT_L>Einteilungsnummer</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>F</DDLANGUAGE>
+     <DDTEXT>Numéro de l&apos;échéance</DDTEXT>
+     <REPTEXT>Éch.</REPTEXT>
+     <SCRTEXT_S>Échéance</SCRTEXT_S>
+     <SCRTEXT_M>Échéance</SCRTEXT_M>
+     <SCRTEXT_L>Numéro de l&apos;échéance</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>G</DDLANGUAGE>
+     <DDTEXT>Αριθμός Γραμμής Παράδοσης</DDTEXT>
+     <REPTEXT>ΓρΠρ</REPTEXT>
+     <SCRTEXT_S>ΓραμΠαράδ.</SCRTEXT_S>
+     <SCRTEXT_M>Γραμ.Παράδοσης</SCRTEXT_M>
+     <SCRTEXT_L>Αρ.Γραμ.Παράδοσης</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>H</DDLANGUAGE>
+     <DDTEXT>Ütemezésszám</DDTEXT>
+     <REPTEXT>Ütem</REPTEXT>
+     <SCRTEXT_S>Ütemezés</SCRTEXT_S>
+     <SCRTEXT_M>Ütemezés</SCRTEXT_M>
+     <SCRTEXT_L>Ütemezésszám</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>I</DDLANGUAGE>
+     <DDTEXT>Numero schedulazione</DDTEXT>
+     <REPTEXT>Sch.</REPTEXT>
+     <SCRTEXT_S>Schedulaz.</SCRTEXT_S>
+     <SCRTEXT_M>Schedulazione</SCRTEXT_M>
+     <SCRTEXT_L>Numero schedulazione</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>J</DDLANGUAGE>
+     <DDTEXT>納入日程行番号</DDTEXT>
+     <REPTEXT>SLNo</REPTEXT>
+     <SCRTEXT_S>納入日程行</SCRTEXT_S>
+     <SCRTEXT_M>納入日程行</SCRTEXT_M>
+     <SCRTEXT_L>納入日程行番号</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>K</DDLANGUAGE>
+     <DDTEXT>Inddelingsnummer</DDTEXT>
+     <REPTEXT>Ind.</REPTEXT>
+     <SCRTEXT_S>LevInddel.</SCRTEXT_S>
+     <SCRTEXT_M>Lev.inddeling</SCRTEXT_M>
+     <SCRTEXT_L>Inddelingsnummer</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>L</DDLANGUAGE>
+     <DDTEXT>Nr linii harmonogr.</DDTEXT>
+     <REPTEXT>LinH</REPTEXT>
+     <SCRTEXT_S>L. harm.</SCRTEXT_S>
+     <SCRTEXT_M>Linia harm.</SCRTEXT_M>
+     <SCRTEXT_L>Nr linii harmonogr.</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>M</DDLANGUAGE>
+     <DDTEXT>排程明細號碼</DDTEXT>
+     <REPTEXT>SLNo</REPTEXT>
+     <SCRTEXT_S>排程明細</SCRTEXT_S>
+     <SCRTEXT_M>排程明細</SCRTEXT_M>
+     <SCRTEXT_L>排程明細號碼</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>N</DDLANGUAGE>
+     <DDTEXT>Indelingsnummer</DDTEXT>
+     <REPTEXT>Indl</REPTEXT>
+     <SCRTEXT_S>Indeling</SCRTEXT_S>
+     <SCRTEXT_M>Indeling</SCRTEXT_M>
+     <SCRTEXT_L>Indelingsnummer</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>O</DDLANGUAGE>
+     <DDTEXT>Nummer i leveringsplaninndeling</DDTEXT>
+     <REPTEXT>LevI</REPTEXT>
+     <SCRTEXT_S>LevPlanInn</SCRTEXT_S>
+     <SCRTEXT_M>Lev.planinnd.</SCRTEXT_M>
+     <SCRTEXT_L>Lev.planinndel.nr.</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>P</DDLANGUAGE>
+     <DDTEXT>Nº da divisão de remessa</DDTEXT>
+     <REPTEXT>Div.</REPTEXT>
+     <SCRTEXT_S>DivRemessa</SCRTEXT_S>
+     <SCRTEXT_M>DivRemessa</SCRTEXT_M>
+     <SCRTEXT_L>Nº div.remessa</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>Q</DDLANGUAGE>
+     <DDTEXT>Číslo rozvrhnutia</DDTEXT>
+     <REPTEXT>Rozv</REPTEXT>
+     <SCRTEXT_S>Rozvrhn.</SCRTEXT_S>
+     <SCRTEXT_M>Rozvrhnutie</SCRTEXT_M>
+     <SCRTEXT_L>Číslo rozvrhnutia</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>R</DDLANGUAGE>
+     <DDTEXT>Номер партии поставки</DDTEXT>
+     <REPTEXT>Парт</REPTEXT>
+     <SCRTEXT_S>Парт.пост.</SCRTEXT_S>
+     <SCRTEXT_M>Партия поставки</SCRTEXT_M>
+     <SCRTEXT_L>Номер партии</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>S</DDLANGUAGE>
+     <DDTEXT>Nº de reparto</DDTEXT>
+     <REPTEXT>Rep.</REPTEXT>
+     <SCRTEXT_S>Reparto</SCRTEXT_S>
+     <SCRTEXT_M>Reparto</SCRTEXT_M>
+     <SCRTEXT_L>Nº de reparto</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>T</DDLANGUAGE>
+     <DDTEXT>Termin satır no.</DDTEXT>
+     <REPTEXT>TrmS</REPTEXT>
+     <SCRTEXT_S>Termin st.</SCRTEXT_S>
+     <SCRTEXT_M>Termin satırı</SCRTEXT_M>
+     <SCRTEXT_L>Termin satır no.</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>U</DDLANGUAGE>
+     <DDTEXT>Aikataulurivinumero</DDTEXT>
+     <REPTEXT>ATRv</REPTEXT>
+     <SCRTEXT_S>TA-rivi</SCRTEXT_S>
+     <SCRTEXT_M>Aikataulurivi</SCRTEXT_M>
+     <SCRTEXT_L>Aikataulurivinumero</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>V</DDLANGUAGE>
+     <DDTEXT>Indelningsnummer</DDTEXT>
+     <REPTEXT>Indl</REPTEXT>
+     <SCRTEXT_S>Indelning</SCRTEXT_S>
+     <SCRTEXT_M>Indelning</SCRTEXT_M>
+     <SCRTEXT_L>Indelningsnummer</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>W</DDLANGUAGE>
+     <DDTEXT>Номер партида на доставка</DDTEXT>
+     <REPTEXT>РГра</REPTEXT>
+     <SCRTEXT_S>ПартДост</SCRTEXT_S>
+     <SCRTEXT_M>ПартидаДоставка</SCRTEXT_M>
+     <SCRTEXT_L>Номер на парт.дост.</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>d</DDLANGUAGE>
+     <DDTEXT>Broj rasporeda otpreme</DDTEXT>
+     <REPTEXT>SLBr</REPTEXT>
+     <SCRTEXT_S>Rasp.otpr.</SCRTEXT_S>
+     <SCRTEXT_M>Raspored otpr.</SCRTEXT_M>
+     <SCRTEXT_L>Br.rasp.otpreme</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>뱋</DDLANGUAGE>
+     <DDTEXT>Жеткізілім топтамасының нөмірі</DDTEXT>
+     <REPTEXT>СОр№</REPTEXT>
+     <SCRTEXT_S>ЖеткТопт.</SCRTEXT_S>
+     <SCRTEXT_M>Жетк.топтамасы</SCRTEXT_M>
+     <SCRTEXT_L>Жетк. топт. нөмірі</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

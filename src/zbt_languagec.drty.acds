@@ -1,0 +1,3 @@
+@EndUserText.label: 'derived type'
+@Semantics.language: true
+define type ZBT_LANGUAGEC: ZBT_LanguageB;

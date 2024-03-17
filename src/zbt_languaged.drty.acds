@@ -1,0 +1,3 @@
+@EndUserText.label: 'multilevel derived type'
+@ObjectModel.sapObjectNodeTypeReference: 'Language'
+define type ZBT_LANGUAGED: zbt_languagec; 

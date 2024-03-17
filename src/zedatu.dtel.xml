@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZEDATU</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <HEADLEN>13</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>20</SCRLEN2>
+    <SCRLEN3>40</SCRLEN3>
+    <DDTEXT>Creation Date</DDTEXT>
+    <REPTEXT>Delivery Date</REPTEXT>
+    <SCRTEXT_S>Del.Date</SCRTEXT_S>
+    <SCRTEXT_M>Delivery Date</SCRTEXT_M>
+    <SCRTEXT_L>Delivery Date</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
+    <DATATYPE>DATS</DATATYPE>
+    <LENG>000008</LENG>
+    <OUTPUTLEN>000010</OUTPUTLEN>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>1</LANGU>
+    <LANGU>2</LANGU>
+    <LANGU>3</LANGU>
+    <LANGU>4</LANGU>
+    <LANGU>5</LANGU>
+    <LANGU>6</LANGU>
+    <LANGU>7</LANGU>
+    <LANGU>8</LANGU>
+    <LANGU>A</LANGU>
+    <LANGU>B</LANGU>
+    <LANGU>C</LANGU>
+    <LANGU>D</LANGU>
+    <LANGU>F</LANGU>
+    <LANGU>G</LANGU>
+    <LANGU>H</LANGU>
+    <LANGU>I</LANGU>
+    <LANGU>J</LANGU>
+    <LANGU>K</LANGU>
+    <LANGU>L</LANGU>
+    <LANGU>M</LANGU>
+    <LANGU>N</LANGU>
+    <LANGU>O</LANGU>
+    <LANGU>P</LANGU>
+    <LANGU>Q</LANGU>
+    <LANGU>R</LANGU>
+    <LANGU>S</LANGU>
+    <LANGU>T</LANGU>
+    <LANGU>U</LANGU>
+    <LANGU>V</LANGU>
+    <LANGU>W</LANGU>
+    <LANGU>d</LANGU>
+    <LANGU>뱋</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>1</DDLANGUAGE>
+     <DDTEXT>创建日期</DDTEXT>
+     <REPTEXT>创建日期</REPTEXT>
+     <SCRTEXT_S>创建日期</SCRTEXT_S>
+     <SCRTEXT_M>创建日期</SCRTEXT_M>
+     <SCRTEXT_L>创建日期</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>2</DDLANGUAGE>
+     <DDTEXT>วันที่สร้าง</DDTEXT>
+     <REPTEXT>สร้างเมื่อ</REPTEXT>
+     <SCRTEXT_S>สร้างเมื่อ</SCRTEXT_S>
+     <SCRTEXT_M>สร้างเมื่อ</SCRTEXT_M>
+     <SCRTEXT_L>สร้างเมื่อ</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>3</DDLANGUAGE>
+     <DDTEXT>생성일</DDTEXT>
+     <REPTEXT>생성일</REPTEXT>
+     <SCRTEXT_S>생성일</SCRTEXT_S>
+     <SCRTEXT_M>생성일</SCRTEXT_M>
+     <SCRTEXT_L>생성일</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>4</DDLANGUAGE>
+     <DDTEXT>Dată de creare</DDTEXT>
+     <REPTEXT>Creat la</REPTEXT>
+     <SCRTEXT_S>Creat la</SCRTEXT_S>
+     <SCRTEXT_M>Creat la</SCRTEXT_M>
+     <SCRTEXT_L>Creat la</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>5</DDLANGUAGE>
+     <DDTEXT>Datum kreiranja</DDTEXT>
+     <REPTEXT>DatumKreir</REPTEXT>
+     <SCRTEXT_S>DatumKreir</SCRTEXT_S>
+     <SCRTEXT_M>Datum kreiranja</SCRTEXT_M>
+     <SCRTEXT_L>Datum kreiranja</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>6</DDLANGUAGE>
+     <DDTEXT>Datum kreiranja</DDTEXT>
+     <REPTEXT>Dtm kreir.</REPTEXT>
+     <SCRTEXT_S>Dtm kreir.</SCRTEXT_S>
+     <SCRTEXT_M>Datum kreiranja</SCRTEXT_M>
+     <SCRTEXT_L>Datum kreiranja</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>7</DDLANGUAGE>
+     <DDTEXT>Tarikh Penciptaan</DDTEXT>
+     <REPTEXT>Dicipta pd</REPTEXT>
+     <SCRTEXT_S>Dicipta pd</SCRTEXT_S>
+     <SCRTEXT_M>Dicipta pada</SCRTEXT_M>
+     <SCRTEXT_L>Dicipta pada</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>8</DDLANGUAGE>
+     <DDTEXT>Дата створення</DDTEXT>
+     <REPTEXT>Дата ств.</REPTEXT>
+     <SCRTEXT_S>Дата ств.</SCRTEXT_S>
+     <SCRTEXT_M>Дата створення</SCRTEXT_M>
+     <SCRTEXT_L>Дата створення</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>A</DDLANGUAGE>
+     <DDTEXT>تاريخ الإنشاء</DDTEXT>
+     <REPTEXT>إنشاء في</REPTEXT>
+     <SCRTEXT_S>إنشاء في</SCRTEXT_S>
+     <SCRTEXT_M>تاريخ الإنشاء</SCRTEXT_M>
+     <SCRTEXT_L>تاريخ الإنشاء</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>B</DDLANGUAGE>
+     <DDTEXT>תאריך יצירה</DDTEXT>
+     <REPTEXT>תאריך יצי.</REPTEXT>
+     <SCRTEXT_S>תאריך יצי.</SCRTEXT_S>
+     <SCRTEXT_M>תאריך יצירה</SCRTEXT_M>
+     <SCRTEXT_L>תאריך יצירה</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>C</DDLANGUAGE>
+     <DDTEXT>Datum založení</DDTEXT>
+     <REPTEXT>DatumZalož</REPTEXT>
+     <SCRTEXT_S>DatumZalož</SCRTEXT_S>
+     <SCRTEXT_M>Datum založení</SCRTEXT_M>
+     <SCRTEXT_L>Datum založení</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DDTEXT>Anlegedatum</DDTEXT>
+     <REPTEXT>AnlegDatum</REPTEXT>
+     <SCRTEXT_S>AnlegDatum</SCRTEXT_S>
+     <SCRTEXT_M>Anlegedatum</SCRTEXT_M>
+     <SCRTEXT_L>Anlegedatum</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>F</DDLANGUAGE>
+     <DDTEXT>Date de création</DDTEXT>
+     <REPTEXT>Dte créat.</REPTEXT>
+     <SCRTEXT_S>Dte créat.</SCRTEXT_S>
+     <SCRTEXT_M>Date de création</SCRTEXT_M>
+     <SCRTEXT_L>Date de création</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>G</DDLANGUAGE>
+     <DDTEXT>Ημερ/νία Δημιουργίας</DDTEXT>
+     <REPTEXT>Δημ.Στις</REPTEXT>
+     <SCRTEXT_S>Δημ.Στις</SCRTEXT_S>
+     <SCRTEXT_M>Ημ/νία Δημιουργίας</SCRTEXT_M>
+     <SCRTEXT_L>Ημ/νία Δημιουργίας</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>H</DDLANGUAGE>
+     <DDTEXT>Létrehozás dátuma</DDTEXT>
+     <REPTEXT>Létreh.dt.</REPTEXT>
+     <SCRTEXT_S>Létreh.dt.</SCRTEXT_S>
+     <SCRTEXT_M>Létrehozás dátuma</SCRTEXT_M>
+     <SCRTEXT_L>Létrehozás dátuma</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>I</DDLANGUAGE>
+     <DDTEXT>Data di creazione</DDTEXT>
+     <REPTEXT>Data cr.</REPTEXT>
+     <SCRTEXT_S>Data cr.</SCRTEXT_S>
+     <SCRTEXT_M>Data di creazione</SCRTEXT_M>
+     <SCRTEXT_L>Data di creazione</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>J</DDLANGUAGE>
+     <DDTEXT>登録日付</DDTEXT>
+     <REPTEXT>登録日付</REPTEXT>
+     <SCRTEXT_S>登録日付</SCRTEXT_S>
+     <SCRTEXT_M>登録日付</SCRTEXT_M>
+     <SCRTEXT_L>登録日付</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>K</DDLANGUAGE>
+     <DDTEXT>Oprettelsesdato</DDTEXT>
+     <REPTEXT>OpretDato</REPTEXT>
+     <SCRTEXT_S>OpretDato</SCRTEXT_S>
+     <SCRTEXT_M>Oprettelsesdato</SCRTEXT_M>
+     <SCRTEXT_L>Oprettelsesdato</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>L</DDLANGUAGE>
+     <DDTEXT>Data utworzenia</DDTEXT>
+     <REPTEXT>Data utw.</REPTEXT>
+     <SCRTEXT_S>Data utw.</SCRTEXT_S>
+     <SCRTEXT_M>Data utworzenia</SCRTEXT_M>
+     <SCRTEXT_L>Data utworzenia</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>M</DDLANGUAGE>
+     <DDTEXT>建立日期</DDTEXT>
+     <REPTEXT>建立日期</REPTEXT>
+     <SCRTEXT_S>建立日期</SCRTEXT_S>
+     <SCRTEXT_M>建立日期</SCRTEXT_M>
+     <SCRTEXT_L>建立日期</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>N</DDLANGUAGE>
+     <DDTEXT>Aanmaakdatum</DDTEXT>
+     <REPTEXT>Aanm.datum</REPTEXT>
+     <SCRTEXT_S>Aanm.datum</SCRTEXT_S>
+     <SCRTEXT_M>Aanmaakdatum</SCRTEXT_M>
+     <SCRTEXT_L>Aanmaakdatum</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>O</DDLANGUAGE>
+     <DDTEXT>Opprettingsdato</DDTEXT>
+     <REPTEXT>Oppr.dato</REPTEXT>
+     <SCRTEXT_S>Oppr.dato</SCRTEXT_S>
+     <SCRTEXT_M>Opprettingsdato</SCRTEXT_M>
+     <SCRTEXT_L>Opprettingsdato</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>P</DDLANGUAGE>
+     <DDTEXT>Data de criação</DDTEXT>
+     <REPTEXT>Dt.criação</REPTEXT>
+     <SCRTEXT_S>Dt.criação</SCRTEXT_S>
+     <SCRTEXT_M>Data de criação</SCRTEXT_M>
+     <SCRTEXT_L>Data de criação</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>Q</DDLANGUAGE>
+     <DDTEXT>Dátum založenia</DDTEXT>
+     <REPTEXT>Dát.založ.</REPTEXT>
+     <SCRTEXT_S>Dát.založ.</SCRTEXT_S>
+     <SCRTEXT_M>Dátum založenia</SCRTEXT_M>
+     <SCRTEXT_L>Dátum založenia</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>R</DDLANGUAGE>
+     <DDTEXT>Дата создания</DDTEXT>
+     <REPTEXT>Д/создания</REPTEXT>
+     <SCRTEXT_S>Д/создания</SCRTEXT_S>
+     <SCRTEXT_M>Дата создания</SCRTEXT_M>
+     <SCRTEXT_L>Дата создания</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>S</DDLANGUAGE>
+     <DDTEXT>Fecha de creación</DDTEXT>
+     <REPTEXT>Fe.creac.</REPTEXT>
+     <SCRTEXT_S>Fe.creac.</SCRTEXT_S>
+     <SCRTEXT_M>Fecha de creación</SCRTEXT_M>
+     <SCRTEXT_L>Fecha de creación</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>T</DDLANGUAGE>
+     <DDTEXT>Yaratma tarihi</DDTEXT>
+     <REPTEXT>Yrt.tarihi</REPTEXT>
+     <SCRTEXT_S>Yrt.tarihi</SCRTEXT_S>
+     <SCRTEXT_M>Yaratma tarihi</SCRTEXT_M>
+     <SCRTEXT_L>Yaratma tarihi</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>U</DDLANGUAGE>
+     <DDTEXT>Luontipäivämäärä</DDTEXT>
+     <REPTEXT>Luontipvm</REPTEXT>
+     <SCRTEXT_S>Luontipvm</SCRTEXT_S>
+     <SCRTEXT_M>Luontipäivämäärä</SCRTEXT_M>
+     <SCRTEXT_L>Luontipäivämäärä</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>V</DDLANGUAGE>
+     <DDTEXT>Uppläggningsdatum</DDTEXT>
+     <REPTEXT>UpplDatum</REPTEXT>
+     <SCRTEXT_S>UpplDatum</SCRTEXT_S>
+     <SCRTEXT_M>Uppläggningsdatum</SCRTEXT_M>
+     <SCRTEXT_L>Uppläggningsdatum</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>W</DDLANGUAGE>
+     <DDTEXT>Дата на създаване</DDTEXT>
+     <REPTEXT>Дата създ.</REPTEXT>
+     <SCRTEXT_S>Дата създ.</SCRTEXT_S>
+     <SCRTEXT_M>Дата на създаване</SCRTEXT_M>
+     <SCRTEXT_L>Дата на създаване</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>d</DDLANGUAGE>
+     <DDTEXT>Datum kreiranja</DDTEXT>
+     <REPTEXT>Kreirano</REPTEXT>
+     <SCRTEXT_S>Kreirano</SCRTEXT_S>
+     <SCRTEXT_M>Kreirano</SCRTEXT_M>
+     <SCRTEXT_L>Kreirano</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>뱋</DDLANGUAGE>
+     <DDTEXT>Жасалу күні</DDTEXT>
+     <REPTEXT>ЖасалғКүні</REPTEXT>
+     <SCRTEXT_S>ЖасалғКүні</SCRTEXT_S>
+     <SCRTEXT_M>Жасалған күні</SCRTEXT_M>
+     <SCRTEXT_L>Жасалған күні</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

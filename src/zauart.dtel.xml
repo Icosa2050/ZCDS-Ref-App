@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZAUART</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>ZAUART</DOMNAME>
+    <HEADLEN>04</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>20</SCRLEN3>
+    <DDTEXT>Sales Document Type</DDTEXT>
+    <REPTEXT>SaTy</REPTEXT>
+    <SCRTEXT_S>SalesDocTy</SCRTEXT_S>
+    <SCRTEXT_M>Sales Doc. Type</SCRTEXT_M>
+    <SCRTEXT_L>Sales Document Type</SCRTEXT_L>
+    <APPLCLASS>VA</APPLCLASS>
+    <DTELMASTER>E</DTELMASTER>
+    <DEFFDNAME>DOC_TYPE</DEFFDNAME>
+    <REFKIND>D</REFKIND>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>1</LANGU>
+    <LANGU>2</LANGU>
+    <LANGU>3</LANGU>
+    <LANGU>4</LANGU>
+    <LANGU>5</LANGU>
+    <LANGU>6</LANGU>
+    <LANGU>7</LANGU>
+    <LANGU>8</LANGU>
+    <LANGU>A</LANGU>
+    <LANGU>B</LANGU>
+    <LANGU>C</LANGU>
+    <LANGU>D</LANGU>
+    <LANGU>F</LANGU>
+    <LANGU>G</LANGU>
+    <LANGU>H</LANGU>
+    <LANGU>I</LANGU>
+    <LANGU>J</LANGU>
+    <LANGU>K</LANGU>
+    <LANGU>L</LANGU>
+    <LANGU>M</LANGU>
+    <LANGU>N</LANGU>
+    <LANGU>O</LANGU>
+    <LANGU>P</LANGU>
+    <LANGU>Q</LANGU>
+    <LANGU>R</LANGU>
+    <LANGU>S</LANGU>
+    <LANGU>T</LANGU>
+    <LANGU>U</LANGU>
+    <LANGU>V</LANGU>
+    <LANGU>W</LANGU>
+    <LANGU>d</LANGU>
+    <LANGU>뱋</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>1</DDLANGUAGE>
+     <DDTEXT>销售凭证类型</DDTEXT>
+     <REPTEXT>类型</REPTEXT>
+     <SCRTEXT_S>销售凭证类</SCRTEXT_S>
+     <SCRTEXT_M>销售凭证类型</SCRTEXT_M>
+     <SCRTEXT_L>销售凭证类型</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>2</DDLANGUAGE>
+     <DDTEXT>ประเภทเอกสารการขาย</DDTEXT>
+     <REPTEXT>SaTy</REPTEXT>
+     <SCRTEXT_S>SalesDocTy</SCRTEXT_S>
+     <SCRTEXT_M>ประเภทเอกสารขาย</SCRTEXT_M>
+     <SCRTEXT_L>ประเภทเอกสารการขาย</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>3</DDLANGUAGE>
+     <DDTEXT>판매 문서 유형</DDTEXT>
+     <REPTEXT>유형</REPTEXT>
+     <SCRTEXT_S>문서 유형</SCRTEXT_S>
+     <SCRTEXT_M>판매 문서 유형</SCRTEXT_M>
+     <SCRTEXT_L>판매 문서 유형</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>4</DDLANGUAGE>
+     <DDTEXT>Tip document vânzări</DDTEXT>
+     <REPTEXT>TpVn</REPTEXT>
+     <SCRTEXT_S>TipDocVânz</SCRTEXT_S>
+     <SCRTEXT_M>Tip doc.vânz.</SCRTEXT_M>
+     <SCRTEXT_L>Tip document vânzări</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>5</DDLANGUAGE>
+     <DDTEXT>Vrsta prodajnega dokumenta</DDTEXT>
+     <REPTEXT>VPro</REPTEXT>
+     <SCRTEXT_S>VrsProdDok</SCRTEXT_S>
+     <SCRTEXT_M>Vrs.prod.dokum.</SCRTEXT_M>
+     <SCRTEXT_L>Vrsta prod. dok.</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>6</DDLANGUAGE>
+     <DDTEXT>Tip prodajnog dokumenta</DDTEXT>
+     <REPTEXT>TpPD</REPTEXT>
+     <SCRTEXT_S>TipProdDok</SCRTEXT_S>
+     <SCRTEXT_M>Tip prod.dokum.</SCRTEXT_M>
+     <SCRTEXT_L>Tip prod. dokumenta</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>7</DDLANGUAGE>
+     <DDTEXT>Jenis Dokumen Jualan</DDTEXT>
+     <REPTEXT>JnJl</REPTEXT>
+     <SCRTEXT_S>Jns Dk Jln</SCRTEXT_S>
+     <SCRTEXT_M>Jns Dok. Jualan</SCRTEXT_M>
+     <SCRTEXT_L>Jenis Dokumen Jualan</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>8</DDLANGUAGE>
+     <DDTEXT>Тип торгового документа</DDTEXT>
+     <REPTEXT>ТТД</REPTEXT>
+     <SCRTEXT_S>Тип тор.д.</SCRTEXT_S>
+     <SCRTEXT_M>Тип торг.докум.</SCRTEXT_M>
+     <SCRTEXT_L>Тип торг.документа</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>A</DDLANGUAGE>
+     <DDTEXT>نوع مستند المبيعات</DDTEXT>
+     <REPTEXT>نوع</REPTEXT>
+     <SCRTEXT_S>ن.مستندبيع</SCRTEXT_S>
+     <SCRTEXT_M>نوع مستندمبيعات</SCRTEXT_M>
+     <SCRTEXT_L>نوع مستند المبيعات</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>B</DDLANGUAGE>
+     <DDTEXT>סוג מסמך מכירות</DDTEXT>
+     <REPTEXT>ס.מ.</REPTEXT>
+     <SCRTEXT_S>סוג מס.מכר</SCRTEXT_S>
+     <SCRTEXT_M>סוג מסמך מכירות</SCRTEXT_M>
+     <SCRTEXT_L>סוג מסמך מכירות</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>C</DDLANGUAGE>
+     <DDTEXT>Druh prod.dokl.</DDTEXT>
+     <REPTEXT>DrPD</REPTEXT>
+     <SCRTEXT_S>DrProdDokl</SCRTEXT_S>
+     <SCRTEXT_M>Dr.prod.dokladu</SCRTEXT_M>
+     <SCRTEXT_L>Druh prod.dokl.</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DDTEXT>Verkaufsbelegart</DDTEXT>
+     <REPTEXT>VArt</REPTEXT>
+     <SCRTEXT_S>V.belegart</SCRTEXT_S>
+     <SCRTEXT_M>VerkBelegart</SCRTEXT_M>
+     <SCRTEXT_L>Verkaufsbelegart</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>F</DDLANGUAGE>
+     <DDTEXT>Type de document de vente</DDTEXT>
+     <REPTEXT>TDVt</REPTEXT>
+     <SCRTEXT_S>TypeDocVte</SCRTEXT_S>
+     <SCRTEXT_M>Type doc. vente</SCRTEXT_M>
+     <SCRTEXT_L>Type document vente</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>G</DDLANGUAGE>
+     <DDTEXT>Είδος Παραστατικού Πωλήσεων</DDTEXT>
+     <REPTEXT>ΕιδΠ</REPTEXT>
+     <SCRTEXT_S>ΕίδΠαρΠωλ</SCRTEXT_S>
+     <SCRTEXT_M>Τύπ.Παραστ.Πωλ.</SCRTEXT_M>
+     <SCRTEXT_L>Είδ.Παραστ.Πωλήσεων</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>H</DDLANGUAGE>
+     <DDTEXT>Eladásibizonylat-fajta</DDTEXT>
+     <REPTEXT>EFaj</REPTEXT>
+     <SCRTEXT_S>EladBizFjt</SCRTEXT_S>
+     <SCRTEXT_M>EladBizonylFjt</SCRTEXT_M>
+     <SCRTEXT_L>Elad.bizonylat-fajta</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>I</DDLANGUAGE>
+     <DDTEXT>Tipo di documento di vendita</DDTEXT>
+     <REPTEXT>TpDV</REPTEXT>
+     <SCRTEXT_S>TpDocVend.</SCRTEXT_S>
+     <SCRTEXT_M>Tp. doc. vend.</SCRTEXT_M>
+     <SCRTEXT_L>Tp. doc. vendita</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>J</DDLANGUAGE>
+     <DDTEXT>販売伝票タイプ</DDTEXT>
+     <REPTEXT>販タ</REPTEXT>
+     <SCRTEXT_S>販売伝票Ty</SCRTEXT_S>
+     <SCRTEXT_M>販売伝票タイプ</SCRTEXT_M>
+     <SCRTEXT_L>販売伝票タイプ</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>K</DDLANGUAGE>
+     <DDTEXT>Salgsbilagsart</DDTEXT>
+     <REPTEXT>SArt</REPTEXT>
+     <SCRTEXT_S>SalgBilArt</SCRTEXT_S>
+     <SCRTEXT_M>Salgsbilagsart</SCRTEXT_M>
+     <SCRTEXT_L>Salgsbilagsart</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>L</DDLANGUAGE>
+     <DDTEXT>Rodzaj dokumentu sprzedaży</DDTEXT>
+     <REPTEXT>RDok</REPTEXT>
+     <SCRTEXT_S>Dok. sprz.</SCRTEXT_S>
+     <SCRTEXT_M>Rodz.dok.sprz.</SCRTEXT_M>
+     <SCRTEXT_L>Rodzaj dok. sprzed.</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>M</DDLANGUAGE>
+     <DDTEXT>銷售文件類型</DDTEXT>
+     <REPTEXT>SaTy</REPTEXT>
+     <SCRTEXT_S>銷售文件類</SCRTEXT_S>
+     <SCRTEXT_M>銷售文件類型</SCRTEXT_M>
+     <SCRTEXT_L>銷售文件類型</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>N</DDLANGUAGE>
+     <DDTEXT>Verkoopdocumentsoort</DDTEXT>
+     <REPTEXT>VSrt</REPTEXT>
+     <SCRTEXT_S>V-docSoort</SCRTEXT_S>
+     <SCRTEXT_M>Verk.doc.soort</SCRTEXT_M>
+     <SCRTEXT_L>Verkoopdocumentsoort</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>O</DDLANGUAGE>
+     <DDTEXT>Salgsdokumenttype</DDTEXT>
+     <REPTEXT>Sdty</REPTEXT>
+     <SCRTEXT_S>SalgDokTyp</SCRTEXT_S>
+     <SCRTEXT_M>Salgsdok.type</SCRTEXT_M>
+     <SCRTEXT_L>Salgsdokumenttype</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>P</DDLANGUAGE>
+     <DDTEXT>Tipo de documento de vendas</DDTEXT>
+     <REPTEXT>TpDV</REPTEXT>
+     <SCRTEXT_S>TpDocVend.</SCRTEXT_S>
+     <SCRTEXT_M>Tp.doc.vdns.</SCRTEXT_M>
+     <SCRTEXT_L>Tipo doc.vendas</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>Q</DDLANGUAGE>
+     <DDTEXT>Druh predajného dokladu</DDTEXT>
+     <REPTEXT>DrPD</REPTEXT>
+     <SCRTEXT_S>DrPredDokl</SCRTEXT_S>
+     <SCRTEXT_M>Druh pred.dokl.</SCRTEXT_M>
+     <SCRTEXT_L>Druh predaj.dokladu</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>R</DDLANGUAGE>
+     <DDTEXT>Вид торгового документа</DDTEXT>
+     <REPTEXT>ВТДк</REPTEXT>
+     <SCRTEXT_S>В/ТргДокум</SCRTEXT_S>
+     <SCRTEXT_M>В/ЦелевТоргДоку</SCRTEXT_M>
+     <SCRTEXT_L>Вид ТорговДокумента</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>S</DDLANGUAGE>
+     <DDTEXT>Clase de documento de ventas</DDTEXT>
+     <REPTEXT>ClVt</REPTEXT>
+     <SCRTEXT_S>ClDocVenta</SCRTEXT_S>
+     <SCRTEXT_M>Cl.doc.ventas</SCRTEXT_M>
+     <SCRTEXT_L>Clase doc.ventas</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>T</DDLANGUAGE>
+     <DDTEXT>Satış belgesi türü</DDTEXT>
+     <REPTEXT>SBTü</REPTEXT>
+     <SCRTEXT_S>Stş.blg.tü</SCRTEXT_S>
+     <SCRTEXT_M>Satış blg.türü</SCRTEXT_M>
+     <SCRTEXT_L>Satış belgesi türü</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>U</DDLANGUAGE>
+     <DDTEXT>Myyntitositelaji</DDTEXT>
+     <REPTEXT>TosL</REPTEXT>
+     <SCRTEXT_S>MyyTosLaji</SCRTEXT_S>
+     <SCRTEXT_M>Myyntitos.laji</SCRTEXT_M>
+     <SCRTEXT_L>Myyntitositelaji</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>V</DDLANGUAGE>
+     <DDTEXT>Försäljningsdokumenttyp</DDTEXT>
+     <REPTEXT>FöDT</REPTEXT>
+     <SCRTEXT_S>FörsDokTyp</SCRTEXT_S>
+     <SCRTEXT_M>Försälj.dok.typ</SCRTEXT_M>
+     <SCRTEXT_L>Försäljn.dokumenttyp</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>W</DDLANGUAGE>
+     <DDTEXT>Тип док. продажби</DDTEXT>
+     <REPTEXT>ТипП</REPTEXT>
+     <SCRTEXT_S>ВидДокПрод</SCRTEXT_S>
+     <SCRTEXT_M>Вид док.прод.</SCRTEXT_M>
+     <SCRTEXT_L>Вид док.продажба</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>d</DDLANGUAGE>
+     <DDTEXT>Tip dokumenta prodaje</DDTEXT>
+     <REPTEXT>TpPr</REPTEXT>
+     <SCRTEXT_S>TipDokProd</SCRTEXT_S>
+     <SCRTEXT_M>Tip dok.prodaje</SCRTEXT_M>
+     <SCRTEXT_L>Tip dok.prodaje</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>뱋</DDLANGUAGE>
+     <DDTEXT>Сауда құжатының түрі</DDTEXT>
+     <REPTEXT>СдҚж</REPTEXT>
+     <SCRTEXT_S>СаудҚұжТүр</SCRTEXT_S>
+     <SCRTEXT_M>Сату құж. түрі</SCRTEXT_M>
+     <SCRTEXT_L>Сауда құжатының түрі</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

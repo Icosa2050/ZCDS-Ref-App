@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZMAKTX</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>ZTEXT40</DOMNAME>
+    <LOGFLAG>X</LOGFLAG>
+    <HEADLEN>40</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>20</SCRLEN3>
+    <DDTEXT>Material Description</DDTEXT>
+    <REPTEXT>Material Description</REPTEXT>
+    <SCRTEXT_S>Descr.</SCRTEXT_S>
+    <SCRTEXT_M>Description</SCRTEXT_M>
+    <SCRTEXT_L>Material Description</SCRTEXT_L>
+    <APPLCLASS>MG</APPLCLASS>
+    <DTELMASTER>D</DTELMASTER>
+    <DEFFDNAME>MATL_DESC</DEFFDNAME>
+    <REFKIND>D</REFKIND>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>1</LANGU>
+    <LANGU>2</LANGU>
+    <LANGU>3</LANGU>
+    <LANGU>4</LANGU>
+    <LANGU>5</LANGU>
+    <LANGU>6</LANGU>
+    <LANGU>7</LANGU>
+    <LANGU>8</LANGU>
+    <LANGU>A</LANGU>
+    <LANGU>B</LANGU>
+    <LANGU>C</LANGU>
+    <LANGU>D</LANGU>
+    <LANGU>F</LANGU>
+    <LANGU>G</LANGU>
+    <LANGU>H</LANGU>
+    <LANGU>I</LANGU>
+    <LANGU>J</LANGU>
+    <LANGU>K</LANGU>
+    <LANGU>L</LANGU>
+    <LANGU>M</LANGU>
+    <LANGU>N</LANGU>
+    <LANGU>O</LANGU>
+    <LANGU>P</LANGU>
+    <LANGU>Q</LANGU>
+    <LANGU>R</LANGU>
+    <LANGU>S</LANGU>
+    <LANGU>T</LANGU>
+    <LANGU>U</LANGU>
+    <LANGU>V</LANGU>
+    <LANGU>W</LANGU>
+    <LANGU>d</LANGU>
+    <LANGU>뱋</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>1</DDLANGUAGE>
+     <DDTEXT>物料描述</DDTEXT>
+     <REPTEXT>物料描述</REPTEXT>
+     <SCRTEXT_S>描述</SCRTEXT_S>
+     <SCRTEXT_M>描述</SCRTEXT_M>
+     <SCRTEXT_L>物料描述</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>2</DDLANGUAGE>
+     <DDTEXT>คำอธิบายวัสดุ</DDTEXT>
+     <REPTEXT>คำอธิบายวัสดุ</REPTEXT>
+     <SCRTEXT_S>คำอธิบาย</SCRTEXT_S>
+     <SCRTEXT_M>คำอธิบาย</SCRTEXT_M>
+     <SCRTEXT_L>คำอธิบายวัสดุ</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>3</DDLANGUAGE>
+     <DDTEXT>자재 내역</DDTEXT>
+     <REPTEXT>자재 내역</REPTEXT>
+     <SCRTEXT_S>내역</SCRTEXT_S>
+     <SCRTEXT_M>내역</SCRTEXT_M>
+     <SCRTEXT_L>자재 내역</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>4</DDLANGUAGE>
+     <DDTEXT>Descriere material</DDTEXT>
+     <REPTEXT>Descriere material</REPTEXT>
+     <SCRTEXT_S>Descr.</SCRTEXT_S>
+     <SCRTEXT_M>Descriere</SCRTEXT_M>
+     <SCRTEXT_L>Descriere material</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>5</DDLANGUAGE>
+     <DDTEXT>Kratki tekst materiala</DDTEXT>
+     <REPTEXT>Kratki tekst materiala</REPTEXT>
+     <SCRTEXT_S>Oznaka</SCRTEXT_S>
+     <SCRTEXT_M>Oznaka</SCRTEXT_M>
+     <SCRTEXT_L>Kratki tks. mat.</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>6</DDLANGUAGE>
+     <DDTEXT>Opis materijala</DDTEXT>
+     <REPTEXT>Opis materijala</REPTEXT>
+     <SCRTEXT_S>Opis</SCRTEXT_S>
+     <SCRTEXT_M>Opis</SCRTEXT_M>
+     <SCRTEXT_L>Opis materijala</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>7</DDLANGUAGE>
+     <DDTEXT>Perihalan Bahan</DDTEXT>
+     <REPTEXT>Perihalan Bahan</REPTEXT>
+     <SCRTEXT_S>Perihalan</SCRTEXT_S>
+     <SCRTEXT_M>Perihalan</SCRTEXT_M>
+     <SCRTEXT_L>Perihalan Bahan</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>8</DDLANGUAGE>
+     <DDTEXT>Опис матеріалу</DDTEXT>
+     <REPTEXT>Опис матеріалу</REPTEXT>
+     <SCRTEXT_S>Опис</SCRTEXT_S>
+     <SCRTEXT_M>Опис</SCRTEXT_M>
+     <SCRTEXT_L>Опис матеріалу</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>A</DDLANGUAGE>
+     <DDTEXT>وصف المادة</DDTEXT>
+     <REPTEXT>وصف المادة</REPTEXT>
+     <SCRTEXT_S>وصف</SCRTEXT_S>
+     <SCRTEXT_M>الوصف</SCRTEXT_M>
+     <SCRTEXT_L>وصف المادة</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>B</DDLANGUAGE>
+     <DDTEXT>תיאור חומר</DDTEXT>
+     <REPTEXT>תיאור חומר</REPTEXT>
+     <SCRTEXT_S>תיאור</SCRTEXT_S>
+     <SCRTEXT_M>תיאור</SCRTEXT_M>
+     <SCRTEXT_L>תיאור חומר</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>C</DDLANGUAGE>
+     <DDTEXT>Krát.text materiálu</DDTEXT>
+     <REPTEXT>Krát.text materiálu</REPTEXT>
+     <SCRTEXT_S>Označení</SCRTEXT_S>
+     <SCRTEXT_M>Označení</SCRTEXT_M>
+     <SCRTEXT_L>Krát.text materiálu</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DDTEXT>Materialkurztext</DDTEXT>
+     <REPTEXT>Materialkurztext</REPTEXT>
+     <SCRTEXT_S>Bezeich</SCRTEXT_S>
+     <SCRTEXT_M>Bezeichnung</SCRTEXT_M>
+     <SCRTEXT_L>Materialkurztext</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>F</DDLANGUAGE>
+     <DDTEXT>Désignation article</DDTEXT>
+     <REPTEXT>Désignation article</REPTEXT>
+     <SCRTEXT_S>Désignat.</SCRTEXT_S>
+     <SCRTEXT_M>Désignation</SCRTEXT_M>
+     <SCRTEXT_L>Désignation article</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>G</DDLANGUAGE>
+     <DDTEXT>Περιγραφή Υλικού</DDTEXT>
+     <REPTEXT>Περιγραφή Υλικού</REPTEXT>
+     <SCRTEXT_S>Περιγραφή</SCRTEXT_S>
+     <SCRTEXT_M>Περιγραφή</SCRTEXT_M>
+     <SCRTEXT_L>Περιγραφή Υλικού</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>H</DDLANGUAGE>
+     <DDTEXT>Anyag rövid szövege</DDTEXT>
+     <REPTEXT>Anyag rövid szövege</REPTEXT>
+     <SCRTEXT_S>Megnevezés</SCRTEXT_S>
+     <SCRTEXT_M>Megnevezés</SCRTEXT_M>
+     <SCRTEXT_L>Anyag rövid szövege</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>I</DDLANGUAGE>
+     <DDTEXT>Testo breve materiale</DDTEXT>
+     <REPTEXT>Testo breve materiale</REPTEXT>
+     <SCRTEXT_S>Def.</SCRTEXT_S>
+     <SCRTEXT_M>Definizione</SCRTEXT_M>
+     <SCRTEXT_L>Testo breve mat.</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>J</DDLANGUAGE>
+     <DDTEXT>品目テキスト</DDTEXT>
+     <REPTEXT>品目テキスト</REPTEXT>
+     <SCRTEXT_S>テキスト</SCRTEXT_S>
+     <SCRTEXT_M>テキスト</SCRTEXT_M>
+     <SCRTEXT_L>品目テキスト</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>K</DDLANGUAGE>
+     <DDTEXT>Materialekorttekst</DDTEXT>
+     <REPTEXT>Materialekorttekst</REPTEXT>
+     <SCRTEXT_S>Betegnelse</SCRTEXT_S>
+     <SCRTEXT_M>Betegnelse</SCRTEXT_M>
+     <SCRTEXT_L>Materialekorttekst</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>L</DDLANGUAGE>
+     <DDTEXT>Krótki tekst materiału</DDTEXT>
+     <REPTEXT>Krótki tekst materiału</REPTEXT>
+     <SCRTEXT_S>Oznacz.</SCRTEXT_S>
+     <SCRTEXT_M>Oznaczenie</SCRTEXT_M>
+     <SCRTEXT_L>Krótki tekst mat.</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>M</DDLANGUAGE>
+     <DDTEXT>物料說明</DDTEXT>
+     <REPTEXT>物料說明</REPTEXT>
+     <SCRTEXT_S>說明</SCRTEXT_S>
+     <SCRTEXT_M>說明</SCRTEXT_M>
+     <SCRTEXT_L>物料說明</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>N</DDLANGUAGE>
+     <DDTEXT>Artikelomschrijving</DDTEXT>
+     <REPTEXT>Artikelomschrijving</REPTEXT>
+     <SCRTEXT_S>Omschr.</SCRTEXT_S>
+     <SCRTEXT_M>Omschrijving</SCRTEXT_M>
+     <SCRTEXT_L>Artikelomschrijving</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>O</DDLANGUAGE>
+     <DDTEXT>Materialkorttekst</DDTEXT>
+     <REPTEXT>Materialkorttekst</REPTEXT>
+     <SCRTEXT_S>Betegnelse</SCRTEXT_S>
+     <SCRTEXT_M>Betegnelse</SCRTEXT_M>
+     <SCRTEXT_L>Materialkorttekst</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>P</DDLANGUAGE>
+     <DDTEXT>Texto breve de material</DDTEXT>
+     <REPTEXT>TxtBreveMaterial</REPTEXT>
+     <SCRTEXT_S>Denom.</SCRTEXT_S>
+     <SCRTEXT_M>Denominação</SCRTEXT_M>
+     <SCRTEXT_L>Texto breve material</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>Q</DDLANGUAGE>
+     <DDTEXT>Krátky text materiálu</DDTEXT>
+     <REPTEXT>Krátky text materiálu</REPTEXT>
+     <SCRTEXT_S>Označenie</SCRTEXT_S>
+     <SCRTEXT_M>Označenie</SCRTEXT_M>
+     <SCRTEXT_L>Krát.text materiálu</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>R</DDLANGUAGE>
+     <DDTEXT>Краткий текст материала</DDTEXT>
+     <REPTEXT>Краткий текст материала</REPTEXT>
+     <SCRTEXT_S>Название</SCRTEXT_S>
+     <SCRTEXT_M>Название</SCRTEXT_M>
+     <SCRTEXT_L>КрТекстМатериала</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>S</DDLANGUAGE>
+     <DDTEXT>Texto breve de material</DDTEXT>
+     <REPTEXT>Texto breve de material</REPTEXT>
+     <SCRTEXT_S>Denomin.</SCRTEXT_S>
+     <SCRTEXT_M>Denominación</SCRTEXT_M>
+     <SCRTEXT_L>Texto breve material</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>T</DDLANGUAGE>
+     <DDTEXT>Malzeme kısa metni</DDTEXT>
+     <REPTEXT>Malzeme kısa metni</REPTEXT>
+     <SCRTEXT_S>Tanım</SCRTEXT_S>
+     <SCRTEXT_M>Tanım</SCRTEXT_M>
+     <SCRTEXT_L>Malzeme kısa metni</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>U</DDLANGUAGE>
+     <DDTEXT>Nimikkeen lyhyt selitys</DDTEXT>
+     <REPTEXT>Nimikkeen lyhyt selitys</REPTEXT>
+     <SCRTEXT_S>Nimitys</SCRTEXT_S>
+     <SCRTEXT_M>Nimitys</SCRTEXT_M>
+     <SCRTEXT_L>Nim. lyhyt selitys</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>V</DDLANGUAGE>
+     <DDTEXT>Materialbeteckning</DDTEXT>
+     <REPTEXT>Materialbeteckning</REPTEXT>
+     <SCRTEXT_S>Beteckning</SCRTEXT_S>
+     <SCRTEXT_M>Beteckning</SCRTEXT_M>
+     <SCRTEXT_L>Materialbeteckning</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>W</DDLANGUAGE>
+     <DDTEXT>Описание на материал</DDTEXT>
+     <REPTEXT>Описание на материал</REPTEXT>
+     <SCRTEXT_S>Описание</SCRTEXT_S>
+     <SCRTEXT_M>Описание</SCRTEXT_M>
+     <SCRTEXT_L>Описание на материал</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>d</DDLANGUAGE>
+     <DDTEXT>Opis materijala</DDTEXT>
+     <REPTEXT>Opis materijala</REPTEXT>
+     <SCRTEXT_S>Opis</SCRTEXT_S>
+     <SCRTEXT_M>Opis</SCRTEXT_M>
+     <SCRTEXT_L>Opis materijala</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>뱋</DDLANGUAGE>
+     <DDTEXT>Материал сипаттамасы</DDTEXT>
+     <REPTEXT>Материал сипаттамасы</REPTEXT>
+     <SCRTEXT_S>Сипаттама</SCRTEXT_S>
+     <SCRTEXT_M>Сипаттама</SCRTEXT_M>
+     <SCRTEXT_L>Материал сипаттамасы</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZVTWEG</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>ZVTWEG</DOMNAME>
+    <LOGFLAG>X</LOGFLAG>
+    <HEADLEN>04</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>20</SCRLEN3>
+    <DDTEXT>Distribution Channel</DDTEXT>
+    <REPTEXT>DChl</REPTEXT>
+    <SCRTEXT_S>Distr. Chl</SCRTEXT_S>
+    <SCRTEXT_M>Distr. Channel</SCRTEXT_M>
+    <SCRTEXT_L>Distribution Channel</SCRTEXT_L>
+    <APPLCLASS>V</APPLCLASS>
+    <DTELMASTER>D</DTELMASTER>
+    <DEFFDNAME>DISTR_CHAN</DEFFDNAME>
+    <REFKIND>D</REFKIND>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>1</LANGU>
+    <LANGU>2</LANGU>
+    <LANGU>3</LANGU>
+    <LANGU>4</LANGU>
+    <LANGU>5</LANGU>
+    <LANGU>6</LANGU>
+    <LANGU>7</LANGU>
+    <LANGU>8</LANGU>
+    <LANGU>A</LANGU>
+    <LANGU>B</LANGU>
+    <LANGU>C</LANGU>
+    <LANGU>D</LANGU>
+    <LANGU>F</LANGU>
+    <LANGU>G</LANGU>
+    <LANGU>H</LANGU>
+    <LANGU>I</LANGU>
+    <LANGU>J</LANGU>
+    <LANGU>K</LANGU>
+    <LANGU>L</LANGU>
+    <LANGU>M</LANGU>
+    <LANGU>N</LANGU>
+    <LANGU>O</LANGU>
+    <LANGU>P</LANGU>
+    <LANGU>Q</LANGU>
+    <LANGU>R</LANGU>
+    <LANGU>S</LANGU>
+    <LANGU>T</LANGU>
+    <LANGU>U</LANGU>
+    <LANGU>V</LANGU>
+    <LANGU>W</LANGU>
+    <LANGU>d</LANGU>
+    <LANGU>뱋</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>1</DDLANGUAGE>
+     <DDTEXT>分销渠道</DDTEXT>
+     <REPTEXT>DChl</REPTEXT>
+     <SCRTEXT_S>分销渠道</SCRTEXT_S>
+     <SCRTEXT_M>分销渠道</SCRTEXT_M>
+     <SCRTEXT_L>分销渠道</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>2</DDLANGUAGE>
+     <DDTEXT>ช่องทางการจัดจำหน่าย</DDTEXT>
+     <REPTEXT>DChl</REPTEXT>
+     <SCRTEXT_S>Distr. Chl</SCRTEXT_S>
+     <SCRTEXT_M>ช่องทางจำหน่าย</SCRTEXT_M>
+     <SCRTEXT_L>ช่องทางการจัดจำหน่าย</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>3</DDLANGUAGE>
+     <DDTEXT>유통 경로</DDTEXT>
+     <REPTEXT>DChl</REPTEXT>
+     <SCRTEXT_S>유통경로</SCRTEXT_S>
+     <SCRTEXT_M>유통경로</SCRTEXT_M>
+     <SCRTEXT_L>유통 경로</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>4</DDLANGUAGE>
+     <DDTEXT>Canal de distribuţie</DDTEXT>
+     <REPTEXT>CanD</REPTEXT>
+     <SCRTEXT_S>Canal dis.</SCRTEXT_S>
+     <SCRTEXT_M>Canal distrib.</SCRTEXT_M>
+     <SCRTEXT_L>Canal de distribuţie</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>5</DDLANGUAGE>
+     <DDTEXT>Distribucijski kanal</DDTEXT>
+     <REPTEXT>DKan</REPTEXT>
+     <SCRTEXT_S>Distr.kan.</SCRTEXT_S>
+     <SCRTEXT_M>DistribKanal</SCRTEXT_M>
+     <SCRTEXT_L>Distribucijski kanal</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>6</DDLANGUAGE>
+     <DDTEXT>Distribucijski kanal</DDTEXT>
+     <REPTEXT>DsKn</REPTEXT>
+     <SCRTEXT_S>Distr.kan.</SCRTEXT_S>
+     <SCRTEXT_M>Distrib. kanal</SCRTEXT_M>
+     <SCRTEXT_L>Distribucijski kanal</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>7</DDLANGUAGE>
+     <DDTEXT>Saluran Pengagihan</DDTEXT>
+     <REPTEXT>SlrP</REPTEXT>
+     <SCRTEXT_S>SPengagihn</SCRTEXT_S>
+     <SCRTEXT_M>Sluran Pgagihan</SCRTEXT_M>
+     <SCRTEXT_L>Saluran Pengagihan</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>8</DDLANGUAGE>
+     <DDTEXT>Канал збуту</DDTEXT>
+     <REPTEXT>КЗ</REPTEXT>
+     <SCRTEXT_S>Кан.збуту</SCRTEXT_S>
+     <SCRTEXT_M>Канал збуту</SCRTEXT_M>
+     <SCRTEXT_L>Канал збуту</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>A</DDLANGUAGE>
+     <DDTEXT>قناة التوزيع</DDTEXT>
+     <REPTEXT>DChl</REPTEXT>
+     <SCRTEXT_S>قناة توزيع</SCRTEXT_S>
+     <SCRTEXT_M>قناة التوزيع</SCRTEXT_M>
+     <SCRTEXT_L>قناة التوزيع</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>B</DDLANGUAGE>
+     <DDTEXT>ערוץ הפצה</DDTEXT>
+     <REPTEXT>ערוץ</REPTEXT>
+     <SCRTEXT_S>ערוץ הפצה</SCRTEXT_S>
+     <SCRTEXT_M>ערוץ הפצה</SCRTEXT_M>
+     <SCRTEXT_L>ערוץ הפצה</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>C</DDLANGUAGE>
+     <DDTEXT>Cesta odbytu</DDTEXT>
+     <REPTEXT>CeOd</REPTEXT>
+     <SCRTEXT_S>CestaOdb</SCRTEXT_S>
+     <SCRTEXT_M>Cesta odbytu</SCRTEXT_M>
+     <SCRTEXT_L>Cesta odbytu</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DDTEXT>Vertriebsweg</DDTEXT>
+     <REPTEXT>VWeg</REPTEXT>
+     <SCRTEXT_S>VertrWeg</SCRTEXT_S>
+     <SCRTEXT_M>Vertriebsweg</SCRTEXT_M>
+     <SCRTEXT_L>Vertriebsweg</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>F</DDLANGUAGE>
+     <DDTEXT>Canal de distribution</DDTEXT>
+     <REPTEXT>CDis</REPTEXT>
+     <SCRTEXT_S>CanalDistr</SCRTEXT_S>
+     <SCRTEXT_M>Canal distrib.</SCRTEXT_M>
+     <SCRTEXT_L>Canal distribution</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>G</DDLANGUAGE>
+     <DDTEXT>Κανάλι Διανομής</DDTEXT>
+     <REPTEXT>ΑλΠ.</REPTEXT>
+     <SCRTEXT_S>ΚανΔιανομ.</SCRTEXT_S>
+     <SCRTEXT_M>Κανάλι Διανομής</SCRTEXT_M>
+     <SCRTEXT_L>Κανάλι Διανομής</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>H</DDLANGUAGE>
+     <DDTEXT>Értékesítési csatorna</DDTEXT>
+     <REPTEXT>ÉCst</REPTEXT>
+     <SCRTEXT_S>Ért.csat.</SCRTEXT_S>
+     <SCRTEXT_M>Érték.csatorna</SCRTEXT_M>
+     <SCRTEXT_L>Érték.csatorna</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>I</DDLANGUAGE>
+     <DDTEXT>Canale di distribuzione</DDTEXT>
+     <REPTEXT>CanD</REPTEXT>
+     <SCRTEXT_S>Can.distr.</SCRTEXT_S>
+     <SCRTEXT_M>Can. distr.</SCRTEXT_M>
+     <SCRTEXT_L>Canale distribuzione</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>J</DDLANGUAGE>
+     <DDTEXT>流通チャネル</DDTEXT>
+     <REPTEXT>流チ</REPTEXT>
+     <SCRTEXT_S>流通 Chan.</SCRTEXT_S>
+     <SCRTEXT_M>流通チャネル</SCRTEXT_M>
+     <SCRTEXT_L>流通チャネル</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>K</DDLANGUAGE>
+     <DDTEXT>Salgskanal</DDTEXT>
+     <REPTEXT>SKan</REPTEXT>
+     <SCRTEXT_S>Salgskanal</SCRTEXT_S>
+     <SCRTEXT_M>Salgskanal</SCRTEXT_M>
+     <SCRTEXT_L>Salgskanal</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>L</DDLANGUAGE>
+     <DDTEXT>Kanał dystrybucji</DDTEXT>
+     <REPTEXT>KDtr</REPTEXT>
+     <SCRTEXT_S>Kanał dys.</SCRTEXT_S>
+     <SCRTEXT_M>Kanał dystr.</SCRTEXT_M>
+     <SCRTEXT_L>Kanał dystrybucji</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>M</DDLANGUAGE>
+     <DDTEXT>配銷通路</DDTEXT>
+     <REPTEXT>通路</REPTEXT>
+     <SCRTEXT_S>配銷通路</SCRTEXT_S>
+     <SCRTEXT_M>配銷通路</SCRTEXT_M>
+     <SCRTEXT_L>配銷通路</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>N</DDLANGUAGE>
+     <DDTEXT>Distributiekanaal</DDTEXT>
+     <REPTEXT>DKan</REPTEXT>
+     <SCRTEXT_S>DiKan</SCRTEXT_S>
+     <SCRTEXT_M>Distr.kanaal</SCRTEXT_M>
+     <SCRTEXT_L>Distributiekanaal</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>O</DDLANGUAGE>
+     <DDTEXT>Distribusjonskanal</DDTEXT>
+     <REPTEXT>DKan</REPTEXT>
+     <SCRTEXT_S>DistrKanal</SCRTEXT_S>
+     <SCRTEXT_M>Distr.kanal</SCRTEXT_M>
+     <SCRTEXT_L>Distribusjonskanal</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>P</DDLANGUAGE>
+     <DDTEXT>Canal de distribuição</DDTEXT>
+     <REPTEXT>CDst</REPTEXT>
+     <SCRTEXT_S>CanalDistr</SCRTEXT_S>
+     <SCRTEXT_M>Canal distrib.</SCRTEXT_M>
+     <SCRTEXT_L>Canal distribuição</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>Q</DDLANGUAGE>
+     <DDTEXT>Cesta odbytu</DDTEXT>
+     <REPTEXT>CeOd</REPTEXT>
+     <SCRTEXT_S>CestaOdb</SCRTEXT_S>
+     <SCRTEXT_M>Cesta odbytu</SCRTEXT_M>
+     <SCRTEXT_L>Cesta odbytu</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>R</DDLANGUAGE>
+     <DDTEXT>Канал сбыта</DDTEXT>
+     <REPTEXT>КнСб</REPTEXT>
+     <SCRTEXT_S>КаналСбыта</SCRTEXT_S>
+     <SCRTEXT_M>Канал сбыта</SCRTEXT_M>
+     <SCRTEXT_L>Канал сбыта</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>S</DDLANGUAGE>
+     <DDTEXT>Canal de distribución</DDTEXT>
+     <REPTEXT>CDis</REPTEXT>
+     <SCRTEXT_S>Can.distr.</SCRTEXT_S>
+     <SCRTEXT_M>Canal distrib.</SCRTEXT_M>
+     <SCRTEXT_L>Canal distribución</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>T</DDLANGUAGE>
+     <DDTEXT>Dağıtım kanalı</DDTEXT>
+     <REPTEXT>DğKn</REPTEXT>
+     <SCRTEXT_S>Dğtm.knl.</SCRTEXT_S>
+     <SCRTEXT_M>Dağıtım kanalı</SCRTEXT_M>
+     <SCRTEXT_L>Dağıtım kanalı</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>U</DDLANGUAGE>
+     <DDTEXT>Jakelutie</DDTEXT>
+     <REPTEXT>JTie</REPTEXT>
+     <SCRTEXT_S>Jakelutie</SCRTEXT_S>
+     <SCRTEXT_M>Jakelutie</SCRTEXT_M>
+     <SCRTEXT_L>Jakelutie</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>V</DDLANGUAGE>
+     <DDTEXT>Distr.kanal</DDTEXT>
+     <REPTEXT>DKan</REPTEXT>
+     <SCRTEXT_S>Dist.kanal</SCRTEXT_S>
+     <SCRTEXT_M>Distr.kanal</SCRTEXT_M>
+     <SCRTEXT_L>Distr.kanal</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>W</DDLANGUAGE>
+     <DDTEXT>Канал за дистрибуция</DDTEXT>
+     <REPTEXT>КанР</REPTEXT>
+     <SCRTEXT_S>КаналДист</SCRTEXT_S>
+     <SCRTEXT_M>Канал разпредел</SCRTEXT_M>
+     <SCRTEXT_L>Канал за дистрибуция</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>d</DDLANGUAGE>
+     <DDTEXT>Distribucioni kanal</DDTEXT>
+     <REPTEXT>DKan</REPTEXT>
+     <SCRTEXT_S>Dist.kanal</SCRTEXT_S>
+     <SCRTEXT_M>Distrib. kanal</SCRTEXT_M>
+     <SCRTEXT_L>Distribucioni kanal</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>뱋</DDLANGUAGE>
+     <DDTEXT>Үлестіру арнасы</DDTEXT>
+     <REPTEXT>ҮАрн</REPTEXT>
+     <SCRTEXT_S>Үлест.арн.</SCRTEXT_S>
+     <SCRTEXT_M>Үлестіру арнасы</SCRTEXT_M>
+     <SCRTEXT_L>Үлестіру арнасы</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

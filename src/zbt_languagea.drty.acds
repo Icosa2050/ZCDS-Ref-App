@@ -1,0 +1,2 @@
+@EndUserText.label: 'type based on abap.lang'
+define type ZBT_LANGUAGEA: abap.lang 

@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZKUNAG</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>ZKUNNR</DOMNAME>
+    <LOGFLAG>X</LOGFLAG>
+    <HEADLEN>10</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>20</SCRLEN3>
+    <DDTEXT>Sold-to Party</DDTEXT>
+    <REPTEXT>Sold-to</REPTEXT>
+    <SCRTEXT_S>Sold-to</SCRTEXT_S>
+    <SCRTEXT_M>Sold-to Party</SCRTEXT_M>
+    <SCRTEXT_L>Sold-to Party</SCRTEXT_L>
+    <APPLCLASS>VP</APPLCLASS>
+    <DTELMASTER>E</DTELMASTER>
+    <DEFFDNAME>SOLD_TO</DEFFDNAME>
+    <REFKIND>D</REFKIND>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>1</LANGU>
+    <LANGU>2</LANGU>
+    <LANGU>3</LANGU>
+    <LANGU>4</LANGU>
+    <LANGU>5</LANGU>
+    <LANGU>6</LANGU>
+    <LANGU>7</LANGU>
+    <LANGU>8</LANGU>
+    <LANGU>A</LANGU>
+    <LANGU>B</LANGU>
+    <LANGU>C</LANGU>
+    <LANGU>D</LANGU>
+    <LANGU>F</LANGU>
+    <LANGU>G</LANGU>
+    <LANGU>H</LANGU>
+    <LANGU>I</LANGU>
+    <LANGU>J</LANGU>
+    <LANGU>K</LANGU>
+    <LANGU>L</LANGU>
+    <LANGU>M</LANGU>
+    <LANGU>N</LANGU>
+    <LANGU>O</LANGU>
+    <LANGU>P</LANGU>
+    <LANGU>Q</LANGU>
+    <LANGU>R</LANGU>
+    <LANGU>S</LANGU>
+    <LANGU>T</LANGU>
+    <LANGU>U</LANGU>
+    <LANGU>V</LANGU>
+    <LANGU>W</LANGU>
+    <LANGU>d</LANGU>
+    <LANGU>뱋</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>1</DDLANGUAGE>
+     <DDTEXT>售达方</DDTEXT>
+     <REPTEXT>售达方</REPTEXT>
+     <SCRTEXT_S>售达方</SCRTEXT_S>
+     <SCRTEXT_M>售达方</SCRTEXT_M>
+     <SCRTEXT_L>售达方</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>2</DDLANGUAGE>
+     <DDTEXT>ผู้ซื้อ</DDTEXT>
+     <REPTEXT>ผู้ซื้อ</REPTEXT>
+     <SCRTEXT_S>ผู้ซื้อ</SCRTEXT_S>
+     <SCRTEXT_M>ผู้ซื้อ</SCRTEXT_M>
+     <SCRTEXT_L>ผู้ซื้อ</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>3</DDLANGUAGE>
+     <DDTEXT>판매처</DDTEXT>
+     <REPTEXT>판매처</REPTEXT>
+     <SCRTEXT_S>판매처</SCRTEXT_S>
+     <SCRTEXT_M>판매처</SCRTEXT_M>
+     <SCRTEXT_L>판매처</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>4</DDLANGUAGE>
+     <DDTEXT>Emitent comandă</DDTEXT>
+     <REPTEXT>EmitentCdă</REPTEXT>
+     <SCRTEXT_S>EmitentCdă</SCRTEXT_S>
+     <SCRTEXT_M>Emitent comandă</SCRTEXT_M>
+     <SCRTEXT_L>Emitent comandă</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>5</DDLANGUAGE>
+     <DDTEXT>Naročnik</DDTEXT>
+     <REPTEXT>Naročnik</REPTEXT>
+     <SCRTEXT_S>Naročnik</SCRTEXT_S>
+     <SCRTEXT_M>Naročnik</SCRTEXT_M>
+     <SCRTEXT_L>Naročnik</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>6</DDLANGUAGE>
+     <DDTEXT>Kupac</DDTEXT>
+     <REPTEXT>Kupac</REPTEXT>
+     <SCRTEXT_S>Kupac</SCRTEXT_S>
+     <SCRTEXT_M>Kupac</SCRTEXT_M>
+     <SCRTEXT_L>Kupac</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>7</DDLANGUAGE>
+     <DDTEXT>Pihak Pembeli</DDTEXT>
+     <REPTEXT>Phk Pmbeli</REPTEXT>
+     <SCRTEXT_S>Phk Pmbeli</SCRTEXT_S>
+     <SCRTEXT_M>Pihak Pembeli</SCRTEXT_M>
+     <SCRTEXT_L>Pihak Pembeli</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>8</DDLANGUAGE>
+     <DDTEXT>Замовник</DDTEXT>
+     <REPTEXT>Замовник</REPTEXT>
+     <SCRTEXT_S>Замовник</SCRTEXT_S>
+     <SCRTEXT_M>Замовник</SCRTEXT_M>
+     <SCRTEXT_L>Замовник</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>A</DDLANGUAGE>
+     <DDTEXT>المستفيد</DDTEXT>
+     <REPTEXT>المستفيد</REPTEXT>
+     <SCRTEXT_S>المستفيد</SCRTEXT_S>
+     <SCRTEXT_M>المستفيد</SCRTEXT_M>
+     <SCRTEXT_L>المستفيد</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>B</DDLANGUAGE>
+     <DDTEXT>גורם מזמין</DDTEXT>
+     <REPTEXT>גורם מזמין</REPTEXT>
+     <SCRTEXT_S>גורם מזמין</SCRTEXT_S>
+     <SCRTEXT_M>גורם מזמין</SCRTEXT_M>
+     <SCRTEXT_L>גורם מזמין</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>C</DDLANGUAGE>
+     <DDTEXT>Zadavatel zakázky</DDTEXT>
+     <REPTEXT>Zadav.zak.</REPTEXT>
+     <SCRTEXT_S>Zadav.zak.</SCRTEXT_S>
+     <SCRTEXT_M>Zadavat.zakázky</SCRTEXT_M>
+     <SCRTEXT_L>Zadavatel zakázky</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DDTEXT>Auftraggeber</DDTEXT>
+     <REPTEXT>Auftr.geb.</REPTEXT>
+     <SCRTEXT_S>Auftr.geb.</SCRTEXT_S>
+     <SCRTEXT_M>Auftraggeber</SCRTEXT_M>
+     <SCRTEXT_L>Auftraggeber</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>F</DDLANGUAGE>
+     <DDTEXT>Donneur d&apos;ordre</DDTEXT>
+     <REPTEXT>Don. ordre</REPTEXT>
+     <SCRTEXT_S>Don. ordre</SCRTEXT_S>
+     <SCRTEXT_M>Donneur d&apos;ordre</SCRTEXT_M>
+     <SCRTEXT_L>Donneur d&apos;ordre</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>G</DDLANGUAGE>
+     <DDTEXT>Πελάτης</DDTEXT>
+     <REPTEXT>Πελάτης</REPTEXT>
+     <SCRTEXT_S>Πελάτης</SCRTEXT_S>
+     <SCRTEXT_M>Πελάτης</SCRTEXT_M>
+     <SCRTEXT_L>Πελάτης</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>H</DDLANGUAGE>
+     <DDTEXT>Megrendelő</DDTEXT>
+     <REPTEXT>Megrendelő</REPTEXT>
+     <SCRTEXT_S>Megrendelő</SCRTEXT_S>
+     <SCRTEXT_M>Megrendelő</SCRTEXT_M>
+     <SCRTEXT_L>Megrendelő</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>I</DDLANGUAGE>
+     <DDTEXT>Committente</DDTEXT>
+     <REPTEXT>Committ.</REPTEXT>
+     <SCRTEXT_S>Committ.</SCRTEXT_S>
+     <SCRTEXT_M>Committente</SCRTEXT_M>
+     <SCRTEXT_L>Committente</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>J</DDLANGUAGE>
+     <DDTEXT>受注先</DDTEXT>
+     <REPTEXT>受注先</REPTEXT>
+     <SCRTEXT_S>受注先</SCRTEXT_S>
+     <SCRTEXT_M>受注先</SCRTEXT_M>
+     <SCRTEXT_L>受注先</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>K</DDLANGUAGE>
+     <DDTEXT>Ordregiver</DDTEXT>
+     <REPTEXT>Ordregiver</REPTEXT>
+     <SCRTEXT_S>Ordregiver</SCRTEXT_S>
+     <SCRTEXT_M>Ordregiver</SCRTEXT_M>
+     <SCRTEXT_L>Ordregiver</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>L</DDLANGUAGE>
+     <DDTEXT>Zleceniodawca</DDTEXT>
+     <REPTEXT>Zleceniod.</REPTEXT>
+     <SCRTEXT_S>Zleceniod.</SCRTEXT_S>
+     <SCRTEXT_M>Zleceniodawca</SCRTEXT_M>
+     <SCRTEXT_L>Zleceniodawca</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>M</DDLANGUAGE>
+     <DDTEXT>買方</DDTEXT>
+     <REPTEXT>買方</REPTEXT>
+     <SCRTEXT_S>買方</SCRTEXT_S>
+     <SCRTEXT_M>買方</SCRTEXT_M>
+     <SCRTEXT_L>買方</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>N</DDLANGUAGE>
+     <DDTEXT>Opdrachtgever</DDTEXT>
+     <REPTEXT>Opdr.gever</REPTEXT>
+     <SCRTEXT_S>Opdr.gever</SCRTEXT_S>
+     <SCRTEXT_M>Opdrachtgever</SCRTEXT_M>
+     <SCRTEXT_L>Opdrachtgever</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>O</DDLANGUAGE>
+     <DDTEXT>Oppdragsgiver</DDTEXT>
+     <REPTEXT>Oppdr.giv.</REPTEXT>
+     <SCRTEXT_S>Oppdr.giv.</SCRTEXT_S>
+     <SCRTEXT_M>Oppdragsgiver</SCRTEXT_M>
+     <SCRTEXT_L>Oppdragsgiver</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>P</DDLANGUAGE>
+     <DDTEXT>Emissor da ordem</DDTEXT>
+     <REPTEXT>EmissorOrd</REPTEXT>
+     <SCRTEXT_S>EmissorOrd</SCRTEXT_S>
+     <SCRTEXT_M>Emissor ordem</SCRTEXT_M>
+     <SCRTEXT_L>Emissor da ordem</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>Q</DDLANGUAGE>
+     <DDTEXT>Zadávateľ zákazky</DDTEXT>
+     <REPTEXT>ZadávZákaz</REPTEXT>
+     <SCRTEXT_S>ZadávZákaz</SCRTEXT_S>
+     <SCRTEXT_M>Zadáv.zákazky</SCRTEXT_M>
+     <SCRTEXT_L>Zadávateľ zákazky</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>R</DDLANGUAGE>
+     <DDTEXT>Заказчик</DDTEXT>
+     <REPTEXT>Заказчик</REPTEXT>
+     <SCRTEXT_S>Заказчик</SCRTEXT_S>
+     <SCRTEXT_M>Заказчик</SCRTEXT_M>
+     <SCRTEXT_L>Заказчик</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>S</DDLANGUAGE>
+     <DDTEXT>Solicitante</DDTEXT>
+     <REPTEXT>Solic.</REPTEXT>
+     <SCRTEXT_S>Solic.</SCRTEXT_S>
+     <SCRTEXT_M>Solicitante</SCRTEXT_M>
+     <SCRTEXT_L>Solicitante</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>T</DDLANGUAGE>
+     <DDTEXT>Sipariş veren</DDTEXT>
+     <REPTEXT>Sprş.veren</REPTEXT>
+     <SCRTEXT_S>Sprş.veren</SCRTEXT_S>
+     <SCRTEXT_M>Sipariş veren</SCRTEXT_M>
+     <SCRTEXT_L>Sipariş veren</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>U</DDLANGUAGE>
+     <DDTEXT>Tilaaja</DDTEXT>
+     <REPTEXT>Tilausas.</REPTEXT>
+     <SCRTEXT_S>Tilausas.</SCRTEXT_S>
+     <SCRTEXT_M>Tilaaja</SCRTEXT_M>
+     <SCRTEXT_L>Tilaaja</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>V</DDLANGUAGE>
+     <DDTEXT>Uppdragsgivare</DDTEXT>
+     <REPTEXT>Uppdr.giv.</REPTEXT>
+     <SCRTEXT_S>Uppdr.giv.</SCRTEXT_S>
+     <SCRTEXT_M>Uppdragsgivare</SCRTEXT_M>
+     <SCRTEXT_L>Uppdragsgivare</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>W</DDLANGUAGE>
+     <DDTEXT>Клиент</DDTEXT>
+     <REPTEXT>Купувач</REPTEXT>
+     <SCRTEXT_S>Купувач</SCRTEXT_S>
+     <SCRTEXT_M>Клиент</SCRTEXT_M>
+     <SCRTEXT_L>Клиент</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>d</DDLANGUAGE>
+     <DDTEXT>Naručilac</DDTEXT>
+     <REPTEXT>Naručilac</REPTEXT>
+     <SCRTEXT_S>Naručilac</SCRTEXT_S>
+     <SCRTEXT_M>Naručilac</SCRTEXT_M>
+     <SCRTEXT_L>Naručilac</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>뱋</DDLANGUAGE>
+     <DDTEXT>Тапсырыс беруші</DDTEXT>
+     <REPTEXT>ТапсБеруші</REPTEXT>
+     <SCRTEXT_S>ТапсБеруші</SCRTEXT_S>
+     <SCRTEXT_M>Тапсырыс беруші</SCRTEXT_M>
+     <SCRTEXT_L>Тапсырыс беруші</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZVKORG</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>ZVKORG</DOMNAME>
+    <LOGFLAG>X</LOGFLAG>
+    <HEADLEN>05</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>20</SCRLEN3>
+    <DDTEXT>Sales Organization</DDTEXT>
+    <REPTEXT>SOrg.</REPTEXT>
+    <SCRTEXT_S>Sales org.</SCRTEXT_S>
+    <SCRTEXT_M>Sales Org.</SCRTEXT_M>
+    <SCRTEXT_L>Sales Organization</SCRTEXT_L>
+    <APPLCLASS>V</APPLCLASS>
+    <DTELMASTER>D</DTELMASTER>
+    <DEFFDNAME>SALESORG</DEFFDNAME>
+    <REFKIND>D</REFKIND>
+    <NOHISTORY>X</NOHISTORY>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>1</LANGU>
+    <LANGU>2</LANGU>
+    <LANGU>3</LANGU>
+    <LANGU>4</LANGU>
+    <LANGU>5</LANGU>
+    <LANGU>6</LANGU>
+    <LANGU>7</LANGU>
+    <LANGU>8</LANGU>
+    <LANGU>A</LANGU>
+    <LANGU>B</LANGU>
+    <LANGU>C</LANGU>
+    <LANGU>D</LANGU>
+    <LANGU>F</LANGU>
+    <LANGU>G</LANGU>
+    <LANGU>H</LANGU>
+    <LANGU>I</LANGU>
+    <LANGU>J</LANGU>
+    <LANGU>K</LANGU>
+    <LANGU>L</LANGU>
+    <LANGU>M</LANGU>
+    <LANGU>N</LANGU>
+    <LANGU>O</LANGU>
+    <LANGU>P</LANGU>
+    <LANGU>Q</LANGU>
+    <LANGU>R</LANGU>
+    <LANGU>S</LANGU>
+    <LANGU>T</LANGU>
+    <LANGU>U</LANGU>
+    <LANGU>V</LANGU>
+    <LANGU>W</LANGU>
+    <LANGU>d</LANGU>
+    <LANGU>뱋</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>1</DDLANGUAGE>
+     <DDTEXT>销售组织</DDTEXT>
+     <REPTEXT>SOrg.</REPTEXT>
+     <SCRTEXT_S>销售组织</SCRTEXT_S>
+     <SCRTEXT_M>销售机构</SCRTEXT_M>
+     <SCRTEXT_L>销售组织</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>2</DDLANGUAGE>
+     <DDTEXT>หน่วยงานขาย</DDTEXT>
+     <REPTEXT>SOrg.</REPTEXT>
+     <SCRTEXT_S>หน่วยขาย</SCRTEXT_S>
+     <SCRTEXT_M>หน่วยงานขาย</SCRTEXT_M>
+     <SCRTEXT_L>หน่วยงานขาย</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>3</DDLANGUAGE>
+     <DDTEXT>영업 조직</DDTEXT>
+     <REPTEXT>영업</REPTEXT>
+     <SCRTEXT_S>영업 조직</SCRTEXT_S>
+     <SCRTEXT_M>영업 조직</SCRTEXT_M>
+     <SCRTEXT_L>영업 조직</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>4</DDLANGUAGE>
+     <DDTEXT>Departament de vânzări</DDTEXT>
+     <REPTEXT>DepV</REPTEXT>
+     <SCRTEXT_S>Dep.vânz.</SCRTEXT_S>
+     <SCRTEXT_M>Depart.vânz.</SCRTEXT_M>
+     <SCRTEXT_L>Depart.de vânzări</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>5</DDLANGUAGE>
+     <DDTEXT>Prodajna organizacija</DDTEXT>
+     <REPTEXT>PrOrg</REPTEXT>
+     <SCRTEXT_S>ProdOrg</SCRTEXT_S>
+     <SCRTEXT_M>Prod. organ.</SCRTEXT_M>
+     <SCRTEXT_L>Prodajna organizac.</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>6</DDLANGUAGE>
+     <DDTEXT>Prodajna organizacija</DDTEXT>
+     <REPTEXT>PrOrg</REPTEXT>
+     <SCRTEXT_S>Prod.org.</SCRTEXT_S>
+     <SCRTEXT_M>Prodajna org.</SCRTEXT_M>
+     <SCRTEXT_L>Prodajna organizac.</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>7</DDLANGUAGE>
+     <DDTEXT>Organisasi Jualan</DDTEXT>
+     <REPTEXT>OgJln</REPTEXT>
+     <SCRTEXT_S>Org. jln</SCRTEXT_S>
+     <SCRTEXT_M>Organisasi Jual</SCRTEXT_M>
+     <SCRTEXT_L>Organisasi Jualan</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>8</DDLANGUAGE>
+     <DDTEXT>Збутова організація</DDTEXT>
+     <REPTEXT>Зб.о.</REPTEXT>
+     <SCRTEXT_S>Збут.орг.</SCRTEXT_S>
+     <SCRTEXT_M>Збут.орг.</SCRTEXT_M>
+     <SCRTEXT_L>Збутова організація</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>A</DDLANGUAGE>
+     <DDTEXT>منظمة المبيعات</DDTEXT>
+     <REPTEXT>م. م.</REPTEXT>
+     <SCRTEXT_S>م. مبيعات</SCRTEXT_S>
+     <SCRTEXT_M>منظمة المبيعات</SCRTEXT_M>
+     <SCRTEXT_L>منظمة المبيعات</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>B</DDLANGUAGE>
+     <DDTEXT>ארגון מכירות</DDTEXT>
+     <REPTEXT>א.מכר</REPTEXT>
+     <SCRTEXT_S>ארג.מכירות</SCRTEXT_S>
+     <SCRTEXT_M>ארגון מכירות</SCRTEXT_M>
+     <SCRTEXT_L>ארגון מכירות</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>C</DDLANGUAGE>
+     <DDTEXT>Prodejní organizace</DDTEXT>
+     <REPTEXT>PrOrg</REPTEXT>
+     <SCRTEXT_S>Prod.org.</SCRTEXT_S>
+     <SCRTEXT_M>Prodej.org.</SCRTEXT_M>
+     <SCRTEXT_L>Prodejní organizace</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DDTEXT>Verkaufsorganisation</DDTEXT>
+     <REPTEXT>VkOrg</REPTEXT>
+     <SCRTEXT_S>VerkOrg.</SCRTEXT_S>
+     <SCRTEXT_M>Verkaufsorg.</SCRTEXT_M>
+     <SCRTEXT_L>Verkaufsorganisation</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>F</DDLANGUAGE>
+     <DDTEXT>Organisation commerciale</DDTEXT>
+     <REPTEXT>OrgCm</REPTEXT>
+     <SCRTEXT_S>Org.comm.</SCRTEXT_S>
+     <SCRTEXT_M>Org.commerciale</SCRTEXT_M>
+     <SCRTEXT_L>Organis. commerciale</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>G</DDLANGUAGE>
+     <DDTEXT>Οργανισμός Πωλήσεων</DDTEXT>
+     <REPTEXT>ΟρΠωλ</REPTEXT>
+     <SCRTEXT_S>Οργ.πωλήσ.</SCRTEXT_S>
+     <SCRTEXT_M>Οργαν.Πωλήσεων</SCRTEXT_M>
+     <SCRTEXT_L>Οργανισμός Πωλήσεων</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>H</DDLANGUAGE>
+     <DDTEXT>Értékesítési szervezet</DDTEXT>
+     <REPTEXT>ÉrtSz</REPTEXT>
+     <SCRTEXT_S>Ért.szerv.</SCRTEXT_S>
+     <SCRTEXT_M>Értékes.szerv.</SCRTEXT_M>
+     <SCRTEXT_L>Értékesítési szerv.</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>I</DDLANGUAGE>
+     <DDTEXT>Organizzazione commerciale</DDTEXT>
+     <REPTEXT>OrgCm</REPTEXT>
+     <SCRTEXT_S>Org. comm.</SCRTEXT_S>
+     <SCRTEXT_M>Org. comm.</SCRTEXT_M>
+     <SCRTEXT_L>Org. commerciale</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>J</DDLANGUAGE>
+     <DDTEXT>販売組織</DDTEXT>
+     <REPTEXT>販組</REPTEXT>
+     <SCRTEXT_S>販売組織</SCRTEXT_S>
+     <SCRTEXT_M>販売組織</SCRTEXT_M>
+     <SCRTEXT_L>販売組織</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>K</DDLANGUAGE>
+     <DDTEXT>Salgsorganisation</DDTEXT>
+     <REPTEXT>SOrg</REPTEXT>
+     <SCRTEXT_S>Salgsorg.</SCRTEXT_S>
+     <SCRTEXT_M>Salgsorg.</SCRTEXT_M>
+     <SCRTEXT_L>Salgsorganisation</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>L</DDLANGUAGE>
+     <DDTEXT>Dział sprzedaży</DDTEXT>
+     <REPTEXT>DSprz</REPTEXT>
+     <SCRTEXT_S>Dział sp.</SCRTEXT_S>
+     <SCRTEXT_M>Dział sprzedaży</SCRTEXT_M>
+     <SCRTEXT_L>Dział sprzedaży</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>M</DDLANGUAGE>
+     <DDTEXT>銷售組織</DDTEXT>
+     <REPTEXT>SOrg.</REPTEXT>
+     <SCRTEXT_S>銷售組織</SCRTEXT_S>
+     <SCRTEXT_M>銷售組織</SCRTEXT_M>
+     <SCRTEXT_L>銷售組織</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>N</DDLANGUAGE>
+     <DDTEXT>Verkooporganisatie</DDTEXT>
+     <REPTEXT>VkOrg</REPTEXT>
+     <SCRTEXT_S>Verk.org.</SCRTEXT_S>
+     <SCRTEXT_M>Verkooporg.</SCRTEXT_M>
+     <SCRTEXT_L>Verkooporganisatie</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>O</DDLANGUAGE>
+     <DDTEXT>Salgsorganisasjon</DDTEXT>
+     <REPTEXT>SOrg.</REPTEXT>
+     <SCRTEXT_S>Salgsorg.</SCRTEXT_S>
+     <SCRTEXT_M>Salgsorg.</SCRTEXT_M>
+     <SCRTEXT_L>Salgsorganisasjon</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>P</DDLANGUAGE>
+     <DDTEXT>Organização de vendas</DDTEXT>
+     <REPTEXT>OrgV</REPTEXT>
+     <SCRTEXT_S>Org.vendas</SCRTEXT_S>
+     <SCRTEXT_M>Org.vendas</SCRTEXT_M>
+     <SCRTEXT_L>Organização vendas</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>Q</DDLANGUAGE>
+     <DDTEXT>Predajná organizácia</DDTEXT>
+     <REPTEXT>PrOrg</REPTEXT>
+     <SCRTEXT_S>PredOrg</SCRTEXT_S>
+     <SCRTEXT_M>Predajná org.</SCRTEXT_M>
+     <SCRTEXT_L>Predajná organizácia</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>R</DDLANGUAGE>
+     <DDTEXT>Сбытовая организация</DDTEXT>
+     <REPTEXT>СбОрг</REPTEXT>
+     <SCRTEXT_S>СбытОрг</SCRTEXT_S>
+     <SCRTEXT_M>СбытовОрганизац</SCRTEXT_M>
+     <SCRTEXT_L>Сбытовая организация</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>S</DDLANGUAGE>
+     <DDTEXT>Organización de ventas</DDTEXT>
+     <REPTEXT>OrgVt</REPTEXT>
+     <SCRTEXT_S>Org.Ventas</SCRTEXT_S>
+     <SCRTEXT_M>Organiz.ventas</SCRTEXT_M>
+     <SCRTEXT_L>Organización ventas</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>T</DDLANGUAGE>
+     <DDTEXT>Satış organizasyonu</DDTEXT>
+     <REPTEXT>StşOr</REPTEXT>
+     <SCRTEXT_S>Satış org.</SCRTEXT_S>
+     <SCRTEXT_M>Satış org.</SCRTEXT_M>
+     <SCRTEXT_L>Satış organizasyonu</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>U</DDLANGUAGE>
+     <DDTEXT>Myyntiorganisaatio</DDTEXT>
+     <REPTEXT>MyOrg</REPTEXT>
+     <SCRTEXT_S>Myyntiorg.</SCRTEXT_S>
+     <SCRTEXT_M>Myyntiorg.</SCRTEXT_M>
+     <SCRTEXT_L>Myyntiorganisaatio</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>V</DDLANGUAGE>
+     <DDTEXT>Försäljningsorganisation</DDTEXT>
+     <REPTEXT>FöOrg</REPTEXT>
+     <SCRTEXT_S>Förs.org.</SCRTEXT_S>
+     <SCRTEXT_M>Försäljn.org.</SCRTEXT_M>
+     <SCRTEXT_L>Försäljningsorg.</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>W</DDLANGUAGE>
+     <DDTEXT>Търговска организация</DDTEXT>
+     <REPTEXT>ТОрг</REPTEXT>
+     <SCRTEXT_S>Пазар.орг.</SCRTEXT_S>
+     <SCRTEXT_M>Търг.орган.</SCRTEXT_M>
+     <SCRTEXT_L>Търг. организация</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>d</DDLANGUAGE>
+     <DDTEXT>Organizacija prodaje</DDTEXT>
+     <REPTEXT>OrgPr</REPTEXT>
+     <SCRTEXT_S>Prod. org.</SCRTEXT_S>
+     <SCRTEXT_M>Organiz.prodaje</SCRTEXT_M>
+     <SCRTEXT_L>Organizacija prodaje</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>뱋</DDLANGUAGE>
+     <DDTEXT>Сатушы ұйым</DDTEXT>
+     <REPTEXT>ӨткҰй</REPTEXT>
+     <SCRTEXT_S>СатушыҰйым</SCRTEXT_S>
+     <SCRTEXT_M>Өткізу ұйымы</SCRTEXT_M>
+     <SCRTEXT_L>Сатушы ұйым</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
