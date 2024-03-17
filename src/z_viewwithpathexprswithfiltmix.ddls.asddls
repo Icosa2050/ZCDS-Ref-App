@@ -7,11 +7,11 @@
     sizeCategory: #S,
     dataClass: #MIXED
 }
-//added where condition to eliminate empty fields
-define view entity Z_ViewWithPathExprsWithFilters
+define view entity Z_VIEWWITHPATHEXPRSWITHFILTMIX
   as select from ZI_Product
+  //with only one inner the empty row is excluded
 {
   key Product,
-      _Text[1: Language='E'].ProductName as ProductNameEnglish,
-      _Text[1: Language='E'].ProductName as ProductOfEnglishText
+      _Text[1: left outer where Language='E'].ProductName as ProductNameEnglish,
+      _Text[1: inner where Language='E'].ProductName as ProductOfEnglishText
 }

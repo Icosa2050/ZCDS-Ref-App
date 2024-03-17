@@ -7,11 +7,12 @@
     sizeCategory: #S,
     dataClass: #MIXED
 }
-//added where condition to eliminate empty fields
-define view entity Z_ViewWithPathExprsWithFilters
+// with explicit left outer the not matching entry is shown, also
+// the same as there is no where condition in the path
+define view entity Z_VIEWWITHPATHEXPRSWITHFILTOUT
   as select from ZI_Product
 {
   key Product,
-      _Text[1: Language='E'].ProductName as ProductNameEnglish,
-      _Text[1: Language='E'].ProductName as ProductOfEnglishText
+      _Text[1: left outer where Language='E'].ProductName as ProductNameEnglish,
+      _Text[1: left outer where Language='E'].ProductName as ProductOfEnglishText
 }

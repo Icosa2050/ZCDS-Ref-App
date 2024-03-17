@@ -22,39 +22,70 @@ CLASS zcl_insert_zi_test_data IMPLEMENTATION.
 
     CLEAR gs_zproduct.
 
-    select * from zproduct_ic into table @DATA(lt_data).
-    loop at lt_data into gs_zproduct.
+    SELECT * FROM zproduct_ic INTO TABLE @DATA(lt_data).
+    LOOP AT lt_data INTO gs_zproduct.
 
-    delete zproduct_ic from @gs_zproduct.
-    if sy-subrc <> 0.
+      out->write( 'delete product' ).
+      out->write( gs_zproduct ).
+      DELETE zproduct_ic FROM @gs_zproduct.
+      IF sy-subrc <> 0.
 
-out->write( 'delete error' ).
+        out->write( 'delete error' ).
 
-    "cl_demo_output=>begin_section( 'delete error' ).
-    "cl_demo_output=>write_data( gs_zproduct-product ).
-    "cl_demo_output=>end_section( ).
-    "cl_demo_output=>display( ).
-    endif.
-    endloop.
+        "cl_demo_output=>begin_section( 'delete error' ).
+        "cl_demo_output=>write_data( gs_zproduct-product ).
+        "cl_demo_output=>end_section( ).
+        "cl_demo_output=>display( ).
+      ENDIF.
+    ENDLOOP.
 
     gs_zproduct-product             = 'P1'.
     gs_zproduct-product_type        = 'T1'.
     GET TIME STAMP FIELD gs_zproduct-creation_date_time.
     INSERT gs_zproduct INTO TABLE gt_zproduct.
+    IF ( sy-subrc <> 0 ).
+      out->write( 'insert error P1' ).
+    ENDIF.
 
     CLEAR gs_zproduct.
     gs_zproduct-product             = 'P2'.
     gs_zproduct-product_type        = 'T1'.
     GET TIME STAMP FIELD gs_zproduct-creation_date_time.
     INSERT gs_zproduct INTO TABLE gt_zproduct.
+    IF ( sy-subrc <> 0 ).
+      out->write( 'insert error P2' ).
+    ENDIF.
+
+
 
     CLEAR gs_zproduct.
     gs_zproduct-product             = 'P3'.
     gs_zproduct-product_type        = 'T3'.
     GET TIME STAMP FIELD gs_zproduct-creation_date_time.
     INSERT gs_zproduct INTO TABLE gt_zproduct.
+    IF ( sy-subrc <> 0 ).
+      out->write( 'insert error P3' ).
+    ENDIF.
+
+
+*Entry without product text
+    CLEAR gs_zproduct.
+    gs_zproduct-product             = 'P4'.
+    gs_zproduct-product_type        = 'T3'.
+    GET TIME STAMP FIELD gs_zproduct-creation_date_time.
+    INSERT gs_zproduct INTO TABLE gt_zproduct.
+    IF ( sy-subrc <> 0 ).
+      out->write( 'insert error P4' ).
+    ENDIF.
+
+
 
     MODIFY zproduct_ic FROM TABLE @gt_zproduct.
+    IF ( sy-subrc <> 0 ).
+      out->write( 'modifying table zproduct_ic failed' ).
+    ENDIF.
+
+
     COMMIT WORK.
 
 *####################################################################
@@ -108,6 +139,11 @@ out->write( 'delete error' ).
 
 
     MODIFY zproducttext FROM TABLE @gt_zproducttext.
+    IF ( sy-subrc <> 0 ).
+      out->write( 'modifying table zproducttext failed' ).
+    ENDIF.
+
+
     COMMIT WORK.
 
 *####################################################################

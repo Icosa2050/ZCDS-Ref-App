@@ -7,7 +7,7 @@
     sizeCategory: #S,
     dataClass: #MIXED
 }
- ///*+[hideWarning] { "IDS" : [ "CARDINALITY_CHECK" ] }*/
+ /*+[hideWarning] { "IDS" : [ "CARDINALITY_CHECK" ] }*/
 define view entity Z_ViewWithAscsWithDfltFilters
   as select from ZI_Product
   association [0..*] to ZI_ProductText as _TextWithDefaultFilter 
