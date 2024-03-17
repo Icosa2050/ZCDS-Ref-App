@@ -4,16 +4,16 @@
 
 define view entity Z_MToNRelationViewA
   as select distinct from zt000_dummy
-//  association [0..*] to Z_MToNRelationViewC as _MToN on $projection.KeyFieldA = _MToN.KeyFieldA
+  association [0..*] to Z_MToNRelationViewC as _MToN on $projection.KeyFieldA = _MToN.KeyFieldA
 {
   key abap.int4'1' as KeyFieldA
-  //,
-   //   _MToN
+  ,
+  _MToN
 }
 union select distinct from zt000_dummy
-//association [0..*] to Z_MToNRelationViewC as _MToN on $projection.KeyFieldA = _MToN.KeyFieldA
+association [0..*] to Z_MToNRelationViewC as _MToN on $projection.KeyFieldA = _MToN.KeyFieldA
 {
   key abap.int4'2' as KeyFieldA
-  //,
-   //   _MToN
+  ,
+  _MToN
 }
