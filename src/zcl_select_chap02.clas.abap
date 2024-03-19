@@ -34,6 +34,9 @@ SELECT *
 SELECT *
   FROM zi_salesorganization
   INTO TABLE @DATA(lt_zi_salesorganization2).
+
+ out->write( 'salesorganization' ).
+ out->write( lt_zi_salesorganization2 ).
 *
 *####################################################################
 

@@ -1,0 +1,9 @@
+@EndUserText.label: 'General Access'
+@MappingRole: true
+define role ZC_SLSORDPRIVILEGEDONLYSOURCE {
+    grant
+        select
+            on
+                ZI_SalesOrderScheduleLine;
+                
+}
