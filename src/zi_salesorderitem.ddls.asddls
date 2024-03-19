@@ -13,11 +13,13 @@
 define view entity ZI_SalesOrderItem
   as select from zsalesorderitem
 
-  association [0..1] to ZI_Product                as _Product    on $projection.Product = _Product.Product
+  association [0..1] to ZI_Product                as _Product
+    on $projection.Product = _Product.Product
 
   composition [0..*] of ZI_SalesOrderScheduleLine as _ScheduleLine
 
-  association        to parent ZI_SalesOrder      as _SalesOrder on $projection.SalesOrder = _SalesOrder.SalesOrder
+  association        to parent ZI_SalesOrder      as _SalesOrder
+    on $projection.SalesOrder = _SalesOrder.SalesOrder
 
 
 {
@@ -30,6 +32,7 @@ define view entity ZI_SalesOrderItem
       @Semantics.amount.currencyCode: 'TransactionCurrency'
       netamount           as NetAmount,
       transactioncurrency as TransactionCurrency,
+      @Semantics.systemDateTime.createdAt: true
       creationdate        as CreationDate,
       _SalesOrder,
       _Product,

@@ -1,0 +1,2 @@
+@EndUserText.label: 'Unite of Measure'
+define type ZBT_UNITOFMEASURE: MEINS;
