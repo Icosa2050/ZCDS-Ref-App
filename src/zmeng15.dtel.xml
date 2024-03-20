@@ -3,18 +3,18 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <DD04V>
-    <ROLLNAME>ZKWMENG</ROLLNAME>
+    <ROLLNAME>ZMENG15</ROLLNAME>
     <DDLANGUAGE>E</DDLANGUAGE>
-    <DOMNAME>ZQUANT</DOMNAME>
+    <DOMNAME>ZMENG15</DOMNAME>
     <HEADLEN>55</HEADLEN>
     <SCRLEN1>10</SCRLEN1>
-    <SCRLEN2>20</SCRLEN2>
-    <SCRLEN3>40</SCRLEN3>
-    <DDTEXT>Auftragsmenge</DDTEXT>
-    <REPTEXT>Auftragsmenge</REPTEXT>
-    <SCRTEXT_S>KumAuMenge</SCRTEXT_S>
-    <SCRTEXT_M>KumAuMenge</SCRTEXT_M>
-    <SCRTEXT_L>Auftragsmenge</SCRTEXT_L>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>20</SCRLEN3>
+    <DDTEXT>Replacement for MENG15</DDTEXT>
+    <REPTEXT>Quantity</REPTEXT>
+    <SCRTEXT_S>Quantity</SCRTEXT_S>
+    <SCRTEXT_M>Quantity</SCRTEXT_M>
+    <SCRTEXT_L>Quantity</SCRTEXT_L>
     <DTELMASTER>E</DTELMASTER>
     <REFKIND>D</REFKIND>
     <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>

@@ -190,7 +190,7 @@ SELECT *
 *    ON target2~salesorder = zc_slsordprivilegedonlysource~salesorder
 *  INTO TABLE @DATA(lt_zc_slsordprivilegedonlysrc2)
 *  PRIVILEGED ACCESS.
-*
+
 *WITH +cte_assoc AS ( SELECT *
 *                       FROM zc_slsordprivilegedonlysource
 *                    )
@@ -213,7 +213,7 @@ SELECT *
 *  FROM  +cte_assoc
 *  INTO TABLE @DATA(lt_zc_slsordprivilegedonlysrc4)
 *  PRIVILEGED ACCESS.
-
+*
 *####################################################################
 
 SELECT *
