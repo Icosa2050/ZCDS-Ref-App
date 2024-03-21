@@ -1,5 +1,5 @@
 @AbapCatalog.viewEnhancementCategory: [#NONE]
-@AccessControl.authorizationCheck: #NOT_REQUIRED
+@AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Sales Order (CDS)'
 @Metadata.ignorePropagatedAnnotations: true
 @ObjectModel.usageType:{
@@ -11,11 +11,13 @@ define root view entity ZI_SalesOrder
 
   as select from zsalesorder
 
-  association [0..1] to ZI_SalesOrganization as _SalesOrganization on $projection.SalesOrganization = _SalesOrganization.Salesorganization
+  association [0..1] to ZI_SalesOrganization as _SalesOrganization
+    on $projection.SalesOrganization = _SalesOrganization.Salesorganization
 
   composition [0..*] of ZI_SalesOrderItem    as _Item
 
-  association [0..1] to ZI_Customer          as _SoldToParty       on $projection.SoldToParty = _SoldToParty.Customer
+  association [0..1] to ZI_Customer          as _SoldToParty
+    on $projection.SoldToParty = _SoldToParty.Customer
 
 {
 

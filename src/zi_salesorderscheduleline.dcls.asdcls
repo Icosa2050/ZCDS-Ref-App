@@ -1,0 +1,11 @@
+@EndUserText.label: 'Role for ZI_SalesOrderScheduleLine'
+@MappingRole: true
+define role ZI_SALESORDERSCHEDULELINE {
+    grant 
+        select
+            on
+                ZI_SalesOrderScheduleLine
+                    where
+                        (_SalesOrder.SalesOrderType ) = aspect pfcg_auth(ZTEST, ZAUART, ACTVT = '03');
+                        
+}

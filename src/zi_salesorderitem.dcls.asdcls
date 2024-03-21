@@ -1,0 +1,13 @@
+@EndUserText.label: 'cds role for ZI_SalesOrderItem'
+@MappingRole: true
+define role ZI_SALESORDERITEM {
+    grant
+        select
+            on
+                ZI_SalesOrderItem
+                where ( _SalesOrder.SalesOrderType ) =
+                 aspect pfcg_auth( 
+                 ZTEST,
+                 ZAUART,ACTVT = '03'); 
+                
+}

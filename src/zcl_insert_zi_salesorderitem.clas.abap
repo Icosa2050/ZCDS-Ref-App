@@ -13,8 +13,8 @@ ENDCLASS.
 
 CLASS zcl_insert_zi_salesorderitem IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
-    DATA: lt_salesorder TYPE TABLE OF zsalesorderitem.
-    DATA : ls_salesorder TYPE zsalesorderitem.
+    DATA: lt_salesorderitem TYPE TABLE OF zsalesorderitem.
+    DATA : ls_salesorderitem TYPE zsalesorderitem.
     GET TIME STAMP FIELD DATA(lv_time).
     out->write(  'Date'  ).
     out->write( 'Time' ).
@@ -25,13 +25,13 @@ CLASS zcl_insert_zi_salesorderitem IMPLEMENTATION.
 * SY-UNAME
     DATA(lv_sy_uname) = cl_abap_context_info=>get_user_technical_name( ).
 * Username
-    clear lt_salesorder.
-    clear ls_salesorder.
+    clear lt_salesorderitem.
+    clear ls_salesorderitem.
     delete from zsalesorderitem where salesorder = 'S1'.
     commit work.
     delete from zsalesorderitem where salesorder = 'S2'.
     commit work.
-    ls_salesorder = VALUE  #(
+    ls_salesorderitem = VALUE  #(
     salesorder = 'S1'
     salesorderitem = '00010'
     product = 'P1'
@@ -43,10 +43,10 @@ CLASS zcl_insert_zi_salesorderitem IMPLEMENTATION.
     lastchangedbyuser = sy-uname
     lastchangedatetime = lv_time ).
 
-    APPEND ls_salesorder TO lt_salesorder.
+    APPEND ls_salesorderitem TO lt_salesorderitem.
 
-    clear ls_salesorder.
-    ls_salesorder = VALUE  #(
+    clear ls_salesorderitem.
+    ls_salesorderitem = VALUE  #(
     salesorder = 'S1'
     salesorderitem = '00020'
     product = 'P2'
@@ -58,20 +58,20 @@ CLASS zcl_insert_zi_salesorderitem IMPLEMENTATION.
     lastchangedbyuser = sy-uname
     lastchangedatetime = lv_time ).
 
-    APPEND ls_salesorder TO lt_salesorder.
+    APPEND ls_salesorderitem TO lt_salesorderitem.
 
-    clear ls_salesorder.
+    clear ls_salesorderitem.
 
-    INSERT zsalesorderitem FROM TABLE @lt_salesorder.
+    INSERT zsalesorderitem FROM TABLE @lt_salesorderitem.
     IF sy-subrc = 0.
       out->write( 'Data Inserted' ).
       COMMIT WORK.
     ELSE.
       out->write( 'Data Not Inserted' ).
     ENDIF.
-  select * from zsalesorderitem into table @lt_salesorder.
+  select * from zsalesorderitem into table @lt_salesorderitem.
   out->write( 'Data After Insert' ).
-  out->write( lt_salesorder ).
+  out->write( lt_salesorderitem ).
 
   ENDMETHOD.
 ENDCLASS.

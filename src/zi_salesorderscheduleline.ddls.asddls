@@ -1,4 +1,4 @@
-@AccessControl.authorizationCheck: #NOT_REQUIRED
+@AccessControl.authorizationCheck: #CHECK
 
 @EndUserText.label: 'Sales Order Schedule Line'
 
@@ -8,11 +8,11 @@ define view entity ZI_SalesOrderScheduleLine
 
   as select from zsalesordersline
 
-  association [1..1] to ZI_SalesOrder            as _SalesOrder     
-  on  $projection.SalesOrder = _SalesOrder.SalesOrder
-  association to parent ZI_SalesOrderItem as _SalesOrderItem 
-  on  $projection.SalesOrder     = _SalesOrderItem.SalesOrder
-  and $projection.SalesOrderItem = _SalesOrderItem.SalesOrderItem
+  association [1..1] to ZI_SalesOrder            as _SalesOrder
+    on $projection.SalesOrder = _SalesOrder.SalesOrder
+  association        to parent ZI_SalesOrderItem as _SalesOrderItem
+    on  $projection.SalesOrder     = _SalesOrderItem.SalesOrder
+    and $projection.SalesOrderItem = _SalesOrderItem.SalesOrderItem
 
 {
 

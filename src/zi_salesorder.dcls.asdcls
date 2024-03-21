@@ -1,0 +1,12 @@
+@EndUserText.label: 'Auto assigned mapping for OrderType'
+@MappingRole: true
+define role ZI_SALESORDER {
+    grant
+        select
+            on
+                ZI_SALESORDER
+                    where ( SalesOrderType ) = 
+                       aspect pfcg_auth( ZTEST, ZAUART, 
+                       ACTVT = '03' 
+                        );
+}

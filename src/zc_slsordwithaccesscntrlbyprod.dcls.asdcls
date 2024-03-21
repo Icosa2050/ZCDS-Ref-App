@@ -1,0 +1,12 @@
+@EndUserText.label: 'Role to Control Access to Product'
+@MappingRole: true
+define role ZC_SLSORDWITHACCESSCNTRLBYPROD {
+    grant 
+        select
+            on
+                ZC_SlsOrdWithAccessCntrlByProd
+                    where
+                    //todo add a autority object to control access to product
+                        (_Item._Product.AuthorizationGroup) ?= aspect pfcg_auth(ZTEST, ZAUART,  actvt = '03');
+                        
+}
