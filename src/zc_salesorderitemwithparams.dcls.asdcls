@@ -1,0 +1,15 @@
+@EndUserText.label: 'Role for ZC_SalesOrderItemWithParams'
+@MappingRole: true
+define role ZC_SALESORDERITEMWITHPARAMS {
+    grant 
+        select
+            on
+                ZC_SalesOrderItemWithParams
+                    where ( _SalesOrder (  P_Parameter1A: $parameters.P_Parameter2A,
+                                           P_Parameter1B: $parameters.P_Parameter2B,
+                                           P_Parameter1C: 'X' ).SalesOrderType ) =  
+                    aspect  pfcg_auth  (  ZTEST, 
+                                          ZAUART,
+                                          ACTVT = '03' );
+                        
+}

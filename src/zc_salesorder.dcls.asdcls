@@ -1,0 +1,25 @@
+@EndUserText.label: 'Auto assigned mapping for OrderType'
+@MappingRole: true
+define role ZC_SALESORDER {
+//variant 1 
+/*
+    grant select
+            on ZC_SALESORDER
+                    where ( _SalesOrder.SalesOrderType ) = 
+                       aspect pfcg_auth( ZTEST, ZAUART, 
+                       ACTVT = '03' 
+                        );
+                        */
+
+//variant 2 
+grant select on ZC_SalesOrder 
+where inherit ZI_SalesOrder for grant select on ZI_SalesOrder;
+//variant 3 NOT WORKING on cloud platform ( Feature not released )
+/*
+grant select on ZC_SalesOrder 
+inherit ZI_SalesOrder;
+*/
+
+
+
+}

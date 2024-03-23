@@ -5,8 +5,8 @@ define role ZC_SLSORDWITHACCESSCNTRLBYPROD {
         select
             on
                 ZC_SlsOrdWithAccessCntrlByProd
-                    where
+                    where all
                     //todo add a autority object to control access to product
-                        (_Item._Product.AuthorizationGroup) ?= aspect pfcg_auth(ZTEST, ZAUART,  actvt = '03');
+                        (_Item._Product.AuthorizationGroup bypass when is null ) ?= aspect pfcg_auth(ZTEST, ZAUART,  actvt = '03');
                         
 }
