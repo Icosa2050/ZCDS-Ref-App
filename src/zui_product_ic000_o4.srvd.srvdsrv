@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition for ZC_PRODUCT_IC000'
+define service ZUI_PRODUCT_IC000_O4 {
+  expose ZC_PRODUCT_IC000;
+}

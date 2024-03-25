@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZBEGRU</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>BEGRU</DOMNAME>
+    <LOGFLAG>X</LOGFLAG>
+    <HEADLEN>04</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>20</SCRLEN3>
+    <DDTEXT>Authorization Group</DDTEXT>
+    <REPTEXT>AGrp</REPTEXT>
+    <SCRTEXT_S>AuthGrp</SCRTEXT_S>
+    <SCRTEXT_M>AuthorizGroup</SCRTEXT_M>
+    <SCRTEXT_L>Authorization Group</SCRTEXT_L>
+    <APPLCLASS>AA</APPLCLASS>
+    <DTELMASTER>D</DTELMASTER>
+    <DEFFDNAME>AUTHORITYGROUP</DEFFDNAME>
+    <REFKIND>D</REFKIND>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>1</LANGU>
+    <LANGU>2</LANGU>
+    <LANGU>3</LANGU>
+    <LANGU>4</LANGU>
+    <LANGU>5</LANGU>
+    <LANGU>6</LANGU>
+    <LANGU>7</LANGU>
+    <LANGU>8</LANGU>
+    <LANGU>A</LANGU>
+    <LANGU>B</LANGU>
+    <LANGU>C</LANGU>
+    <LANGU>D</LANGU>
+    <LANGU>F</LANGU>
+    <LANGU>G</LANGU>
+    <LANGU>H</LANGU>
+    <LANGU>I</LANGU>
+    <LANGU>J</LANGU>
+    <LANGU>K</LANGU>
+    <LANGU>L</LANGU>
+    <LANGU>M</LANGU>
+    <LANGU>N</LANGU>
+    <LANGU>O</LANGU>
+    <LANGU>P</LANGU>
+    <LANGU>Q</LANGU>
+    <LANGU>R</LANGU>
+    <LANGU>S</LANGU>
+    <LANGU>T</LANGU>
+    <LANGU>U</LANGU>
+    <LANGU>V</LANGU>
+    <LANGU>W</LANGU>
+    <LANGU>d</LANGU>
+    <LANGU>뱋</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>1</DDLANGUAGE>
+     <DDTEXT>权限组</DDTEXT>
+     <REPTEXT>AGrp</REPTEXT>
+     <SCRTEXT_S>权限组</SCRTEXT_S>
+     <SCRTEXT_M>权限组</SCRTEXT_M>
+     <SCRTEXT_L>权限组</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>2</DDLANGUAGE>
+     <DDTEXT>กลุ่มสิทธิ</DDTEXT>
+     <REPTEXT>AGrp</REPTEXT>
+     <SCRTEXT_S>AuthGrp</SCRTEXT_S>
+     <SCRTEXT_M>กลุ่มสิทธิ</SCRTEXT_M>
+     <SCRTEXT_L>กลุ่มสิทธิ</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>3</DDLANGUAGE>
+     <DDTEXT>권한 그룹</DDTEXT>
+     <REPTEXT>권한</REPTEXT>
+     <SCRTEXT_S>권한 그룹</SCRTEXT_S>
+     <SCRTEXT_M>권한 그룹</SCRTEXT_M>
+     <SCRTEXT_L>권한 그룹</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>4</DDLANGUAGE>
+     <DDTEXT>Grup de autorizaţii</DDTEXT>
+     <REPTEXT>GrpA</REPTEXT>
+     <SCRTEXT_S>GrupAut</SCRTEXT_S>
+     <SCRTEXT_M>GrupAutorizaţii</SCRTEXT_M>
+     <SCRTEXT_L>Grup de autorizaţii</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>5</DDLANGUAGE>
+     <DDTEXT>Skupina avtorizacij</DDTEXT>
+     <REPTEXT>SkpP</REPTEXT>
+     <SCRTEXT_S>Skup.avt.</SCRTEXT_S>
+     <SCRTEXT_M>Skupina avtor.</SCRTEXT_M>
+     <SCRTEXT_L>Skupina avtorizacij</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>6</DDLANGUAGE>
+     <DDTEXT>Grupa ovlaštenja</DDTEXT>
+     <REPTEXT>GrpO</REPTEXT>
+     <SCRTEXT_S>Grupa ovl.</SCRTEXT_S>
+     <SCRTEXT_M>Grupa ovlašt.</SCRTEXT_M>
+     <SCRTEXT_L>Grupa ovlaštenja</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>7</DDLANGUAGE>
+     <DDTEXT>Kumpulan Sah Kuasa</DDTEXT>
+     <REPTEXT>KSK</REPTEXT>
+     <SCRTEXT_S>KpSahKuasa</SCRTEXT_S>
+     <SCRTEXT_M>Kump Sah Kuasa</SCRTEXT_M>
+     <SCRTEXT_L>Kumpulan Sah Kuasa</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>8</DDLANGUAGE>
+     <DDTEXT>Група повноважень</DDTEXT>
+     <REPTEXT>ГП</REPTEXT>
+     <SCRTEXT_S>Група пов.</SCRTEXT_S>
+     <SCRTEXT_M>Група повноваж.</SCRTEXT_M>
+     <SCRTEXT_L>Група повноважень</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>A</DDLANGUAGE>
+     <DDTEXT>مجموعة التفويضات</DDTEXT>
+     <REPTEXT>م.ت</REPTEXT>
+     <SCRTEXT_S>م.تخويلات</SCRTEXT_S>
+     <SCRTEXT_M>مجموعة تفويضات</SCRTEXT_M>
+     <SCRTEXT_L>مجموعة التفويضات</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>B</DDLANGUAGE>
+     <DDTEXT>קבוצת הרשאות</DDTEXT>
+     <REPTEXT>קב.ה</REPTEXT>
+     <SCRTEXT_S>קבוצ.הרשאה</SCRTEXT_S>
+     <SCRTEXT_M>קבוצת הרשאה</SCRTEXT_M>
+     <SCRTEXT_L>קבוצת הרשאות</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>C</DDLANGUAGE>
+     <DDTEXT>Skupina oprávnění</DDTEXT>
+     <REPTEXT>SkOp</REPTEXT>
+     <SCRTEXT_S>SkOpráv</SCRTEXT_S>
+     <SCRTEXT_M>Sk. oprávnění</SCRTEXT_M>
+     <SCRTEXT_L>Skupina oprávnění</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DDTEXT>Berechtigungsgruppe</DDTEXT>
+     <REPTEXT>BGrp</REPTEXT>
+     <SCRTEXT_S>BerGrp.</SCRTEXT_S>
+     <SCRTEXT_M>BerechtGruppe</SCRTEXT_M>
+     <SCRTEXT_L>Berechtigungsgruppe</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>F</DDLANGUAGE>
+     <DDTEXT>Groupe d&apos;autorisations</DDTEXT>
+     <REPTEXT>GrpA</REPTEXT>
+     <SCRTEXT_S>GrpeAutor.</SCRTEXT_S>
+     <SCRTEXT_M>Groupe autoris.</SCRTEXT_M>
+     <SCRTEXT_L>Groupe autorisations</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>G</DDLANGUAGE>
+     <DDTEXT>Ομάδα Εξουσιοδοτήσεων</DDTEXT>
+     <REPTEXT>AGrp</REPTEXT>
+     <SCRTEXT_S>ΟμΕξουσ</SCRTEXT_S>
+     <SCRTEXT_M>Ομάδ.Εξουσιοδ</SCRTEXT_M>
+     <SCRTEXT_L>Ομάδ.Εξουσιοδοτήσεων</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>H</DDLANGUAGE>
+     <DDTEXT>Jogosultsági csoport</DDTEXT>
+     <REPTEXT>JCsp</REPTEXT>
+     <SCRTEXT_S>Jogos.csop</SCRTEXT_S>
+     <SCRTEXT_M>Jogos.csoport</SCRTEXT_M>
+     <SCRTEXT_L>Jogosultsági csoport</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>I</DDLANGUAGE>
+     <DDTEXT>Gruppo autorizzazioni</DDTEXT>
+     <REPTEXT>GrAu</REPTEXT>
+     <SCRTEXT_S>Grp. aut.</SCRTEXT_S>
+     <SCRTEXT_M>Gruppo autor.</SCRTEXT_M>
+     <SCRTEXT_L>Gr. autorizzazioni</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>J</DDLANGUAGE>
+     <DDTEXT>権限グループ</DDTEXT>
+     <REPTEXT>AGrp</REPTEXT>
+     <SCRTEXT_S>権限 Group</SCRTEXT_S>
+     <SCRTEXT_M>権限グループ</SCRTEXT_M>
+     <SCRTEXT_L>権限グループ</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>K</DDLANGUAGE>
+     <DDTEXT>Autorisationsgruppe</DDTEXT>
+     <REPTEXT>AuGr</REPTEXT>
+     <SCRTEXT_S>Aut.grp.</SCRTEXT_S>
+     <SCRTEXT_M>AutorisGruppe</SCRTEXT_M>
+     <SCRTEXT_L>Autorisationsgruppe</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>L</DDLANGUAGE>
+     <DDTEXT>Grupa uprawnień</DDTEXT>
+     <REPTEXT>GrUp</REPTEXT>
+     <SCRTEXT_S>Gr. upr.</SCRTEXT_S>
+     <SCRTEXT_M>Grupa uprawnień</SCRTEXT_M>
+     <SCRTEXT_L>Grupa uprawnień</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>M</DDLANGUAGE>
+     <DDTEXT>權限群組</DDTEXT>
+     <REPTEXT>AGrp</REPTEXT>
+     <SCRTEXT_S>權限群組</SCRTEXT_S>
+     <SCRTEXT_M>權限群組</SCRTEXT_M>
+     <SCRTEXT_L>權限群組</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>N</DDLANGUAGE>
+     <DDTEXT>Bevoegdheidsgroep</DDTEXT>
+     <REPTEXT>BGrp</REPTEXT>
+     <SCRTEXT_S>BevGrp</SCRTEXT_S>
+     <SCRTEXT_M>Bevoegdh.groep</SCRTEXT_M>
+     <SCRTEXT_L>Bevoegdheidsgroep</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>O</DDLANGUAGE>
+     <DDTEXT>Autorisasjonsgruppe</DDTEXT>
+     <REPTEXT>AGrp</REPTEXT>
+     <SCRTEXT_S>Autor.grp</SCRTEXT_S>
+     <SCRTEXT_M>Autor.gruppe</SCRTEXT_M>
+     <SCRTEXT_L>Autorisasjonsgruppe</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>P</DDLANGUAGE>
+     <DDTEXT>Grupo de autorizações</DDTEXT>
+     <REPTEXT>GrpT</REPTEXT>
+     <SCRTEXT_S>Grp.autor.</SCRTEXT_S>
+     <SCRTEXT_M>Grp.autorizs.</SCRTEXT_M>
+     <SCRTEXT_L>Grupo autorizações</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>Q</DDLANGUAGE>
+     <DDTEXT>Skupina oprávnení</DDTEXT>
+     <REPTEXT>SkOp</REPTEXT>
+     <SCRTEXT_S>SkupOpráv</SCRTEXT_S>
+     <SCRTEXT_M>Sk.oprávnení</SCRTEXT_M>
+     <SCRTEXT_L>Skupina oprávnení</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>R</DDLANGUAGE>
+     <DDTEXT>Группа полномочий</DDTEXT>
+     <REPTEXT>ГрПл</REPTEXT>
+     <SCRTEXT_S>ГрупПолном</SCRTEXT_S>
+     <SCRTEXT_M>ГруппПолномочий</SCRTEXT_M>
+     <SCRTEXT_L>Группа полномочий</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>S</DDLANGUAGE>
+     <DDTEXT>Grupo de autorizaciones</DDTEXT>
+     <REPTEXT>GrpA</REPTEXT>
+     <SCRTEXT_S>Gr.aut.</SCRTEXT_S>
+     <SCRTEXT_M>Grupo autoriz.</SCRTEXT_M>
+     <SCRTEXT_L>Grupo autorizaciones</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>T</DDLANGUAGE>
+     <DDTEXT>Yetki grubu</DDTEXT>
+     <REPTEXT>YGrp</REPTEXT>
+     <SCRTEXT_S>Yetki grp.</SCRTEXT_S>
+     <SCRTEXT_M>Yetki grubu</SCRTEXT_M>
+     <SCRTEXT_L>Yetki grubu</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>U</DDLANGUAGE>
+     <DDTEXT>Käyttöoikeusryhmä</DDTEXT>
+     <REPTEXT>KORh</REPTEXT>
+     <SCRTEXT_S>K.o.ryhmä</SCRTEXT_S>
+     <SCRTEXT_M>Käyttöoik.ryhmä</SCRTEXT_M>
+     <SCRTEXT_L>Käyttöoikeusryhmä</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>V</DDLANGUAGE>
+     <DDTEXT>Behörighetsgrupp</DDTEXT>
+     <REPTEXT>BGrp</REPTEXT>
+     <SCRTEXT_S>Beh.grupp</SCRTEXT_S>
+     <SCRTEXT_M>Behörigh.grupp</SCRTEXT_M>
+     <SCRTEXT_L>Behörighetsgrupp</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>W</DDLANGUAGE>
+     <DDTEXT>Група оторизации</DDTEXT>
+     <REPTEXT>ГрОт</REPTEXT>
+     <SCRTEXT_S>Гр.оториз.</SCRTEXT_S>
+     <SCRTEXT_M>ГрупаОторизации</SCRTEXT_M>
+     <SCRTEXT_L>Група оторизации</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>d</DDLANGUAGE>
+     <DDTEXT>Grupa ovlašćenja</DDTEXT>
+     <REPTEXT>GrOv</REPTEXT>
+     <SCRTEXT_S>Gr.ovl.</SCRTEXT_S>
+     <SCRTEXT_M>GrupaOvlašćenja</SCRTEXT_M>
+     <SCRTEXT_L>Grupa ovlašćenja</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>뱋</DDLANGUAGE>
+     <DDTEXT>Өкілеттіктер тобы</DDTEXT>
+     <REPTEXT>ӨкТб</REPTEXT>
+     <SCRTEXT_S>Өкіл.тобы</SCRTEXT_S>
+     <SCRTEXT_M>ӨкілеттіктТобы</SCRTEXT_M>
+     <SCRTEXT_L>Өкілеттіктер тобы</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

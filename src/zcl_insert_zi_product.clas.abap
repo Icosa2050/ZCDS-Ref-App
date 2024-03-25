@@ -48,13 +48,16 @@ CLASS zcl_insert_zi_product IMPLEMENTATION.
     product_type   =   'FERT'
   creation_date_time  = lv_time
      ).
+    " //write a comment
 
     APPEND ls_product_ic TO lt_product_ic.
 
     ls_product_ic = VALUE  #(
     product = 'P4'
     product_type   =   'FERT'
-  creation_date_time  = lv_time
+    creation_date_time  = lv_time
+
+
      ).
 
     APPEND ls_product_ic TO lt_product_ic.
