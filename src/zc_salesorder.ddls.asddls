@@ -1,5 +1,5 @@
 @AbapCatalog.viewEnhancementCategory: [#NONE]
-@AccessControl.authorizationCheck: #NOT_REQUIRED
+@AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'View with projected association'
 @Metadata.ignorePropagatedAnnotations: true
 @ObjectModel.usageType:{
@@ -9,11 +9,12 @@
 }
 define view entity ZC_SalesOrder
   as select from ZI_SalesOrder
-  association [0..1] to ZI_SalesOrder as _SalesOrder
+  association [1..1] to ZI_SalesOrder as _SalesOrder
     on $projection.SalesOrder = _SalesOrder.SalesOrder
 {
   key ZI_SalesOrder.SalesOrder,
       ZI_SalesOrder.SalesOrderType,
       ZI_SalesOrder._Item as _SalesOrderItem,
+      CreatedByUser,
       _SalesOrder
 }

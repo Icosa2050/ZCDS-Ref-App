@@ -3,20 +3,28 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <TOBJ>
-    <OBJCT>ZTEST</OBJCT>
+    <OBJCT>Z_VBAK_VK</OBJCT>
     <FIEL1>ACTVT</FIEL1>
-    <FIEL2>ZAUART</FIEL2>
+    <FIEL2>ZSPART01</FIEL2>
+    <FIEL3>ZVKORG</FIEL3>
+    <FIEL4>ZTWEG</FIEL4>
     <OCLSS>CPAE</OCLSS>
    </TOBJ>
    <TOBJ_ATTR>
-    <OBJCT>ZTEST</OBJCT>
+    <OBJCT>Z_VBAK_VK</OBJCT>
     <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
    </TOBJ_ATTR>
    <TOBJT>
     <LANGU>E</LANGU>
-    <OBJECT>ZTEST</OBJECT>
-    <TTEXT>ZTEST</TTEXT>
+    <OBJECT>Z_VBAK_VK</OBJECT>
+    <TTEXT>Z_VBAK_VK</TTEXT>
    </TOBJT>
+   <TACTZ>
+    <TACTZ>
+     <BROBJ>Z_VBAK_VK</BROBJ>
+     <ACTVT>03</ACTVT>
+    </TACTZ>
+   </TACTZ>
   </asx:values>
  </asx:abap>
 </abapGit>

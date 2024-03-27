@@ -12,14 +12,29 @@ define role ZC_SALESORDER {
                         */
 
 //variant 2 
-grant select on ZC_SalesOrder 
+/*grant select on ZC_SalesOrder 
 where inherit ZI_SalesOrder for grant select on ZI_SalesOrder;
+*/
 //variant 3 NOT WORKING on cloud platform ( Feature not released )
 /*
 grant select on ZC_SalesOrder 
 inherit ZI_SalesOrder;
 */
 
-
-
+//variant 4
+// garanties to run even if the inheriting entity is not available
+/*
+grant select on ZC_SalesOrder 
+where inheriting conditions from entity ZI_SalesOrder 
+    default true 
+    replacing { root with _SalesOrder };
+    */
+//variant 5 Listing 5.34
+grant select on ZC_SalesOrder  
+where inheriting conditions from entity ZI_SalesOrder    
+        replacing { 
+        conditions on any of ( SalesOrganization,
+                               OrganizationDivision, 
+                               DistributionChannel )
+        with void };
 }

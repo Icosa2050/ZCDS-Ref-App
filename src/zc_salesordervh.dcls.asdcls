@@ -1,0 +1,31 @@
+@EndUserText.label: 'role for ZC_SalesOrderVH'
+@MappingRole: true
+define role ZC_SALESORDERVH {
+    /*grant 
+        select
+            on
+                ZC_SalesOrderVH
+                    where
+                    inheriting conditions from entity ZI_SalesOrder
+                    // combines value help F4 instead of activity 03
+                    replacing { pfcg_filter field actvt value '03' with 'F4' }
+                    or 
+                    inheriting conditions from entity ZI_SalesOrder;
+                    //results in 
+                    */
+                    
+                   grant select on ZC_SalesOrderVH    
+                   where ( SalesOrderType ) =    
+                   aspect pfcg_auth ( ZTEST,
+                                      ZAUART,
+                                      ACTVT = 'F4' )
+                   or ( SalesOrderType ) = 
+                   aspect pfcg_auth ( ZTEST,
+                                      ZAUART,
+                                      ACTVT = '03' );
+                    
+                   
+                    
+                        
+                        
+}

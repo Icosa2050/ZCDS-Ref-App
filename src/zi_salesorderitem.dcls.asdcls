@@ -1,6 +1,8 @@
 @EndUserText.label: 'cds role for ZI_SalesOrderItem'
 @MappingRole: true
 define role ZI_SALESORDERITEM {
+//variant 1
+/*
     grant
         select
             on
@@ -9,5 +11,12 @@ define role ZI_SALESORDERITEM {
                  aspect pfcg_auth( 
                  ZTEST,
                  ZAUART,ACTVT = '03'); 
-                
+
+                */
+              //variant 2
+              grant select on ZI_SalesOrderItem where 
+              inheriting conditions from entity ZI_SalesOrder
+                default true
+                replacing { root with _SalesOrder };
+
 }

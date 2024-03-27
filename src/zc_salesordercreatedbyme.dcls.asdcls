@@ -1,0 +1,11 @@
+@EndUserText.label: 'Role for selecting only SalesOrder created by user'
+@MappingRole: true
+define role ZC_SALESORDERCREATEDBYME {
+    grant 
+        select
+            on
+                ZC_SalesOrder
+                    where
+                        CreatedByUser = aspect user;
+                        
+}

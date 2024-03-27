@@ -1,11 +1,18 @@
 @EndUserText.label: 'Role for ZI_SalesOrderScheduleLine'
 @MappingRole: true
 define role ZI_SALESORDERSCHEDULELINE {
+//variant 1
+/*
     grant 
         select
             on
                 ZI_SalesOrderScheduleLine
                     where
                         (_SalesOrder.SalesOrderType ) = aspect pfcg_auth(ZTEST, ZAUART, ACTVT = '03');
+ */
+//variant 2
+      grant select on ZI_SalesOrderScheduleLine 
+      where inherit ZI_SALESORDERITEM for grant select on 
+        ZI_SalesOrderItem; 
                         
 }

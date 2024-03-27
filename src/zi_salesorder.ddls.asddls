@@ -61,4 +61,5 @@ define root view entity ZI_SalesOrder
 
       _SoldToParty
 
+
 }
