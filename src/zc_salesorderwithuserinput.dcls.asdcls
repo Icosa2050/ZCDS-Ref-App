@@ -1,0 +1,11 @@
+@EndUserText.label: 'role to test params like user input'
+@MappingRole: true
+define role ZC_SALESORDERWITHUSERINPUT {
+    grant
+        select
+            on
+                ZC_SALESORDERWITHUSERINPUT
+                    where ( UserInput ) = 
+                    aspect pfcg_auth (  ZTEST,ZAUART, ACTVT = '03' );
+                        
+}

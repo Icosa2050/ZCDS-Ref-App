@@ -1,0 +1,11 @@
+@EndUserText.label: 'Role for View with Provider Contract C'
+@MappingRole: true
+define role Z_VIEWWITHPROVIDERCONTRACTC {
+    grant
+        select
+            on
+                Z_ViewWithProviderContractC
+                    where
+                        inheriting conditions from entity Z_ViewWithProviderContractB;
+                        
+}

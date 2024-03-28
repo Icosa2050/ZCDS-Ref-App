@@ -1,0 +1,14 @@
+@EndUserText.label: 'role with combined rules'
+@MappingRole: true
+define role ZC_SALESORDERCOMBINED {
+    grant
+        select
+            on
+                ZC_SalesOrder
+                combination mode 
+                or
+                // 
+                // and 
+                where SalesOrderType = 'TAF';
+                       
+}

@@ -1,0 +1,13 @@
+@EndUserText.label: 'ROLE TO BLOCK ANY SELECTION'
+@MappingRole: true
+define role ZC_SALESORDERPRIVILEGEDONLY {
+    grant
+        select
+            on
+                ZC_SalesOrderPrivilegedOnly
+                    where SalesOrder is null
+                    and SalesOrder is not null;
+                    //variant? 
+                    //where  false;
+                        
+}

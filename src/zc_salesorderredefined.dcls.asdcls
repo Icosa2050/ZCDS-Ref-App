@@ -1,0 +1,11 @@
+@EndUserText.label: 'Role with Redefinition'
+@MappingRole: true
+define role ZC_SALESORDERREDEFINED {
+    grant select on ZC_SalesOrder
+    redefinition
+    //variant 1
+    //where SalesOrderType = 'TAF'; 
+    //variant 2 inherited all from super and added additional condition
+    where inheriting conditions from super
+    and SalesOrderType = 'TAF';
+}

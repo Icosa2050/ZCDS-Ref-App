@@ -17,3 +17,11 @@ define view entity ZC_SalesOrderPrivilegedOnly
       CreatedByUser
 
 }
+
+// only way to access this view is to have Privileged Access
+/*
+Select *
+from ZC_SalesOrderPrivilegedOnly
+wiht Privileged Access
+into table @DATA(lt_sales_order_privileged_only);
+*/

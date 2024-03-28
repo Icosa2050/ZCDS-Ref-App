@@ -1,0 +1,5 @@
+@MappingRole: true
+define role Z_ViewWithProviderContractA {  
+        grant select on Z_ViewWithProviderContractA    
+          where KeyField = 'A';          
+}

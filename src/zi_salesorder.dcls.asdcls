@@ -9,6 +9,7 @@ define role ZI_SALESORDER {
                     where ( SalesOrderType ) = 
                        aspect pfcg_auth( ZTEST, ZAUART, ACTVT = '03' ); 
                        */
+                       /*
            grant select on ZI_SalesOrder    
            with optional elements ( OrganizationDivision default true,
                                     SalesOrganization default true,
@@ -25,5 +26,16 @@ define role ZI_SALESORDER {
                                 ZSPART01, 
                                 ZVKORG,
                                 ZTWEG,
-                                ACTVT = '03' )
-                                                                                                                ;}
+                                ACTVT = '03' ) ;
+                                */
+                                // cds role with user dependent filter and independent filter
+   grant select on ZI_SalesOrder
+   where( SalesOrderType ) 
+            = aspect pfcg_auth( 
+                    ZTEST, 
+                    ZAUART, 
+                    ACTVT = '03' )
+       or SalesOrderType = '' ; 
+
+  }
+

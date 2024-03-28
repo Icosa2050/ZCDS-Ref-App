@@ -1,0 +1,6 @@
+@MappingRole: true
+define role Z_VIEWWITHPROVIDERCONTRACTB {  
+        grant select on Z_ViewWithProviderContractB    
+
+          where inheriting conditions from entity Z_ViewWithProviderContractA;
+}

@@ -1,0 +1,9 @@
+@EndUserText.label: 'role to disactivate any restriction'
+@MappingRole: true
+define role ZI_SALESORDERUNRESTRICTED {
+    grant
+        select
+            on
+                ZI_SalesOrder;
+                        
+}
