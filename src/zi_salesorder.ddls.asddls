@@ -11,55 +11,63 @@ define root view entity ZI_SalesOrder
 
   as select from zsalesorder
 
-  association [0..1] to ZI_SalesOrganization as _SalesOrganization
+  association [0..1] to ZI_SalesOrganization  as _SalesOrganization
     on $projection.SalesOrganization = _SalesOrganization.Salesorganization
 
-  composition [0..*] of ZI_SalesOrderItem    as _Item
+  composition [0..*] of ZI_SalesOrderItem     as _Item
 
-  association [0..1] to ZI_Customer          as _SoldToParty
+  association [0..1] to ZI_Customer           as _SoldToParty
     on $projection.SoldToParty = _SoldToParty.Customer
+  association [0..1] to ZI_SalesOrderItem_Agg as _SumNetAmount
+    on $projection.SalesOrder = _SumNetAmount.SalesOrder
 
 {
 
-  key salesorder           as SalesOrder,
+  key salesorder                   as SalesOrder,
 
-      salesordertype       as SalesOrderType,
+      salesordertype               as SalesOrderType,
 
       @ObjectModel.foreignKey.association: '_SalesOrganization'
 
-      salesorganization    as SalesOrganization,
+      salesorganization            as SalesOrganization,
 
       @ObjectModel.foreignKey.association: '_SoldToParty'
 
-      soldtoparty          as SoldToParty,
+      soldtoparty                  as SoldToParty,
 
-      distributionchannel  as DistributionChannel,
+      distributionchannel          as DistributionChannel,
 
-      organizationdivision as OrganizationDivision,
+      organizationdivision         as OrganizationDivision,
 
       @Semantics.amount.currencyCode: 'TransactionCurrency'
 
-      netamount            as NetAmount,
+      netamount                    as NetAmount,
 
-      transactioncurrency  as TransactionCurrency,
+      transactioncurrency          as TransactionCurrency,
 
-      deliverystatus       as DeliveryStatus,
+      deliverystatus               as DeliveryStatus,
 
-      deletionindicator    as DeletionIndicator,
+      deletionindicator            as DeletionIndicator,
 
-      createdbyuser        as CreatedByUser,
+      createdbyuser                as CreatedByUser,
 
-      creationdatetime     as CreationDateTime,
+      creationdatetime             as CreationDateTime,
 
-      lastchangedbyuser    as LastChangedByUser,
+      lastchangedbyuser            as LastChangedByUser,
 
-      lastchangedatetime   as LastChangeDateTime,
+      lastchangedatetime           as LastChangeDateTime,
+
+      @Semantics.amount.currencyCode: 'TransactionCurrency'
+      _SumNetAmount.TotalNetAmount as TotalNetAmount,
+
+      _SumNetAmount,
 
       _Item,
 
       _SalesOrganization,
 
       _SoldToParty
+
 
 
 }

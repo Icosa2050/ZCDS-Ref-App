@@ -3,7 +3,7 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZCL_INSERT_ZI_PRODUCT</CLSNAME>
+    <CLSNAME>ZCL_INSERT_ZSALESORDERITEM</CLSNAME>
     <LANGU>E</LANGU>
     <DESCRIPT>insert data</DESCRIPT>
     <STATE>1</STATE>

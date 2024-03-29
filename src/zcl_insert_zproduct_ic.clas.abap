@@ -1,4 +1,4 @@
-CLASS zcl_insert_zi_product DEFINITION
+CLASS zcl_insert_zproduct_ic DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -11,18 +11,18 @@ ENDCLASS.
 
 
 
-CLASS zcl_insert_zi_product IMPLEMENTATION.
+CLASS zcl_insert_zproduct_ic IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
     DATA: lt_product_ic TYPE TABLE OF zproduct_ic.
     DATA: ls_product_ic TYPE zproduct_ic.
-    select * from zproduct_ic into table @lt_product_ic.
-    loop at lt_product_ic into ls_product_ic.
+    SELECT * FROM zproduct_ic INTO TABLE @lt_product_ic.
+    LOOP AT lt_product_ic INTO ls_product_ic.
       out->write( ls_product_ic ).
-    delete zproduct_ic from @ls_product_ic.
-      endloop.
+      DELETE zproduct_ic FROM @ls_product_ic.
+    ENDLOOP.
     GET TIME STAMP FIELD DATA(lv_time).
-    clear ls_product_ic.
-    clear lt_product_ic.
+    CLEAR ls_product_ic.
+    CLEAR lt_product_ic.
 
     ls_product_ic = VALUE  #(
     product = 'P1'

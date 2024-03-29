@@ -1,15 +1,15 @@
-class ZBP_R_PRODUCT_IC000 definition
-  public
-  abstract
-  final
-  for behavior of ZR_PRODUCT_IC000 .
+CLASS zbp_r_product_ic000 DEFINITION
+  PUBLIC
+  ABSTRACT
+  FINAL
+  FOR BEHAVIOR OF zr_product_ic000 .
 
-public section.
-protected section.
-private section.
+  PUBLIC SECTION.
+  PROTECTED SECTION.
+  PRIVATE SECTION.
 ENDCLASS.
 
 
 
-CLASS ZBP_R_PRODUCT_IC000 IMPLEMENTATION.
+CLASS zbp_r_product_ic000 IMPLEMENTATION.
 ENDCLASS.

@@ -1,4 +1,4 @@
-CLASS zcl_insert_one_entry_zt000 DEFINITION
+CLASS zcl_insert_zt000_dummy DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -11,9 +11,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_insert_one_entry_zt000 IMPLEMENTATION.
+CLASS zcl_insert_zt000_dummy IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
-"COMMENT
+    "COMMENT
     DATA: lt_test TYPE TABLE OF zt000_dummy.
     DATA : ls_test TYPE zt000_dummy.
     GET TIME STAMP FIELD DATA(lv_time).

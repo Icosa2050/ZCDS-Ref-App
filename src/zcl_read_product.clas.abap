@@ -23,11 +23,11 @@ CLASS zcl_read_product IMPLEMENTATION.
        FROM zproduct_ic
       INTO TABLE @lt_zi_product.
 
-       out->write( ' Products' ).
-       out->write( lt_zi_product ).
-       "loop at lt_zi_product ASSIGNING FIELD-SYMBOL(<line>).
-       "out->write( <line> ).
-       "endloop.
+    out->write( ' Products' ).
+    out->write( lt_zi_product ).
+    "loop at lt_zi_product ASSIGNING FIELD-SYMBOL(<line>).
+    "out->write( <line> ).
+    "endloop.
 
   ENDMETHOD.
 ENDCLASS.
