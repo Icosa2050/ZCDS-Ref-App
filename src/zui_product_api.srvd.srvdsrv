@@ -1,0 +1,5 @@
+@EndUserText.label: 'definition for API'
+define service ZUI_Product_API {
+  expose ZC_PRODUCT;
+  expose ZC_ProductText;
+}

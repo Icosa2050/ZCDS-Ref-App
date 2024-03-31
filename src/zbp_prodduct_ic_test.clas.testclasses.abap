@@ -22,7 +22,7 @@ CLASS ltc_CREATE IMPLEMENTATION.
 
     lo_client_proxy = /iwbep/cl_cp_factory_unit_tst=>create_v4_local_proxy(
                     EXPORTING
-                      is_service_key     = VALUE #( service_id      = 'ZUI_PRODUCT_IC000_O4'
+                      is_service_key     = VALUE #( service_id      = 'ZUI_PRODUCT_DISPLAY'
                                                     repository_id   = 'SRVD'
                                                     service_version = '0001' )
                        iv_do_write_traces = abap_true ).
@@ -100,7 +100,7 @@ CLASS ltc_READ_ENTITY IMPLEMENTATION.
               hasactiveentity  = abap_true ).
 
     " Navigate to the resource
-    lo_resource = lo_client_proxy->create_resource_for_entity_set( 'ZC_PRODUCT_IC000' )->navigate_with_key( ls_entity_key ).
+    lo_resource = lo_client_proxy->create_resource_for_entity_set( 'ZC_PRODUCT' )->navigate_with_key( ls_entity_key ).
 
     " Execute the request and retrieve the business data
     lo_response = lo_resource->create_request_for_read( )->execute( ).
@@ -146,14 +146,14 @@ CLASS ltc_READ_LIST IMPLEMENTATION.
 
     lo_client_proxy = /iwbep/cl_cp_factory_unit_tst=>create_v4_local_proxy(
                     EXPORTING
-                      is_service_key     = VALUE #( service_id      = 'ZUI_PRODUCT_IC000_O4'
+                      is_service_key     = VALUE #( service_id      = 'ZUI_PRODUCT_DISPLAY'
                                                     repository_id   = 'SRVD'
                                                     service_version = '0001' )
                        iv_do_write_traces = abap_true ).
 
 
     " Navigate to the resource and create a request for the read operation
-    lo_request = lo_client_proxy->create_resource_for_entity_set( 'ZC_PRODUCT_IC000' )->create_request_for_read( ).
+    lo_request = lo_client_proxy->create_resource_for_entity_set( 'ZC_PRODUCT' )->create_request_for_read( ).
 
     " Create the filter tree
 *lo_filter_factory = lo_request->create_filter_factory( ).
@@ -205,7 +205,7 @@ CLASS ltc_UPDATE IMPLEMENTATION.
 
     lo_client_proxy = /iwbep/cl_cp_factory_unit_tst=>create_v4_local_proxy(
                     EXPORTING
-                      is_service_key     = VALUE #( service_id      = 'ZUI_PRODUCT_IC000_O4'
+                      is_service_key     = VALUE #( service_id      = 'ZUI_PRODUCT_DISPLAY'
                                                     repository_id   = 'SRVD'
                                                     service_version = '0001' )
                        iv_do_write_traces = abap_true ).
@@ -273,7 +273,7 @@ CLASS ltc_DELETE_ENTITY IMPLEMENTATION.
 
     lo_client_proxy = /iwbep/cl_cp_factory_unit_tst=>create_v4_local_proxy(
                     EXPORTING
-                      is_service_key     = VALUE #( service_id      = 'ZUI_PRODUCT_IC000_O4'
+                      is_service_key     = VALUE #( service_id      = 'ZUI_PRODUCT_DISPLAY'
                                                     repository_id   = 'SRVD'
                                                     service_version = '0001' )
                        iv_do_write_traces = abap_true ).

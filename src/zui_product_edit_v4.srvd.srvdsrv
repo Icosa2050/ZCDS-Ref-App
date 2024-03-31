@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Definition for Editing'
+define service ZUI_Product_Edit_V4 {
+  expose ZC_PRODUCT;
+  expose ZC_ProductText;
+}

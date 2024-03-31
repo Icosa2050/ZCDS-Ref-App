@@ -1,0 +1,5 @@
+@EndUserText.label: 'definition for projection view on cube'
+define service ZUI_INA_SalesOrderProductInfo
+  provider contracts ina {
+  expose ZC_SalesOrderProductAmountQ;
+}

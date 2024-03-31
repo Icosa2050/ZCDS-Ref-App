@@ -42,39 +42,62 @@ CLASS zcl_insert_zproducttext IMPLEMENTATION.
 
     CLEAR gs_zproducttext.
     gs_zproducttext-product             = 'P1'.
-    gs_zproducttext-product_name        = 'P1 English'.
+    gs_zproducttext-product_name        = 'Product 1 '.
     gs_zproducttext-language            = 'E'.
     INSERT gs_zproducttext INTO TABLE gt_zproducttext.
 
     CLEAR gs_zproducttext.
     gs_zproducttext-product             = 'P1'.
-    gs_zproducttext-product_name        = 'P1 Deutsch'.
+    gs_zproducttext-product_name        = 'Produkt 1'.
     gs_zproducttext-language            = 'D'.
     INSERT gs_zproducttext INTO TABLE gt_zproducttext.
 
     CLEAR gs_zproducttext.
     gs_zproducttext-product             = 'P2'.
-    gs_zproducttext-product_name        = 'P2 English'.
+    gs_zproducttext-product_name        = 'Product 2'.
     gs_zproducttext-language            = 'E'.
     INSERT gs_zproducttext INTO TABLE gt_zproducttext.
 
     CLEAR gs_zproducttext.
     gs_zproducttext-product             = 'P2'.
-    gs_zproducttext-product_name        = 'P2 Deutsch'.
+    gs_zproducttext-product_name        = 'Produkt 2'.
     gs_zproducttext-language            = 'D'.
     INSERT gs_zproducttext INTO TABLE gt_zproducttext.
 
     CLEAR gs_zproducttext.
     gs_zproducttext-product             = 'P3'.
-    gs_zproducttext-product_name        = 'P3 English'.
+    gs_zproducttext-product_name        = 'Product 3'.
     gs_zproducttext-language            = 'E'.
     INSERT gs_zproducttext INTO TABLE gt_zproducttext.
 
     CLEAR gs_zproducttext.
     gs_zproducttext-product             = 'P3'.
-    gs_zproducttext-product_name        = 'P3 Deutsch'.
+    gs_zproducttext-product_name        = 'Produkt 3'.
     gs_zproducttext-language            = 'D'.
     INSERT gs_zproducttext INTO TABLE gt_zproducttext.
+
+    CLEAR gs_zproducttext.
+    gs_zproducttext-product             = 'P4'.
+    gs_zproducttext-product_name        = 'Product 4 '.
+    gs_zproducttext-language            = 'E'.
+
+    INSERT gs_zproducttext INTO TABLE gt_zproducttext.
+
+    CLEAR gs_zproducttext.
+    gs_zproducttext-product             = 'P4'.
+    gs_zproducttext-product_name        = 'Produkt 4 '.
+    gs_zproducttext-language            = 'D'.
+
+    INSERT gs_zproducttext INTO TABLE gt_zproducttext.
+    CLEAR gs_zproducttext.
+
+    gs_zproducttext-product             = 'P4'.
+    gs_zproducttext-product_name        = 'Produkt 4 '.
+    gs_zproducttext-language            = 'D'.
+
+    INSERT gs_zproducttext INTO TABLE gt_zproducttext.
+
+    CLEAR gs_zproducttext.
 
 
     MODIFY zproducttext FROM TABLE @gt_zproducttext.
@@ -82,6 +105,7 @@ CLASS zcl_insert_zproducttext IMPLEMENTATION.
       out->write( 'modifying table zproducttext failed' ).
     ENDIF.
 
+      out->write( gt_zproducttext ).
 
     COMMIT WORK.
 

@@ -1,0 +1,6 @@
+@EndUserText.label: 'Definition for ZC_Product Display'
+@AbapCatalog.extensibility.extensible: true
+define service ZUI_Product_Display {
+  expose ZC_PRODUCT     as Product;
+  expose ZC_ProductText as ProductText;
+}

@@ -10,21 +10,22 @@
 
 @Search.searchable: true
 
-define view entity ZI_ProductText 
+define view entity ZI_ProductText
 
   as select from zproducttext
 
-  association to parent ZI_Product as _Product on $projection.Product = _Product.Product
+  association to parent ZI_Product as _Product
+    on $projection.Product = _Product.Product
 
 {
 
       @Semantics.language: true
 
-  key language           as Language,
+  key language     as Language,
 
       @ObjectModel.text.element:['ProductName']
 
-  key product            as Product,
+  key product      as Product,
 
       @Search.defaultSearchElement: true
 
@@ -32,7 +33,7 @@ define view entity ZI_ProductText
 
       @Semantics.text: true
 
-      product_name       as ProductName,
+      product_name as ProductName,
 
       _Product
 

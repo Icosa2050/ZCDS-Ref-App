@@ -1,7 +1,8 @@
 @AbapCatalog.viewEnhancementCategory: [#NONE]
-@AccessControl.authorizationCheck: #NOT_REQUIRED
+@AccessControl.authorizationCheck: #NOT_ALLOWED
 @EndUserText.label: 'Cube of views'
 @Metadata.ignorePropagatedAnnotations: true
+@Analytics.dataCategory: #CUBE
 @ObjectModel.usageType:{
     serviceQuality: #X,
     sizeCategory: #S,

@@ -13,7 +13,7 @@ define view entity Z_ViewDefinition
   //join
     left outer to exact one join ZI_SalesOrder     as SO on SO.SalesOrder = ITEM.SalesOrder
   //association definition
-  association [0..1] to ZI_Product as _Product on $projection.RenamedProduct = _Product.Product
+  association [0..1] to ZI_Product_IC as _Product on $projection.RenamedProduct = _Product.Product
 {
       //projected field as key
   key ITEM.SalesOrder,
