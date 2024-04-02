@@ -8,12 +8,14 @@
     dataClass: #MIXED
 }
 define view entity Z_CountryViaTableFunction
-  as select from Z_TableFunctionCountry
-                 ( P_SAPClient : $session.client )
+  as select distinct from Z_TableFunctionCountry
+                          ( P_SAPClient : $session.client)
+  //P_Language  : $session.system_language )
   association [0..*] to I_CountryText as _Text
     on $projection.Country = _Text.Country
   association [0..1] to I_Currency    as _CountryCurrency
     on $projection.CountryISOCode = _CountryCurrency.Currency
+
 {
   key Country,
       CountryThreeLetterISOCode,

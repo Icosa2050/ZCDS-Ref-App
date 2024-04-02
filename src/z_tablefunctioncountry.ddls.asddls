@@ -6,6 +6,9 @@ define table function Z_TableFunctionCountry
   with parameters
     @Environment.systemField: #CLIENT
     P_SAPClient : abap.clnt
+  //,
+  //@Environment.systemField: #SYSTEM_LANGUAGE
+  //P_Language  : spras
 returns
 {
   mandt                     : abap.clnt;

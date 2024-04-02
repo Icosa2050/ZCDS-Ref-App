@@ -21,7 +21,7 @@ CLASS zcl_table_function_country IMPLEMENTATION.
   OPTIONS READ-ONLY
   USING I_Country.
     RETURN
-    select
+    select distinct
     :P_SAPClient as mandt,
     Country,
     CountryThreeLetterISOCode,
@@ -30,6 +30,6 @@ CLASS zcl_table_function_country IMPLEMENTATION.
     FROM
     I_Country
     WHERE
-    mandt = :P_SAPClient;
+    mandt = :P_SAPClient ;
   ENDMETHOD.
 ENDCLASS.
