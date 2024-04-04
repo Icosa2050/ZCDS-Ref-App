@@ -49,7 +49,7 @@ CLASS zcl_select_chap02 IMPLEMENTATION.
 
     SELECT \_product-product            AS product,
            \_product-producttype        AS producttype,
-           \_product-authorizationgroup AS authorizationgroup,
+"           \_product-authorizationgroup AS authorizationgroup,
            \_product-creationdatetime   AS creationdatetime
        FROM zi_salesorderitem
        WHERE zi_salesorderitem~salesorder = 'S1'

@@ -1,4 +1,4 @@
-CLASS zcl_insert_zsalesorderitem DEFINITION
+CLASS zcl_insert_zsalesorderscline DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -14,13 +14,19 @@ ENDCLASS.
 
 
 
-CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
+CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
-    insert_data( ).
+
+    TRY.
+        insert_data( ).
+      CATCH zcx_demo_dyn_t100 INTO DATA(lo_error).
+        out->write( lo_error->get_text( ) ).
+    ENDTRY.
+
   ENDMETHOD.
   METHOD insert_data.
-    DATA: lt_salesorderitem TYPE TABLE OF zsalesorderitem.
-    DATA : ls_salesorderitem TYPE zsalesorderitem.
+    DATA: lt_data TYPE TABLE OF zsalesordersline.
+    DATA : ls_data TYPE zsalesordersline.
     GET TIME STAMP FIELD DATA(lv_time).
     DATA(lv_sy_datum) = cl_abap_context_info=>get_system_date( ).
 * SY-UZEIT
@@ -28,106 +34,95 @@ CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
 * SY-UNAME
     DATA(lv_sy_uname) = cl_abap_context_info=>get_user_technical_name( ).
 * Username
-    CLEAR lt_salesorderitem.
-    CLEAR ls_salesorderitem.
-    DELETE FROM zsalesorderitem WHERE salesorder = 'S1'.
-    DELETE FROM zsalesorderitem WHERE salesorder = 'S2'.
+    CLEAR lt_data.
+    CLEAR ls_data.
+    SELECT * FROM zsalesordersline INTO TABLE @lt_data.
+    LOOP AT lt_data INTO ls_data.
+      DELETE zsalesordersline FROM @ls_data.
+      IF sy-subrc <> 0.
+        RAISE EXCEPTION TYPE zcx_demo_dyn_t100.
+      ENDIF.
+    ENDLOOP.
     COMMIT WORK.
-    ls_salesorderitem = VALUE  #(
+    ls_data = VALUE  #(
     salesorder = 'S1'
     salesorderitem = '00010'
-    product = 'P1'
     orderquantity = '1'
     orderquantityunit = 'STK'
-    netamount = 100
-    transactioncurrency = 'USD'
-    creationdate        = lv_sy_datum
     createdbyuser       = lv_sy_uname
     creationdatetime = lv_time
     lastchangedbyuser = sy-uname
     lastchangedatetime = lv_time ).
 
-    APPEND ls_salesorderitem TO lt_salesorderitem.
+    APPEND ls_data TO lt_data.
 
-    CLEAR ls_salesorderitem.
-    ls_salesorderitem = VALUE  #(
+    CLEAR ls_data.
+    ls_data = VALUE  #(
     salesorder = 'S1'
     salesorderitem = '00020'
-    product = 'P2'
     orderquantity = '1'
     orderquantityunit = 'STK'
-    netamount = 200
-    transactioncurrency = 'USD'
-    creationdate        = lv_sy_datum
     createdbyuser       = sy-uname
     creationdatetime = lv_time
     lastchangedbyuser = sy-uname
     lastchangedatetime = lv_time ).
 
-    APPEND ls_salesorderitem TO lt_salesorderitem.
+    APPEND ls_data TO lt_data.
 
-    CLEAR ls_salesorderitem.
+    CLEAR ls_data.
 
-    ls_salesorderitem = VALUE  #(
+    ls_data = VALUE  #(
     salesorder = 'S2'
     salesorderitem = '00010'
-    product = 'P2'
     orderquantity = '1'
     orderquantityunit = 'STK'
-    netamount = 300
-    transactioncurrency = 'EUR'
-    creationdate        = lv_sy_datum
     createdbyuser       = lv_sy_uname
     creationdatetime = lv_time
     lastchangedbyuser = sy-uname
     lastchangedatetime = lv_time ).
 
-    APPEND ls_salesorderitem TO lt_salesorderitem.
+    APPEND ls_data TO lt_data.
 
-    CLEAR ls_salesorderitem.
-    ls_salesorderitem = VALUE  #(
+    CLEAR ls_data.
+    ls_data = VALUE  #(
     salesorder = 'S2'
     salesorderitem = '00020'
-    product = 'P3'
     orderquantity = '1'
     orderquantityunit = 'STK'
-    netamount = 400
-    transactioncurrency = 'EUR'
-    creationdate        = lv_sy_datum
     createdbyuser       = sy-uname
     creationdatetime = lv_time
     lastchangedbyuser = sy-uname
     lastchangedatetime = lv_time ).
 
-    APPEND ls_salesorderitem TO lt_salesorderitem.
+    APPEND ls_data TO lt_data.
 
-    CLEAR ls_salesorderitem.
-    ls_salesorderitem = VALUE  #(
+    CLEAR ls_data.
+    ls_data = VALUE  #(
     salesorder = 'S2'
     salesorderitem = '00030'
-    product = 'P4'
     orderquantity = '2'
     orderquantityunit = 'STK'
-    netamount = 500
-    transactioncurrency = 'EUR'
-    creationdate        = lv_sy_datum
     createdbyuser       = sy-uname
     creationdatetime = lv_time
     lastchangedbyuser = sy-uname
     lastchangedatetime = lv_time ).
 
-    APPEND ls_salesorderitem TO lt_salesorderitem.
+    APPEND ls_data TO lt_data.
 
 
-    CLEAR ls_salesorderitem.
+    CLEAR ls_data.
 
 
-    INSERT zsalesorderitem FROM TABLE @lt_salesorderitem.
+    LOOP AT lt_data INTO ls_data.
+      modify zsalesordersline FROM @ls_data.
+      IF sy-subrc <> 0.
+        RAISE EXCEPTION TYPE zcx_demo_dyn_t100.
+      ENDIF.
+    ENDLOOP.
     IF sy-subrc = 0.
       COMMIT WORK.
-    ELSE.
-      RAISE EXCEPTION TYPE zcx_demo_dyn_t100.
+      SELECT * FROM zsalesordersline INTO TABLE @lt_data.
     ENDIF.
-    SELECT * FROM zsalesorderitem INTO TABLE @lt_salesorderitem.
   ENDMETHOD.
+
 ENDCLASS.

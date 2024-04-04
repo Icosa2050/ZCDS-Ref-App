@@ -2,6 +2,7 @@
 @AccessControl.authorizationCheck: #CHECK
 @EndUserText.label: 'Sales Order (CDS)'
 @Metadata.ignorePropagatedAnnotations: true
+@ObjectModel.representativeKey: 'SalesOrder'
 @ObjectModel.usageType:{
     serviceQuality: #X,
     sizeCategory: #S,
