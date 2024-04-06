@@ -40,17 +40,21 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
     LOOP AT lt_data INTO ls_data.
       DELETE zsalesordersline FROM @ls_data.
       IF sy-subrc <> 0.
-        RAISE EXCEPTION TYPE zcx_demo_dyn_t100.
+        RAISE EXCEPTION TYPE zcx_demo_dyn_t100
+       MESSAGE e001(zcds_ref_app) WITH 'Error in updating data'.
       ENDIF.
     ENDLOOP.
     COMMIT WORK.
+    clear lt_data.
     ls_data = VALUE  #(
     salesorder = 'S1'
     salesorderitem = '00010'
+    salesorderscheduleline = '00010'
     orderquantity = '1'
     orderquantityunit = 'STK'
     createdbyuser       = lv_sy_uname
     creationdatetime = lv_time
+    deliverydate = lv_sy_datum + 10
     lastchangedbyuser = sy-uname
     lastchangedatetime = lv_time ).
 
@@ -60,9 +64,11 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
     ls_data = VALUE  #(
     salesorder = 'S1'
     salesorderitem = '00020'
+    salesorderscheduleline = '00020'
     orderquantity = '1'
     orderquantityunit = 'STK'
     createdbyuser       = sy-uname
+    deliverydate = lv_sy_datum + 10
     creationdatetime = lv_time
     lastchangedbyuser = sy-uname
     lastchangedatetime = lv_time ).
@@ -74,9 +80,11 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
     ls_data = VALUE  #(
     salesorder = 'S2'
     salesorderitem = '00010'
+    salesorderscheduleline = '00010'
     orderquantity = '1'
     orderquantityunit = 'STK'
     createdbyuser       = lv_sy_uname
+    deliverydate = lv_sy_datum + 20
     creationdatetime = lv_time
     lastchangedbyuser = sy-uname
     lastchangedatetime = lv_time ).
@@ -87,10 +95,12 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
     ls_data = VALUE  #(
     salesorder = 'S2'
     salesorderitem = '00020'
+    salesorderscheduleline = '00020'
     orderquantity = '1'
     orderquantityunit = 'STK'
     createdbyuser       = sy-uname
     creationdatetime = lv_time
+    deliverydate = lv_sy_datum + 30
     lastchangedbyuser = sy-uname
     lastchangedatetime = lv_time ).
 
@@ -100,9 +110,11 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
     ls_data = VALUE  #(
     salesorder = 'S2'
     salesorderitem = '00030'
+    salesorderscheduleline = '00030'
     orderquantity = '2'
     orderquantityunit = 'STK'
     createdbyuser       = sy-uname
+    deliverydate = lv_sy_datum + 30
     creationdatetime = lv_time
     lastchangedbyuser = sy-uname
     lastchangedatetime = lv_time ).
@@ -114,9 +126,10 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
 
 
     LOOP AT lt_data INTO ls_data.
-      modify zsalesordersline FROM @ls_data.
+      INSERT zsalesordersline FROM @ls_data.
       IF sy-subrc <> 0.
-        RAISE EXCEPTION TYPE zcx_demo_dyn_t100.
+        RAISE EXCEPTION TYPE zcx_demo_dyn_t100
+        MESSAGE e001(zcds_ref_app) WITH 'Error in updating data'.
       ENDIF.
     ENDLOOP.
     IF sy-subrc = 0.

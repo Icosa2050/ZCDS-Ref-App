@@ -19,6 +19,7 @@ define view entity ZI_Customer
 
       @Semantics.text: true
 
-      name     as CustomerName
+      name     as CustomerName,
+      country  as Country
 
 }

@@ -25,8 +25,9 @@ CLASS zcl_insert_zcustomer_ic IMPLEMENTATION.
     clear lt_product_ic.
 
     ls_product_ic = VALUE  #(
-    customer = 'C1'
+    customer = '0000000001'
     name   =   'Customer 1'
+    country = 'DE'
      ).
 
     APPEND ls_product_ic TO lt_product_ic.
@@ -34,16 +35,19 @@ CLASS zcl_insert_zcustomer_ic IMPLEMENTATION.
     GET TIME STAMP FIELD lv_time.
 
     ls_product_ic = VALUE  #(
-    customer = 'C2'
+
+    customer   =   '0000000002'
     name   =   'Customer 2'
+    country = 'DE'
      ).
 
 
     APPEND ls_product_ic TO lt_product_ic.
 
     ls_product_ic = VALUE  #(
-    customer = 'C3'
+    customer = '0000000003'
     name   =   'Customer 3'
+    country = 'EN'
      ).
 
    " //write a comment
@@ -51,8 +55,9 @@ CLASS zcl_insert_zcustomer_ic IMPLEMENTATION.
     APPEND ls_product_ic TO lt_product_ic.
 
     ls_product_ic = VALUE  #(
-    customer = 'C4'
+    customer = '0000000004'
     name   =   'Customer 4'
+    country = 'EN'
      ).
 
     APPEND ls_product_ic TO lt_product_ic.

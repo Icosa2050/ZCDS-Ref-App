@@ -8,10 +8,32 @@
     <DATATYPE>CHAR</DATATYPE>
     <LENG>000004</LENG>
     <OUTPUTLEN>000004</OUTPUTLEN>
-    <ENTITYTAB>TVKO</ENTITYTAB>
+    <VALEXI>X</VALEXI>
     <DDTEXT>Sales Organization</DDTEXT>
     <APPLCLASS>MG</APPLCLASS>
    </DD01V>
+   <DD07V_TAB>
+    <DD07V>
+     <DOMNAME>ZVKORG</DOMNAME>
+     <VALPOS>0001</VALPOS>
+     <DOMVALUE_L>CENT</DOMVALUE_L>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZVKORG</DOMNAME>
+     <VALPOS>0002</VALPOS>
+     <DOMVALUE_L>FILA</DOMVALUE_L>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZVKORG</DOMNAME>
+     <VALPOS>0003</VALPOS>
+     <DOMVALUE_L>FILB</DOMVALUE_L>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZVKORG</DOMNAME>
+     <VALPOS>0004</VALPOS>
+     <DOMVALUE_L>FILC</DOMVALUE_L>
+    </DD07V>
+   </DD07V_TAB>
    <I18N_LANGS>
     <LANGU>D</LANGU>
    </I18N_LANGS>
@@ -21,6 +43,32 @@
      <DDTEXT>Verkaufsorganisation</DDTEXT>
     </item>
    </DD01_TEXTS>
+   <DD07_TEXTS>
+    <item>
+     <VALPOS>0001</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>CENT</DOMVALUE_L>
+     <DDTEXT>Sales Org 01</DDTEXT>
+    </item>
+    <item>
+     <VALPOS>0002</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>FILA</DOMVALUE_L>
+     <DDTEXT>Sales Org 02</DDTEXT>
+    </item>
+    <item>
+     <VALPOS>0003</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>FILB</DOMVALUE_L>
+     <DDTEXT>Sales Org 03</DDTEXT>
+    </item>
+    <item>
+     <VALPOS>0004</VALPOS>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DOMVALUE_L>FILC</DOMVALUE_L>
+     <DDTEXT>Sales Org 04</DDTEXT>
+    </item>
+   </DD07_TEXTS>
   </asx:values>
  </asx:abap>
 </abapGit>
