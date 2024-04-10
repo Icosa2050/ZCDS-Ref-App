@@ -4,8 +4,10 @@ CLASS zcl_insert_zsalesorderitem DEFINITION
   CREATE PUBLIC .
 
   PUBLIC SECTION.
+
     INTERFACES if_oo_adt_classrun.
-    METHODS: insert_data
+
+    METHODS: insert_salesorderitem
       RAISING
         zcx_demo_dyn_t100.
   PROTECTED SECTION.
@@ -16,9 +18,13 @@ ENDCLASS.
 
 CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
-    insert_data( ).
+    TRY.
+        insert_salesorderitem( ).
+      CATCH zcx_demo_dyn_t100.
+        out->write( 'error from insert_salesorderitem' ).
+    ENDTRY.
   ENDMETHOD.
-  METHOD insert_data.
+  METHOD insert_salesorderitem.
     DATA: lt_salesorderitem TYPE TABLE OF zsalesorderitem.
     DATA : ls_salesorderitem TYPE zsalesorderitem.
     GET TIME STAMP FIELD DATA(lv_time).
@@ -28,11 +34,12 @@ CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
 * SY-UNAME
     DATA(lv_sy_uname) = cl_abap_context_info=>get_user_technical_name( ).
 * Username
+    SELECT * FROM zsalesorderitem INTO TABLE @lt_salesorderitem.
+    DELETE zsalesorderitem FROM TABLE @lt_salesorderitem.
+    COMMIT WORK.
     CLEAR lt_salesorderitem.
     CLEAR ls_salesorderitem.
-    DELETE FROM zsalesorderitem WHERE salesorder = 'S1'.
-    DELETE FROM zsalesorderitem WHERE salesorder = 'S2'.
-    COMMIT WORK.
+
     ls_salesorderitem = VALUE  #(
     salesorder = 'S1'
     salesorderitem = '00010'

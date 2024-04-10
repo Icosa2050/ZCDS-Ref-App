@@ -5,7 +5,7 @@ CLASS zcl_insert_zsalesorderscline DEFINITION
 
   PUBLIC SECTION.
     INTERFACES if_oo_adt_classrun.
-    METHODS: insert_data
+    METHODS: insert_salesorderscline
       RAISING
         zcx_demo_dyn_t100.
   PROTECTED SECTION.
@@ -18,13 +18,13 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
 
     TRY.
-        insert_data( ).
+        insert_salesorderscline( ).
       CATCH zcx_demo_dyn_t100 INTO DATA(lo_error).
         out->write( lo_error->get_text( ) ).
     ENDTRY.
 
   ENDMETHOD.
-  METHOD insert_data.
+  METHOD insert_salesorderscline.
     DATA: lt_data TYPE TABLE OF zsalesordersline.
     DATA : ls_data TYPE zsalesordersline.
     GET TIME STAMP FIELD DATA(lv_time).
@@ -37,15 +37,13 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
     CLEAR lt_data.
     CLEAR ls_data.
     SELECT * FROM zsalesordersline INTO TABLE @lt_data.
-    LOOP AT lt_data INTO ls_data.
-      DELETE zsalesordersline FROM @ls_data.
-      IF sy-subrc <> 0.
-        RAISE EXCEPTION TYPE zcx_demo_dyn_t100
-       MESSAGE e001(zcds_ref_app) WITH 'Error in updating data'.
-      ENDIF.
-    ENDLOOP.
+    DELETE zsalesordersline FROM TABLE @lt_data.
+    IF sy-subrc <> 0.
+      RAISE EXCEPTION TYPE zcx_demo_dyn_t100
+     MESSAGE e001(zcds_ref_app) WITH 'Error in deleting data'.
+    ENDIF.
     COMMIT WORK.
-    clear lt_data.
+    CLEAR lt_data.
     ls_data = VALUE  #(
     salesorder = 'S1'
     salesorderitem = '00010'

@@ -105,7 +105,7 @@ CLASS zcl_insert_zproducttext IMPLEMENTATION.
       out->write( 'modifying table zproducttext failed' ).
     ENDIF.
 
-      out->write( gt_zproducttext ).
+    out->write( gt_zproducttext ).
 
     COMMIT WORK.
 

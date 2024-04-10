@@ -4,29 +4,26 @@ CLASS zcl_insert_zsalesorg DEFINITION
   CREATE PUBLIC .
   PUBLIC SECTION.
     INTERFACES if_oo_adt_classrun.
-    methods insert_sales_org_ic
-     IMPORTING
-      out TYPE REF TO if_oo_adt_classrun_out.
-    methods insert_sales_org_texts
-     IMPORTING
-      out TYPE REF TO if_oo_adt_classrun_out.
+    METHODS insert_sales_org_ic
+      IMPORTING
+        out TYPE REF TO if_oo_adt_classrun_out.
+    METHODS insert_sales_org_texts
+      IMPORTING
+        out TYPE REF TO if_oo_adt_classrun_out.
 
   PROTECTED SECTION.
   PRIVATE SECTION.
 ENDCLASS.
 
 CLASS zcl_insert_zsalesorg IMPLEMENTATION.
- method insert_sales_org_ic.
+  METHOD insert_sales_org_ic.
     DATA: lt_sales_org_ic TYPE TABLE OF zsalesorg.
     DATA: ls_sales_org_ic TYPE zsalesorg.
     SELECT * FROM zsalesorg INTO TABLE @lt_sales_org_ic.
-    LOOP AT lt_sales_org_ic INTO ls_sales_org_ic.
-      DELETE zsalesorg FROM @ls_sales_org_ic.
-      IF sy-subrc <> 0.
-        out->write( 'error' ).
-        out->write( ls_sales_org_ic ).
-      ENDIF.
-    ENDLOOP.
+    DELETE zsalesorg FROM TABLE @lt_sales_org_ic.
+    IF sy-subrc <> 0.
+      out->write( 'error delete' ).
+    ENDIF.
     CLEAR ls_sales_org_ic.
     CLEAR lt_sales_org_ic.
 
@@ -64,8 +61,8 @@ CLASS zcl_insert_zsalesorg IMPLEMENTATION.
 
 
 
- endmethod.
- method insert_sales_org_texts.
+  ENDMETHOD.
+  METHOD insert_sales_org_texts.
     DATA: lt_sales_org_text TYPE TABLE OF zsalesorgtext.
     DATA: ls_sales_org_text TYPE zsalesorgtext.
     SELECT * FROM zsalesorgtext INTO TABLE @lt_sales_org_text.
@@ -113,10 +110,10 @@ CLASS zcl_insert_zsalesorg IMPLEMENTATION.
 
 
 
- endmethod.
+  ENDMETHOD.
 
   METHOD if_oo_adt_classrun~main.
-      insert_sales_org_ic( out = out ).
-      insert_sales_org_texts( out = out ).
+    insert_sales_org_ic( out = out ).
+    insert_sales_org_texts( out = out ).
   ENDMETHOD.
 ENDCLASS.

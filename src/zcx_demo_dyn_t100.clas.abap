@@ -1,41 +1,40 @@
-class ZCX_DEMO_DYN_T100 definition
-  public
-  inheriting from CX_STATIC_CHECK
-  create public .
+CLASS zcx_demo_dyn_t100 DEFINITION
+  PUBLIC
+  INHERITING FROM cx_static_check
+  CREATE PUBLIC .
 
-public section.
+  PUBLIC SECTION.
 
-  interfaces IF_T100_MESSAGE .
-  interfaces IF_T100_DYN_MSG .
+    INTERFACES if_t100_message .
+    INTERFACES if_t100_dyn_msg .
 
-  aliases MSGTY
-    for IF_T100_DYN_MSG~MSGTY .
+    ALIASES msgty
+      FOR if_t100_dyn_msg~msgty .
 
-  methods CONSTRUCTOR
-    importing
-      !TEXTID like IF_T100_MESSAGE=>T100KEY optional
-      !PREVIOUS like PREVIOUS optional
-      !MSGTY type SYMSGTY optional .
-protected section.
-private section.
+    METHODS constructor
+      IMPORTING
+        !textid   LIKE if_t100_message=>t100key OPTIONAL
+        !previous LIKE previous OPTIONAL
+        !msgty    TYPE symsgty OPTIONAL .
+  PROTECTED SECTION.
+  PRIVATE SECTION.
 ENDCLASS.
 
 
 
-CLASS ZCX_DEMO_DYN_T100 IMPLEMENTATION.
+CLASS zcx_demo_dyn_t100 IMPLEMENTATION.
 
 
-  method CONSTRUCTOR ##ADT_SUPPRESS_GENERATION.
-CALL METHOD SUPER->CONSTRUCTOR
-EXPORTING
-PREVIOUS = PREVIOUS
-.
-me->MSGTY = MSGTY .
-clear me->textid.
-if textid is initial.
-  IF_T100_MESSAGE~T100KEY = IF_T100_MESSAGE=>DEFAULT_TEXTID.
-else.
-  IF_T100_MESSAGE~T100KEY = TEXTID.
-endif.
-  endmethod.
+  METHOD constructor ##ADT_SUPPRESS_GENERATION.
+    CALL METHOD super->constructor
+      EXPORTING
+        previous = previous.
+    me->msgty = msgty .
+    CLEAR me->textid.
+    IF textid IS INITIAL.
+      if_t100_message~t100key = if_t100_message=>default_textid.
+    ELSE.
+      if_t100_message~t100key = textid.
+    ENDIF.
+  ENDMETHOD.
 ENDCLASS.

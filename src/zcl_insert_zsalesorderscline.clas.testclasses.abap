@@ -24,7 +24,7 @@ CLASS zcl_insert_zsalesorderscl_test IMPLEMENTATION.
 
     "Execute the method
     TRY.
-        lo_insert_zsalesorderscline->insert_data( ).
+        lo_insert_zsalesorderscline->insert_salesorderscline( ).
       CATCH zcx_demo_dyn_t100 INTO DATA(lx_exeption).
         cl_abap_unit_assert=>fail( lx_exeption->get_text( ) ).
     ENDTRY.

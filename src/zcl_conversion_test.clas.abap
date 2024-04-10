@@ -13,7 +13,7 @@ ENDCLASS.
 
 CLASS zcl_conversion_test IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
-  me->out = out.
+    me->out = out.
     CALL METHOD conversion.
   ENDMETHOD.
 
@@ -30,11 +30,11 @@ CLASS zcl_conversion_test IMPLEMENTATION.
 *============================================
 *9    100           USD    82019898  2
 *Date is inverted to 1998-08-20
-"data dat1 type d value '82019898' .
-data dat1 type d value '82019898' .
-data dat2 type d .
-TRANSLATE dat1 USING '09182736455463728190'.
-out->write( dat1 ).
+        "data dat1 type d value '82019898' .
+        DATA dat1 TYPE d VALUE '82019898' .
+        DATA dat2 TYPE d .
+        TRANSLATE dat1 USING '09182736455463728190'.
+        out->write( dat1 ).
 *    * 1. Convert 1 EUR to USD on
         CALL METHOD cl_exchange_rates=>convert_to_foreign_currency
           EXPORTING

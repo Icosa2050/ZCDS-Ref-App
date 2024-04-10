@@ -15,14 +15,11 @@ CLASS zcl_insert_zcustomer_ic IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
     DATA: lt_product_ic TYPE TABLE OF zcustomer_ic.
     DATA: ls_product_ic TYPE zcustomer_ic.
-    select * from zcustomer_ic into table @lt_product_ic.
-    loop at lt_product_ic into ls_product_ic.
-      out->write( ls_product_ic ).
-    delete zcustomer_ic from @ls_product_ic.
-      endloop.
+    SELECT * FROM zcustomer_ic INTO TABLE @lt_product_ic.
+    DELETE zcustomer_ic FROM TABLE @lt_product_ic.
     GET TIME STAMP FIELD DATA(lv_time).
-    clear ls_product_ic.
-    clear lt_product_ic.
+    CLEAR ls_product_ic.
+    CLEAR lt_product_ic.
 
     ls_product_ic = VALUE  #(
     customer = '0000000001'
@@ -50,7 +47,7 @@ CLASS zcl_insert_zcustomer_ic IMPLEMENTATION.
     country = 'EN'
      ).
 
-   " //write a comment
+    " //write a comment
 
     APPEND ls_product_ic TO lt_product_ic.
 

@@ -9,8 +9,10 @@
 }
 @AbapCatalog.entityBuffer.definitionAllowed: true
 // view for table zsalesorg
-define view entity ZI_SalesOrganization
+define root view entity ZI_SalesOrganization
   as select from zsalesorg
+  composition [0..1] of ZI_SALESORGTEXT as _Text
 {
-  key salesorganization as Salesorganization
+  key salesorganization as Salesorganization,
+      _Text
 }

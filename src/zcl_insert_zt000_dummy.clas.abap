@@ -16,6 +16,12 @@ CLASS zcl_insert_zt000_dummy IMPLEMENTATION.
     "COMMENT
     DATA: lt_test TYPE TABLE OF zt000_dummy.
     DATA : ls_test TYPE zt000_dummy.
+    SELECT * FROM zt000_dummy INTO TABLE @lt_test.
+
+    DELETE zt000_dummy FROM TABLE @lt_test.
+
+    CLEAR lt_test.
+
     GET TIME STAMP FIELD DATA(lv_time).
 
     ls_test = VALUE  #(
