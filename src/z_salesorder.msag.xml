@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>Z_SALESORDER</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>sales order messages</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_SALESORDER</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>Error in Sales Order Processing</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_SALESORDER</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Sales Order &amp;1 locked by &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_SALESORDER</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Product is initial</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_SALESORDER</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Sold-to party is initial</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_SALESORDER</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Sold-to party &amp;1 does not exist</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_SALESORDER</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Quantity unit is initial</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_SALESORDER</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>Quantity unit &amp;1 does not exist</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_SALESORDER</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>No authorization to create sales order</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_SALESORDER</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>No authorization to change sales order &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_SALESORDER</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>No authorization to delete sales order &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_SALESORDER</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT> No No authorization to change sales order type for sales order. &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_SALESORDER</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Not implemented (for demo purpose only)</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

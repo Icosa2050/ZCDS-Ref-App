@@ -6,7 +6,7 @@ CLASS zcl_insert_zsalesorderscl_test DEFINITION
 
   PRIVATE SECTION.
     METHODS: setup ,
-      test_main_method FOR TESTING raising zcx_demo_dyn_t100.
+      test_main_method FOR TESTING raising zcx_db_message.
 
 ENDCLASS.
 
@@ -25,7 +25,7 @@ CLASS zcl_insert_zsalesorderscl_test IMPLEMENTATION.
     "Execute the method
     TRY.
         lo_insert_zsalesorderscline->insert_salesorderscline( ).
-      CATCH zcx_demo_dyn_t100 INTO DATA(lx_exeption).
+      CATCH zcx_db_message INTO DATA(lx_exeption).
         cl_abap_unit_assert=>fail( lx_exeption->get_text( ) ).
     ENDTRY.
     "Assertions to verify the method behavior

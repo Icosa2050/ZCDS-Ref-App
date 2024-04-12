@@ -8,8 +8,8 @@ define view ZB_SalesOrderItemCube04
   association [0..1] to I_CalendarDate as _CreationDate
     on $projection.CreationDate = _CreationDate.CalendarDate
 {
-  SalesOrder,
-  SalesOrderItem,
+  key SalesOrder,
+  key SalesOrderItem,
       _SalesOrder,
       CreationDate,
       _CreationDate.CalendarYear       as CreationYear,

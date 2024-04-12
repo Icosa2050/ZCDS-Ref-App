@@ -4,8 +4,8 @@
 define view entity ZB_SALESORDERITEMQUERY02
   as select from ZB_SALESORDERITEMCUBE01
 {
-  SalesOrder,
-  SalesOrderItem,
+  key SalesOrder,
+  key SalesOrderItem,
 
       @AnalyticsDetails.query.axis: #ROWS
       @AnalyticsDetails.query.totals: #SHOW

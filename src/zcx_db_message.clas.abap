@@ -1,4 +1,4 @@
-CLASS zcx_demo_dyn_t100 DEFINITION
+CLASS zcx_db_message DEFINITION
   PUBLIC
   INHERITING FROM cx_static_check
   CREATE PUBLIC .
@@ -22,7 +22,7 @@ ENDCLASS.
 
 
 
-CLASS zcx_demo_dyn_t100 IMPLEMENTATION.
+CLASS zcx_db_message IMPLEMENTATION.
 
 
   METHOD constructor ##ADT_SUPPRESS_GENERATION.

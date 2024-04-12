@@ -9,7 +9,7 @@ CLASS zcl_insert_zsalesorderitem DEFINITION
 
     METHODS: insert_salesorderitem
       RAISING
-        zcx_demo_dyn_t100.
+        zcx_db_message.
   PROTECTED SECTION.
   PRIVATE SECTION.
 ENDCLASS.
@@ -20,7 +20,7 @@ CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
     TRY.
         insert_salesorderitem( ).
-      CATCH zcx_demo_dyn_t100.
+      CATCH zcx_db_message.
         out->write( 'error from insert_salesorderitem' ).
     ENDTRY.
   ENDMETHOD.
@@ -133,7 +133,7 @@ CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
     IF sy-subrc = 0.
       COMMIT WORK.
     ELSE.
-      RAISE EXCEPTION TYPE zcx_demo_dyn_t100.
+      RAISE EXCEPTION TYPE zcx_db_message.
     ENDIF.
     SELECT * FROM zsalesorderitem INTO TABLE @lt_salesorderitem.
   ENDMETHOD.

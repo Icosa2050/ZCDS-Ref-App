@@ -41,7 +41,7 @@ define view ZB_SALESORDERITEMQUERY06
   end                                                             as ThursdayToSundayQuantity,
   @EndUserText.label: 'MO-MI Wert'
   case when CreationWeekDay <= '3' then NetAmount
-  else 0
+  else  0
   end                                                             as MondayToWednesdayAmount,
   @EndUserText.label: 'DO-SO Wert'
   case when CreationWeekDay >= '4' then NetAmount

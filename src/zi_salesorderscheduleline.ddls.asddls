@@ -18,29 +18,31 @@ define view entity ZI_SalesOrderScheduleLine
 
       @ObjectModel.foreignKey.association: '_SalesOrder'
 
-  key salesorder             as SalesOrder,
+  key salesorder                 as SalesOrder,
 
       @ObjectModel.foreignKey.association: '_SalesOrderItem'
 
-  key salesorderitem         as SalesOrderItem,
+  key salesorderitem             as SalesOrderItem,
 
-  key salesorderscheduleline as SalesOrderScheduleLine,
+  key salesorderscheduleline     as SalesOrderScheduleLine,
 
-      deliverydate           as DeliveryDate,
+      deliverydate               as DeliveryDate,
 
       @Semantics.quantity.unitOfMeasure: 'OrderQuantityUnit'
 
-      orderquantity          as OrderQuantity,
+      orderquantity              as OrderQuantity,
 
-      orderquantityunit      as OrderQuantityUnit,
+      orderquantityunit          as OrderQuantityUnit,
 
-      createdbyuser          as CreatedByUser,
+      createdbyuser              as CreatedByUser,
 
-      creationdatetime       as CreationDateTime,
+      creationdatetime           as CreationDateTime,
 
-      lastchangedbyuser      as LastChangedByUser,
+      lastchangedbyuser          as LastChangedByUser,
 
-      lastchangedatetime     as LastChangeDateTime,
+      lastchangedatetime         as LastChangeDateTime,
+
+      salesorderschedulelinetype as SalesOrderScheduleLineType,
 
       _SalesOrder,
 

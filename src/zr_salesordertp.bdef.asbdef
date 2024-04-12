@@ -1,0 +1,80 @@
+managed implementation in class zbp_r_salesordertp unique;
+strict ( 2 );
+//with draft;
+//extensible { with additional save; with determinations on modify; with determinations on save; with validations on save; }
+
+// Allow consumers to use PRIVILEGED mode
+//cl_abap_behv_aux=>get_current_context(    IMPORTING privileged = data(privileged)  ).
+
+with privileged mode disabling NoCheckWhenPrivileged;
+
+define own authorization context by privileged mode and { }
+
+define authorization context NoCheckWhenPrivileged { 'Z_VBAK_VK'; }
+
+define authorization context NoCheckWhenReadingOrModifying
+for disable ( modify, read ) ##WARN_OK { }
+
+define behavior for ZR_SalesOrderTP alias SalesOrder
+persistent table zsalesorder
+//with additional save
+//lock master unmanaged total etag LastChangeDateTime
+lock master
+//etag master LastChangeDateTime
+
+authorization master ( global, instance )
+
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  association _Item { create; }
+  field ( mandatory:create, readonly:update ) SalesOrder;
+  field ( readonly ) CreatedByUser;
+  field ( readonly ) CreationDateTime;
+  field ( readonly ) LastChangedByUser;
+  field ( readonly ) LastChangeDateTime;
+  field (mandatory) SalesOrderType;
+  field (mandatory) SalesOrganization;
+  field (mandatory) SoldToParty;
+
+}
+
+define behavior for ZR_SalesOrderItemTP alias SalesOrderItem
+early numbering
+persistent table zsalesorderitem
+lock dependent by _SalesOrder
+authorization dependent by _SalesOrder
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) SalesOrder;
+  field ( readonly:update ) SalesOrderItem;
+
+  association _SalesOrder;
+  association _ScheduleLine { create; }
+  unmanaged association _RequestedScheduleLine
+    { create ( authorization : update ); }
+  unmanaged association _ConfirmedScheduleLine
+    { create ( authorization : update ); }
+
+}
+
+define behavior for ZR_SalesOrderScheduleLineTP alias SalesOrderScheduleLine
+early numbering
+persistent table zsalesordersline
+lock dependent by _SalesOrder
+authorization dependent by _SalesOrder
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) SalesOrder;
+  field ( readonly:update) SalesOrderItem;
+  field ( readonly : update ) SalesOrderScheduleLine;
+  association _SalesOrder;
+  association _SalesOrderItem;
+
+}

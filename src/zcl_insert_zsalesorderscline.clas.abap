@@ -7,7 +7,7 @@ CLASS zcl_insert_zsalesorderscline DEFINITION
     INTERFACES if_oo_adt_classrun.
     METHODS: insert_salesorderscline
       RAISING
-        zcx_demo_dyn_t100.
+        zcx_db_message.
   PROTECTED SECTION.
   PRIVATE SECTION.
 ENDCLASS.
@@ -19,7 +19,7 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
 
     TRY.
         insert_salesorderscline( ).
-      CATCH zcx_demo_dyn_t100 INTO DATA(lo_error).
+      CATCH zcx_db_message INTO DATA(lo_error).
         out->write( lo_error->get_text( ) ).
     ENDTRY.
 
@@ -39,7 +39,7 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
     SELECT * FROM zsalesordersline INTO TABLE @lt_data.
     DELETE zsalesordersline FROM TABLE @lt_data.
     IF sy-subrc <> 0.
-      RAISE EXCEPTION TYPE zcx_demo_dyn_t100
+      RAISE EXCEPTION TYPE zcx_db_message
      MESSAGE e001(zcds_ref_app) WITH 'Error in deleting data'.
     ENDIF.
     COMMIT WORK.
@@ -126,7 +126,7 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
     LOOP AT lt_data INTO ls_data.
       INSERT zsalesordersline FROM @ls_data.
       IF sy-subrc <> 0.
-        RAISE EXCEPTION TYPE zcx_demo_dyn_t100
+        RAISE EXCEPTION TYPE zcx_db_message
         MESSAGE e001(zcds_ref_app) WITH 'Error in updating data'.
       ENDIF.
     ENDLOOP.

@@ -1,0 +1,43 @@
+unmanaged implementation in class zbp_r_salesordertp_2 unique;
+strict ( 2 );
+
+define behavior for ZR_SALESORDERTP_2 //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly:update ) SalesOrder ;
+  association _Item { create; }
+}
+
+define behavior for ZR_SALESORDERITEMTP_2 //alias <alias_name>
+//late numbering
+lock dependent by _SalesOrder
+authorization dependent by _SalesOrder
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) SalesOrder;
+  field ( readonly:update ) SalesOrderItem;
+  association _SalesOrder;
+  association _ScheduleLine { create; }
+}
+
+define behavior for ZR_SALESORDERSCHEDULELINETP_2 //alias <alias_name>
+//late numbering
+lock dependent by _SalesOrder
+authorization dependent by _SalesOrder
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) SalesOrder, SalesOrderItem;
+  field ( readonly:update ) SalesOrderScheduleLine;
+  association _SalesOrder;
+  association _SalesOrderItem;
+}

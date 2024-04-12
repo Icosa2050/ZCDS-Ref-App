@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZVDM_USERDESCRIPTION</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>ZSUIDTECHDESC</DOMNAME>
+    <SCRLEN2>20</SCRLEN2>
+    <DDTEXT>User Description</DDTEXT>
+    <SCRTEXT_M>Description</SCRTEXT_M>
+    <DTELMASTER>E</DTELMASTER>
+    <REFKIND>D</REFKIND>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>1</LANGU>
+    <LANGU>2</LANGU>
+    <LANGU>3</LANGU>
+    <LANGU>4</LANGU>
+    <LANGU>5</LANGU>
+    <LANGU>6</LANGU>
+    <LANGU>7</LANGU>
+    <LANGU>8</LANGU>
+    <LANGU>A</LANGU>
+    <LANGU>B</LANGU>
+    <LANGU>C</LANGU>
+    <LANGU>D</LANGU>
+    <LANGU>F</LANGU>
+    <LANGU>G</LANGU>
+    <LANGU>H</LANGU>
+    <LANGU>I</LANGU>
+    <LANGU>J</LANGU>
+    <LANGU>K</LANGU>
+    <LANGU>L</LANGU>
+    <LANGU>M</LANGU>
+    <LANGU>N</LANGU>
+    <LANGU>O</LANGU>
+    <LANGU>P</LANGU>
+    <LANGU>Q</LANGU>
+    <LANGU>R</LANGU>
+    <LANGU>S</LANGU>
+    <LANGU>T</LANGU>
+    <LANGU>U</LANGU>
+    <LANGU>V</LANGU>
+    <LANGU>W</LANGU>
+    <LANGU>d</LANGU>
+    <LANGU>뱋</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>1</DDLANGUAGE>
+     <DDTEXT>用户描述</DDTEXT>
+     <SCRTEXT_M>描述</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>2</DDLANGUAGE>
+     <DDTEXT>คำอธิบายผู้ใช้</DDTEXT>
+     <SCRTEXT_M>คำอธิบาย</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>3</DDLANGUAGE>
+     <DDTEXT>사용자 내역</DDTEXT>
+     <SCRTEXT_M>내역</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>4</DDLANGUAGE>
+     <DDTEXT>Descriere utilizator</DDTEXT>
+     <SCRTEXT_M>Descriere</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>5</DDLANGUAGE>
+     <DDTEXT>Opis uporabnika</DDTEXT>
+     <SCRTEXT_M>Opis</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>6</DDLANGUAGE>
+     <DDTEXT>Opis korisnika</DDTEXT>
+     <SCRTEXT_M>Opis</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>7</DDLANGUAGE>
+     <DDTEXT>Perihalan Pengguna</DDTEXT>
+     <SCRTEXT_M>Perihalan</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>8</DDLANGUAGE>
+     <DDTEXT>Опис користувача</DDTEXT>
+     <SCRTEXT_M>Опис</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>A</DDLANGUAGE>
+     <DDTEXT>وصف المستخدم</DDTEXT>
+     <SCRTEXT_M>الوصف</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>B</DDLANGUAGE>
+     <DDTEXT>תיאור משתמש</DDTEXT>
+     <SCRTEXT_M>תיאור</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>C</DDLANGUAGE>
+     <DDTEXT>Popis uživatele</DDTEXT>
+     <SCRTEXT_M>Popis</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DDTEXT>Benutzerbeschreibung</DDTEXT>
+     <SCRTEXT_M>Beschreibung</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>F</DDLANGUAGE>
+     <DDTEXT>Description d&apos;utilisateur</DDTEXT>
+     <SCRTEXT_M>Description</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>G</DDLANGUAGE>
+     <DDTEXT>Περιγραφή Χρήστη</DDTEXT>
+     <SCRTEXT_M>Περιγραφή</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>H</DDLANGUAGE>
+     <DDTEXT>Felhasználó leírása</DDTEXT>
+     <SCRTEXT_M>Leírás</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>I</DDLANGUAGE>
+     <DDTEXT>Descrizione utente</DDTEXT>
+     <SCRTEXT_M>Descrizione</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>J</DDLANGUAGE>
+     <DDTEXT>ユーザ内容説明</DDTEXT>
+     <SCRTEXT_M>内容説明</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>K</DDLANGUAGE>
+     <DDTEXT>Brugerbeskrivelse</DDTEXT>
+     <SCRTEXT_M>Beskrivelse</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>L</DDLANGUAGE>
+     <DDTEXT>Opis użytkownika</DDTEXT>
+     <SCRTEXT_M>Opis</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>M</DDLANGUAGE>
+     <DDTEXT>使用者說明</DDTEXT>
+     <SCRTEXT_M>說明</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>N</DDLANGUAGE>
+     <DDTEXT>Gebruikersomschrijving</DDTEXT>
+     <SCRTEXT_M>Omschrijving</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>O</DDLANGUAGE>
+     <DDTEXT>Brukerbeskrivelse</DDTEXT>
+     <SCRTEXT_M>Beskrivelse</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>P</DDLANGUAGE>
+     <DDTEXT>Descrição do usuário</DDTEXT>
+     <SCRTEXT_M>Descrição</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>Q</DDLANGUAGE>
+     <DDTEXT>Popis užívateľa</DDTEXT>
+     <SCRTEXT_M>Popis</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>R</DDLANGUAGE>
+     <DDTEXT>Описание пользователя</DDTEXT>
+     <SCRTEXT_M>Описание</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>S</DDLANGUAGE>
+     <DDTEXT>Descripción de usuario</DDTEXT>
+     <SCRTEXT_M>Descripción</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>T</DDLANGUAGE>
+     <DDTEXT>Kullanıcı tanımı</DDTEXT>
+     <SCRTEXT_M>Tanım</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>U</DDLANGUAGE>
+     <DDTEXT>Käyttäjän kuvaus</DDTEXT>
+     <SCRTEXT_M>Kuvaus</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>V</DDLANGUAGE>
+     <DDTEXT>Användarbeskrivning</DDTEXT>
+     <SCRTEXT_M>Beskrivning</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>W</DDLANGUAGE>
+     <DDTEXT>Описание на потребител</DDTEXT>
+     <SCRTEXT_M>Описание</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>d</DDLANGUAGE>
+     <DDTEXT>Opis korisnika</DDTEXT>
+     <SCRTEXT_M>Opis</SCRTEXT_M>
+    </item>
+    <item>
+     <DDLANGUAGE>뱋</DDLANGUAGE>
+     <DDTEXT>Пайдаланушы сипаттамасы</DDTEXT>
+     <SCRTEXT_M>Сипаттама</SCRTEXT_M>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

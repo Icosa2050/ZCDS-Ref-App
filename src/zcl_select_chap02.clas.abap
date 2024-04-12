@@ -93,8 +93,7 @@ CLASS zcl_select_chap02 IMPLEMENTATION.
 
 *####################################################################
 
-    DATA: lv_current_date TYPE dats.
-    lv_current_date = sy-datum.
+    data(lv_current_date) = cl_abap_context_info=>get_system_date( ).
 
     SELECT *
       FROM z_viewwithoptionalparameters( p_keydate = @lv_current_date )
@@ -103,13 +102,13 @@ CLASS zcl_select_chap02 IMPLEMENTATION.
 *####################################################################
 
     SELECT *
-      FROM z_viewwithoptionalparameters( p_keydate = @sy-datum )
+      FROM z_viewwithoptionalparameters( p_keydate = @lv_current_date )
       INTO TABLE @DATA(lt_z_viewwithoptionalparamete3).
 
 *####################################################################
 
     SELECT *
-      FROM z_viewwithparameters( p_keydate = @sy-datum, p_language = 'E' )
+      FROM z_viewwithparameters( p_keydate = @lv_current_date, p_language = 'E' )
       INTO TABLE @DATA(lt_z_viewwithparameter).
 
 *####################################################################

@@ -3,10 +3,14 @@
 {
 "FROM":
 [
-"ZPRODUCT_IC"
+"ZI_SALESORDER"
 ],
 "ASSOCIATED":
-[],
+[
+"ZI_CUSTOMER",
+"ZI_USER",
+"ZR_SALESORDERITEMTP_2"
+],
 "BASE":
 [],
 "ANNO_REF":
