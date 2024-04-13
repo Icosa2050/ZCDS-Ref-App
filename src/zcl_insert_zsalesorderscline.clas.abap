@@ -6,6 +6,8 @@ CLASS zcl_insert_zsalesorderscline DEFINITION
   PUBLIC SECTION.
     INTERFACES if_oo_adt_classrun.
     METHODS: insert_salesorderscline
+        IMPORTING
+      out TYPE REF TO if_oo_adt_classrun_out optional
       RAISING
         zcx_db_message.
   PROTECTED SECTION.
@@ -18,10 +20,11 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
 
     TRY.
-        insert_salesorderscline( ).
+        insert_salesorderscline( out = out ).
       CATCH zcx_db_message INTO DATA(lo_error).
         out->write( lo_error->get_text( ) ).
     ENDTRY.
+       out->write( 'Data Inserted Successfully' ).
 
   ENDMETHOD.
   METHOD insert_salesorderscline.
@@ -52,6 +55,7 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
     orderquantityunit = 'STK'
     createdbyuser       = lv_sy_uname
     creationdatetime = lv_time
+    salesorderschedulelinetype = 'C'
     deliverydate = lv_sy_datum + 10
     lastchangedbyuser = sy-uname
     lastchangedatetime = lv_time ).
@@ -68,6 +72,7 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
     createdbyuser       = sy-uname
     deliverydate = lv_sy_datum + 10
     creationdatetime = lv_time
+    salesorderschedulelinetype = 'R'
     lastchangedbyuser = sy-uname
     lastchangedatetime = lv_time ).
 
@@ -84,6 +89,8 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
     createdbyuser       = lv_sy_uname
     deliverydate = lv_sy_datum + 20
     creationdatetime = lv_time
+    salesorderschedulelinetype = 'C'
+
     lastchangedbyuser = sy-uname
     lastchangedatetime = lv_time ).
 
@@ -98,6 +105,7 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
     orderquantityunit = 'STK'
     createdbyuser       = sy-uname
     creationdatetime = lv_time
+    salesorderschedulelinetype = 'R'
     deliverydate = lv_sy_datum + 30
     lastchangedbyuser = sy-uname
     lastchangedatetime = lv_time ).
@@ -114,6 +122,7 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
     createdbyuser       = sy-uname
     deliverydate = lv_sy_datum + 30
     creationdatetime = lv_time
+    salesorderschedulelinetype = 'C'
     lastchangedbyuser = sy-uname
     lastchangedatetime = lv_time ).
 
@@ -127,12 +136,15 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
       INSERT zsalesordersline FROM @ls_data.
       IF sy-subrc <> 0.
         RAISE EXCEPTION TYPE zcx_db_message
-        MESSAGE e001(zcds_ref_app) WITH 'Error in updating data'.
+        MESSAGE e001(zcds_ref_app) WITH 'Error in inserting data'.
       ENDIF.
     ENDLOOP.
     IF sy-subrc = 0.
       COMMIT WORK.
       SELECT * FROM zsalesordersline INTO TABLE @lt_data.
+      if ( out is not initial ).
+      out->write( lt_data ).
+      endif.
     ENDIF.
   ENDMETHOD.
 

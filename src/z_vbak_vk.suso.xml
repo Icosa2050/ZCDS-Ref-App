@@ -22,7 +22,27 @@
    <TACTZ>
     <TACTZ>
      <BROBJ>Z_VBAK_VK</BROBJ>
+     <ACTVT>01</ACTVT>
+    </TACTZ>
+    <TACTZ>
+     <BROBJ>Z_VBAK_VK</BROBJ>
+     <ACTVT>02</ACTVT>
+    </TACTZ>
+    <TACTZ>
+     <BROBJ>Z_VBAK_VK</BROBJ>
      <ACTVT>03</ACTVT>
+    </TACTZ>
+    <TACTZ>
+     <BROBJ>Z_VBAK_VK</BROBJ>
+     <ACTVT>04</ACTVT>
+    </TACTZ>
+    <TACTZ>
+     <BROBJ>Z_VBAK_VK</BROBJ>
+     <ACTVT>05</ACTVT>
+    </TACTZ>
+    <TACTZ>
+     <BROBJ>Z_VBAK_VK</BROBJ>
+     <ACTVT>06</ACTVT>
     </TACTZ>
    </TACTZ>
   </asx:values>

@@ -30,6 +30,11 @@
       <ACCESS_CATEGORY>W</ACCESS_CATEGORY>
       <ACTIVITY_TEXT>Delete</ACTIVITY_TEXT>
      </item>
+     <item>
+      <ACTIVITY>F4</ACTIVITY>
+      <ACCESS_CATEGORY>F</ACCESS_CATEGORY>
+      <ACTIVITY_TEXT>Display in Value Help</ACTIVITY_TEXT>
+     </item>
     </ACTIVITY_MAPPING>
    </SIA3>
   </asx:values>

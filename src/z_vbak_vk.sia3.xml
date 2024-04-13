@@ -11,9 +11,34 @@
     <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
     <ACTIVITY_MAPPING>
      <item>
+      <ACTIVITY>01</ACTIVITY>
+      <ACCESS_CATEGORY>W</ACCESS_CATEGORY>
+      <ACTIVITY_TEXT>Add or Create</ACTIVITY_TEXT>
+     </item>
+     <item>
+      <ACTIVITY>02</ACTIVITY>
+      <ACCESS_CATEGORY>W</ACCESS_CATEGORY>
+      <ACTIVITY_TEXT>Change</ACTIVITY_TEXT>
+     </item>
+     <item>
       <ACTIVITY>03</ACTIVITY>
       <ACCESS_CATEGORY>R</ACCESS_CATEGORY>
       <ACTIVITY_TEXT>Display</ACTIVITY_TEXT>
+     </item>
+     <item>
+      <ACTIVITY>04</ACTIVITY>
+      <ACCESS_CATEGORY>R</ACCESS_CATEGORY>
+      <ACTIVITY_TEXT>Print, edit messages</ACTIVITY_TEXT>
+     </item>
+     <item>
+      <ACTIVITY>05</ACTIVITY>
+      <ACCESS_CATEGORY>R</ACCESS_CATEGORY>
+      <ACTIVITY_TEXT>Lock</ACTIVITY_TEXT>
+     </item>
+     <item>
+      <ACTIVITY>06</ACTIVITY>
+      <ACCESS_CATEGORY>W</ACCESS_CATEGORY>
+      <ACTIVITY_TEXT>Delete</ACTIVITY_TEXT>
      </item>
     </ACTIVITY_MAPPING>
    </SIA3>

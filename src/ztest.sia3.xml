@@ -27,6 +27,14 @@
       <ACTIVITY>F4</ACTIVITY>
       <ACCESS_CATEGORY>F</ACCESS_CATEGORY>
      </item>
+     <item>
+      <ACTIVITY>05</ACTIVITY>
+      <ACCESS_CATEGORY>R</ACCESS_CATEGORY>
+     </item>
+     <item>
+      <ACTIVITY>06</ACTIVITY>
+      <ACCESS_CATEGORY>W</ACCESS_CATEGORY>
+     </item>
     </ACTIVITY_MAPPING>
    </SIA3>
   </asx:values>

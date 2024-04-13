@@ -1,93 +1,3 @@
-CLASS lhc_salesorderitem DEFINITION INHERITING FROM cl_abap_behavior_handler.
-
-  PRIVATE SECTION.
-
-    METHODS earlynumbering_cba_Schedulelin FOR NUMBERING
-      IMPORTING entities FOR CREATE SalesOrderItem\_Scheduleline.
-    METHODS rba_Confirmedscheduleline FOR READ
-      IMPORTING keys_rba FOR READ SalesOrderItem\_Confirmedscheduleline FULL result_requested RESULT result LINK association_links.
-
-    METHODS rba_Requestedscheduleline FOR READ
-      IMPORTING keys_rba FOR READ SalesOrderItem\_Requestedscheduleline FULL result_requested RESULT result LINK association_links.
-
-    METHODS cba_Confirmedscheduleline FOR MODIFY
-      IMPORTING entities_cba FOR CREATE SalesOrderItem\_Confirmedscheduleline.
-
-    METHODS cba_Requestedscheduleline FOR MODIFY
-      IMPORTING entities_cba FOR CREATE SalesOrderItem\_Requestedscheduleline.
-
-ENDCLASS.
-
-CLASS lhc_salesorderitem IMPLEMENTATION.
-
-  METHOD earlynumbering_cba_Schedulelin.
-    READ ENTITIES OF ZR_SalesOrderTP IN LOCAL MODE
-        ENTITY SalesOrderItem BY \_ScheduleLine
-          FIELDS ( SalesOrderScheduleLine )
-            WITH CORRESPONDING #( entities )
-            RESULT DATA(sales_order_schedule_lines)
-          FAILED failed.
-
-    LOOP AT entities ASSIGNING FIELD-SYMBOL(<sales_order_item>).
-      " get highest item from sales order items of a sales order
-      DATA(max_schedule_line_id) = REDUCE #( INIT max = CONV zetenr( '0000' )
-                                             FOR sales_order_schedule_line IN sales_order_schedule_lines
-                                               USING KEY entity WHERE ( SalesOrder = <sales_order_item>-SalesOrder
-                                               AND SalesOrderItem = <sales_order_item>-SalesOrderItem )
-                                             NEXT max = COND zposnr( WHEN sales_order_schedule_line-SalesOrderScheduleLine > max
-                                                                    THEN sales_order_schedule_line-SalesOrderScheduleLine
-                                                                    ELSE max )
-                                           ).
-
-      "assign sales order schedule line id
-      LOOP AT <sales_order_item>-%target ASSIGNING FIELD-SYMBOL(<sales_order_schedule_line>).
-        APPEND CORRESPONDING #( <sales_order_schedule_line> ) TO mapped-salesorderscheduleline ASSIGNING FIELD-SYMBOL(<mapped_sales_order_sline>).
-        IF <sales_order_schedule_line>-SalesOrderScheduleLine IS INITIAL.
-          max_schedule_line_id += 1.
-          <mapped_sales_order_sline>-SalesOrderScheduleLine = max_schedule_line_id.
-        ENDIF.
-      ENDLOOP.
-    ENDLOOP.
-  ENDMETHOD.
-
-  METHOD rba_Confirmedscheduleline.
-  ENDMETHOD.
-
-  METHOD rba_Requestedscheduleline.
-    cl_abap_behv_aux=>get_current_context( IMPORTING in_local_mode = DATA(in_local_mode) ).
-    IF in_local_mode = abap_true.
-      READ ENTITY IN LOCAL MODE zr_salesorderitemtp
-      BY \_scheduleline
-      FROM CORRESPONDING #( keys_rba )
-      RESULT DATA(salesorderschedulelines)
-      LINK DATA(salesorderschedulelinelinks)
-      FAILED failed
-      REPORTED reported.
-    ELSE.
-      READ ENTITY zr_salesorderitemtp
-      BY \_scheduleline ##NO_LOCAL_MODE
-      FROM CORRESPONDING #( keys_rba )
-      RESULT salesorderschedulelines
-      LINK salesorderschedulelinelinks
-      FAILED failed
-      REPORTED reported.
-    ENDIF.
-    LOOP AT salesorderschedulelines ASSIGNING FIELD-SYMBOL(<salesorderscheduleline>)
-    WHERE SalesOrderScheduleLineType <> 'R'.
-      DELETE salesorderschedulelinelinks WHERE target-%tky = <salesorderscheduleline>-%tky.
-      DELETE salesorderschedulelines WHERE %tky = <salesorderscheduleline>-%tky.
-    ENDLOOP.
-    result = CORRESPONDING #( salesorderschedulelines ).
-    association_links = CORRESPONDING #( DEEP salesorderschedulelinelinks ).
-  ENDMETHOD.
-
-  METHOD cba_Confirmedscheduleline.
-  ENDMETHOD.
-
-  METHOD cba_Requestedscheduleline.
-  ENDMETHOD.
-
-ENDCLASS.
 
 CLASS lhc_SalesOrder DEFINITION INHERITING FROM cl_abap_behavior_handler.
   PRIVATE SECTION.
@@ -101,6 +11,8 @@ CLASS lhc_SalesOrder DEFINITION INHERITING FROM cl_abap_behavior_handler.
     METHODS get_global_authorizations FOR GLOBAL AUTHORIZATION
       IMPORTING REQUEST requested_authorizations FOR SalesOrder RESULT result.
 
+    METHODS delete FOR MODIFY
+      IMPORTING keys FOR ACTION SalesOrder~delete.
 
 ENDCLASS.
 
@@ -202,7 +114,7 @@ CLASS lhc_SalesOrder IMPLEMENTATION.
       ENDIF.
     ENDIF.
     IF requested_authorizations-%update = if_abap_behv=>mk-on.
-      AUTHORITY-CHECK OBJECT 'V_VBAK_AAT'
+      AUTHORITY-CHECK OBJECT 'Z_VBAK_AAT'
         ID 'ACTVT' FIELD '02'
         ID 'AUART' DUMMY.
       IF sy-subrc <> 0.
@@ -216,7 +128,7 @@ CLASS lhc_SalesOrder IMPLEMENTATION.
       ENDIF.
     ENDIF.
     IF requested_authorizations-%Delete = if_abap_behv=>mk-on.
-      AUTHORITY-CHECK OBJECT 'V_VBAK_AAT'
+      AUTHORITY-CHECK OBJECT 'Z_VBAK_AAT'
         ID 'ACTVT' FIELD '06'
         ID 'AUART' DUMMY.
       IF sy-subrc <> 0.
@@ -229,6 +141,177 @@ CLASS lhc_SalesOrder IMPLEMENTATION.
                       ) TO reported-salesorder.
       ENDIF.
     ENDIF.
+  ENDMETHOD.
+  METHOD delete.
+   READ ENTITY IN LOCAL MODE ZR_SalesOrderTP
+      FIELDS ( DeliveryStatus DeletionIndicator )
+      WITH CORRESPONDING #( keys )
+      RESULT DATA(salesorders)
+      FAILED failed.
+
+    DATA update TYPE TABLE FOR UPDATE zr_salesordertp\\salesorder.
+    DATA delete TYPE TABLE FOR DELETE zr_salesordertp\\salesorder.
+
+    LOOP AT salesorders ASSIGNING FIELD-SYMBOL(<salesorder>).
+      IF <salesorder>-DeliveryStatus = space OR <salesorder>-DeliveryStatus = 'A'.
+        "physically delete sales orders with delivery status space or A
+        APPEND VALUE #( %tky = <salesorder>-%tky ) TO delete.
+      ELSEIF <salesorder>-DeletionIndicator = abap_false.
+        "logically delete sales orders with delivery status B or C
+        APPEND VALUE #( %tky                       = <salesorder>-%tky
+                        DeletionIndicator          = abap_true
+                        %control-DeletionIndicator = if_abap_behv=>mk-on ) TO update.
+      ENDIF.
+    ENDLOOP.
+
+    MODIFY ENTITY IN LOCAL MODE ZR_SalesOrderTP
+      UPDATE FROM update
+      DELETE FROM delete
+      FAILED failed
+      REPORTED reported.
+  ENDMETHOD.
+
+ENDCLASS.
+CLASS lhc_salesorderitem DEFINITION INHERITING FROM cl_abap_behavior_handler.
+
+  PRIVATE SECTION.
+
+    METHODS earlynumbering_cba_Schedulelin FOR NUMBERING
+      IMPORTING entities FOR CREATE SalesOrderItem\_Scheduleline.
+    METHODS rba_Confirmedscheduleline FOR READ
+      IMPORTING keys_rba FOR READ SalesOrderItem\_Confirmedscheduleline FULL result_requested RESULT result LINK association_links.
+
+    METHODS rba_Requestedscheduleline FOR READ
+      IMPORTING keys_rba FOR READ SalesOrderItem\_Requestedscheduleline FULL result_requested RESULT result LINK association_links.
+
+    METHODS cba_Confirmedscheduleline FOR MODIFY
+      IMPORTING entities_cba FOR CREATE SalesOrderItem\_Confirmedscheduleline.
+
+    METHODS cba_Requestedscheduleline FOR MODIFY
+      IMPORTING entities_cba FOR CREATE SalesOrderItem\_Requestedscheduleline.
+    METHODS get_instance_authorizations FOR INSTANCE AUTHORIZATION
+      IMPORTING keys REQUEST requested_authorizations FOR SalesOrderItem RESULT result.
+
+    METHODS get_global_authorizations FOR GLOBAL AUTHORIZATION
+      IMPORTING REQUEST requested_authorizations FOR SalesOrderItem RESULT result.
+
+    METHODS delete FOR MODIFY
+      IMPORTING keys FOR ACTION SalesOrderItem~delete.
+    METHODS Copy FOR MODIFY
+      IMPORTING keys FOR ACTION SalesOrderItem~Copy RESULT result.
+ENDCLASS.
+
+CLASS lhc_salesorderitem IMPLEMENTATION.
+
+  METHOD earlynumbering_cba_Schedulelin.
+    READ ENTITIES OF ZR_SalesOrderTP IN LOCAL MODE
+        ENTITY SalesOrderItem BY \_ScheduleLine
+          FIELDS ( SalesOrderScheduleLine )
+            WITH CORRESPONDING #( entities )
+            RESULT DATA(sales_order_schedule_lines)
+          FAILED failed.
+
+    LOOP AT entities ASSIGNING FIELD-SYMBOL(<sales_order_item>).
+      " get highest item from sales order items of a sales order
+      DATA(max_schedule_line_id) = REDUCE #( INIT max = CONV zetenr( '0000' )
+                                             FOR sales_order_schedule_line IN sales_order_schedule_lines
+                                               USING KEY entity WHERE ( SalesOrder = <sales_order_item>-SalesOrder
+                                               AND SalesOrderItem = <sales_order_item>-SalesOrderItem )
+                                             NEXT max = COND zposnr( WHEN sales_order_schedule_line-SalesOrderScheduleLine > max
+                                                                    THEN sales_order_schedule_line-SalesOrderScheduleLine
+                                                                    ELSE max )
+                                           ).
+
+      "assign sales order schedule line id
+      LOOP AT <sales_order_item>-%target ASSIGNING FIELD-SYMBOL(<sales_order_schedule_line>).
+        APPEND CORRESPONDING #( <sales_order_schedule_line> ) TO mapped-salesorderscheduleline ASSIGNING FIELD-SYMBOL(<mapped_sales_order_sline>).
+        IF <sales_order_schedule_line>-SalesOrderScheduleLine IS INITIAL.
+          max_schedule_line_id += 1.
+          <mapped_sales_order_sline>-SalesOrderScheduleLine = max_schedule_line_id.
+        ENDIF.
+      ENDLOOP.
+    ENDLOOP.
+  ENDMETHOD.
+
+  METHOD rba_Confirmedscheduleline.
+  ENDMETHOD.
+
+  METHOD rba_Requestedscheduleline.
+    cl_abap_behv_aux=>get_current_context( IMPORTING in_local_mode = DATA(in_local_mode) ).
+    IF in_local_mode = abap_true.
+      READ ENTITY IN LOCAL MODE zr_salesorderitemtp
+      BY \_scheduleline
+      FROM CORRESPONDING #( keys_rba )
+      RESULT DATA(salesorderschedulelines)
+      LINK DATA(salesorderschedulelinelinks)
+      FAILED failed
+      REPORTED reported.
+    ELSE.
+      READ ENTITY zr_salesorderitemtp
+      BY \_scheduleline ##NO_LOCAL_MODE
+      FROM CORRESPONDING #( keys_rba )
+      RESULT salesorderschedulelines
+      LINK salesorderschedulelinelinks
+      FAILED failed
+      REPORTED reported.
+    ENDIF.
+    LOOP AT salesorderschedulelines ASSIGNING FIELD-SYMBOL(<salesorderscheduleline>)
+    WHERE SalesOrderScheduleLineType <> 'R'.
+      DELETE salesorderschedulelinelinks WHERE target-%tky = <salesorderscheduleline>-%tky.
+      DELETE salesorderschedulelines WHERE %tky = <salesorderscheduleline>-%tky.
+    ENDLOOP.
+    result = CORRESPONDING #( salesorderschedulelines ).
+    association_links = CORRESPONDING #( DEEP salesorderschedulelinelinks ).
+  ENDMETHOD.
+
+  METHOD cba_Confirmedscheduleline.
+    DATA create TYPE TABLE FOR CREATE zr_salesordertp\\salesorderitem\_scheduleline.
+
+    create = CORRESPONDING #( DEEP entities_cba ).
+    LOOP AT create ASSIGNING FIELD-SYMBOL(<create>).
+      LOOP AT <create>-%target ASSIGNING FIELD-SYMBOL(<target>).
+        <target>-SalesOrderScheduleLineType = 'C'.
+        <target>-%control-SalesOrderScheduleLineType = if_abap_behv=>mk-on.
+      ENDLOOP.
+    ENDLOOP.
+
+    MODIFY ENTITY IN LOCAL MODE ZR_SalesOrderItemTP
+      CREATE BY \_ScheduleLine FROM create
+      MAPPED DATA(mapped_local)
+      FAILED failed
+      REPORTED reported.
+
+    mapped = CORRESPONDING #( DEEP mapped_local ).
+  ENDMETHOD.
+
+  METHOD cba_Requestedscheduleline.
+    DATA create TYPE TABLE FOR CREATE zr_salesordertp\\salesorderitem\_scheduleline.
+    create = CORRESPONDING #( DEEP entities_cba ).
+    LOOP AT create ASSIGNING FIELD-SYMBOL(<create>).
+      LOOP AT <create>-%target ASSIGNING FIELD-SYMBOL(<target>).
+        <target>-SalesOrderScheduleLineType = 'R'.
+        <target>-%control-SalesOrderScheduleLineType =  if_abap_behv=>mk-on.
+      ENDLOOP.
+    ENDLOOP.
+    MODIFY ENTITY IN LOCAL MODE ZR_SalesOrderItemTP
+    CREATE BY \_ScheduleLine FROM create
+    MAPPED DATA(mapped_local)
+    FAILED failed
+    REPORTED reported.
+    mapped = CORRESPONDING #( DEEP mapped_local ).
+  ENDMETHOD.
+
+  METHOD get_instance_authorizations.
+  ENDMETHOD.
+
+  METHOD get_global_authorizations.
+  ENDMETHOD.
+
+  METHOD delete.
+  "TODO implement copy method
+  ENDMETHOD.
+
+  METHOD Copy.
   ENDMETHOD.
 
 ENDCLASS.

@@ -34,6 +34,10 @@
      <BROBJ>ZMATE_MAT</BROBJ>
      <ACTVT>06</ACTVT>
     </TACTZ>
+    <TACTZ>
+     <BROBJ>ZMATE_MAT</BROBJ>
+     <ACTVT>F4</ACTVT>
+    </TACTZ>
    </TACTZ>
   </asx:values>
  </asx:abap>

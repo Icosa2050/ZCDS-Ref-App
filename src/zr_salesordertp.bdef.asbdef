@@ -39,6 +39,7 @@ authorization master ( global, instance )
   field (mandatory) SalesOrganization;
   field (mandatory) SoldToParty;
 
+ action delete;
 }
 
 define behavior for ZR_SalesOrderItemTP alias SalesOrderItem
@@ -49,7 +50,6 @@ authorization dependent by _SalesOrder
 //etag master <field_name>
 {
   update;
-  delete;
   field ( readonly ) SalesOrder;
   field ( readonly:update ) SalesOrderItem;
 
@@ -60,6 +60,10 @@ authorization dependent by _SalesOrder
   unmanaged association _ConfirmedScheduleLine
     { create ( authorization : update ); }
 
+ action delete;
+ action ( authorization: update) Copy
+ parameter ZD_SALESORDERITEMCOPYPARAMETER
+ result [1..*] $self;
 }
 
 define behavior for ZR_SalesOrderScheduleLineTP alias SalesOrderScheduleLine
@@ -70,7 +74,6 @@ authorization dependent by _SalesOrder
 //etag master <field_name>
 {
   update;
-  delete;
   field ( readonly ) SalesOrder;
   field ( readonly:update) SalesOrderItem;
   field ( readonly : update ) SalesOrderScheduleLine;
