@@ -8,6 +8,7 @@ strict ( 2 );
 
 with privileged mode disabling NoCheckWhenPrivileged;
 
+
 define own authorization context by privileged mode and { }
 
 define authorization context NoCheckWhenPrivileged { 'Z_VBAK_VK'; }
@@ -23,11 +24,10 @@ lock master
 //etag master LastChangeDateTime
 
 authorization master ( global, instance )
-
 //etag master <field_name>
 {
-  create;
-  update;
+  create ( features : global );
+  update ( features : instance );
   delete;
   association _Item { create; }
   field ( mandatory:create, readonly:update ) SalesOrder;
@@ -40,6 +40,8 @@ authorization master ( global, instance )
   field (mandatory) SoldToParty;
 
  action delete;
+   static factory action ( features : global ) CreateFromQuote deep parameter ZD_SalesOrderCreateFromQuoteP [1];
+
 }
 
 define behavior for ZR_SalesOrderItemTP alias SalesOrderItem
@@ -49,6 +51,8 @@ lock dependent by _SalesOrder
 authorization dependent by _SalesOrder
 //etag master <field_name>
 {
+
+  action delete;
   update;
   field ( readonly ) SalesOrder;
   field ( readonly:update ) SalesOrderItem;
@@ -60,10 +64,11 @@ authorization dependent by _SalesOrder
   unmanaged association _ConfirmedScheduleLine
     { create ( authorization : update ); }
 
- action delete;
  action ( authorization: update) Copy
  parameter ZD_SALESORDERITEMCOPYPARAMETER
  result [1..*] $self;
+//function GetNumberOfItems deep result [1] ZD_SalesOrderGetNumberofItemsR;
+
 }
 
 define behavior for ZR_SalesOrderScheduleLineTP alias SalesOrderScheduleLine

@@ -1,0 +1,12 @@
+abstract;
+strict(2);
+with hierarchy;
+
+define behavior for ZD_SalesOrderCreateFromQuoteP with control
+{
+  association _SalesQuotes;
+
+  field (suppress) Dummy;
+}
+
+scalar entity ZD_SalesOrderCreateFromQuoteSP field SalesQuote;

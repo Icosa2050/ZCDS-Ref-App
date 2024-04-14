@@ -13,6 +13,13 @@ CLASS lhc_SalesOrder DEFINITION INHERITING FROM cl_abap_behavior_handler.
 
     METHODS delete FOR MODIFY
       IMPORTING keys FOR ACTION SalesOrder~delete.
+    METHODS get_global_features FOR GLOBAL FEATURES
+      IMPORTING REQUEST requested_features FOR SalesOrder RESULT result.
+
+    METHODS CreateFromQuote FOR MODIFY
+      IMPORTING keys FOR ACTION SalesOrder~CreateFromQuote.
+    METHODS get_instance_features FOR INSTANCE FEATURES
+      IMPORTING keys REQUEST requested_features FOR SalesOrder RESULT result.
 
 ENDCLASS.
 
@@ -143,11 +150,11 @@ CLASS lhc_SalesOrder IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
   METHOD delete.
-   READ ENTITY IN LOCAL MODE ZR_SalesOrderTP
-      FIELDS ( DeliveryStatus DeletionIndicator )
-      WITH CORRESPONDING #( keys )
-      RESULT DATA(salesorders)
-      FAILED failed.
+    READ ENTITY IN LOCAL MODE ZR_SalesOrderTP
+       FIELDS ( DeliveryStatus DeletionIndicator )
+       WITH CORRESPONDING #( keys )
+       RESULT DATA(salesorders)
+       FAILED failed.
 
     DATA update TYPE TABLE FOR UPDATE zr_salesordertp\\salesorder.
     DATA delete TYPE TABLE FOR DELETE zr_salesordertp\\salesorder.
@@ -171,6 +178,35 @@ CLASS lhc_SalesOrder IMPLEMENTATION.
       REPORTED reported.
   ENDMETHOD.
 
+  METHOD get_global_features.
+    "TODO implement
+  ENDMETHOD.
+
+METHOD CreateFromQuote.
+  DATA keys_base TYPE TABLE FOR ACTION IMPORT zr_salesordertp~createfromquote .
+    LOOP AT keys ASSIGNING FIELD-SYMBOL(<key>).
+      APPEND VALUE #( %cid                = <key>-%cid
+"                      %param-%is_draft    = <key>-%param-%is_draft
+"TODO salesquotes and salesquote do not match???
+*                      %param-_salesquotes = VALUE #( ( <key>-%param-salesquote ) )
+                    ) TO keys_base.
+    ENDLOOP.
+"added local mode
+    MODIFY ENTITY IN LOCAL MODE ZR_SalesOrderTP
+      EXECUTE CreateFromQuote FROM keys_base
+      MAPPED   DATA(mapped_base)
+      FAILED   DATA(failed_base)
+      REPORTED DATA(reported_base).
+    mapped   = CORRESPONDING #( DEEP mapped_base ).
+    failed   = CORRESPONDING #( DEEP failed_base ).
+    reported = CORRESPONDING #( DEEP reported_base ).
+    "TODO implement
+  ENDMETHOD.
+
+  METHOD get_instance_features.
+    "TODO implement
+  ENDMETHOD.
+
 ENDCLASS.
 CLASS lhc_salesorderitem DEFINITION INHERITING FROM cl_abap_behavior_handler.
 
@@ -189,16 +225,17 @@ CLASS lhc_salesorderitem DEFINITION INHERITING FROM cl_abap_behavior_handler.
 
     METHODS cba_Requestedscheduleline FOR MODIFY
       IMPORTING entities_cba FOR CREATE SalesOrderItem\_Requestedscheduleline.
+
+    METHODS delete FOR MODIFY
+      IMPORTING keys FOR ACTION SalesOrderItem~delete.
+    METHODS Copy FOR MODIFY
+      IMPORTING keys FOR ACTION SalesOrderItem~Copy RESULT result.
     METHODS get_instance_authorizations FOR INSTANCE AUTHORIZATION
       IMPORTING keys REQUEST requested_authorizations FOR SalesOrderItem RESULT result.
 
     METHODS get_global_authorizations FOR GLOBAL AUTHORIZATION
       IMPORTING REQUEST requested_authorizations FOR SalesOrderItem RESULT result.
 
-    METHODS delete FOR MODIFY
-      IMPORTING keys FOR ACTION SalesOrderItem~delete.
-    METHODS Copy FOR MODIFY
-      IMPORTING keys FOR ACTION SalesOrderItem~Copy RESULT result.
 ENDCLASS.
 
 CLASS lhc_salesorderitem IMPLEMENTATION.
@@ -213,18 +250,20 @@ CLASS lhc_salesorderitem IMPLEMENTATION.
 
     LOOP AT entities ASSIGNING FIELD-SYMBOL(<sales_order_item>).
       " get highest item from sales order items of a sales order
-      DATA(max_schedule_line_id) = REDUCE #( INIT max = CONV zetenr( '0000' )
-                                             FOR sales_order_schedule_line IN sales_order_schedule_lines
-                                               USING KEY entity WHERE ( SalesOrder = <sales_order_item>-SalesOrder
-                                               AND SalesOrderItem = <sales_order_item>-SalesOrderItem )
-                                             NEXT max = COND zposnr( WHEN sales_order_schedule_line-SalesOrderScheduleLine > max
-                                                                    THEN sales_order_schedule_line-SalesOrderScheduleLine
-                                                                    ELSE max )
-                                           ).
+      DATA(max_schedule_line_id) =
+      REDUCE #( INIT max = CONV zetenr( '0000' )
+             FOR sales_order_schedule_line IN sales_order_schedule_lines
+               USING KEY entity WHERE ( SalesOrder = <sales_order_item>-SalesOrder
+               AND SalesOrderItem = <sales_order_item>-SalesOrderItem )
+               NEXT max = COND zposnr( WHEN sales_order_schedule_line-SalesOrderScheduleLine > max
+               THEN sales_order_schedule_line-SalesOrderScheduleLine
+               ELSE max )
+              ).
 
       "assign sales order schedule line id
       LOOP AT <sales_order_item>-%target ASSIGNING FIELD-SYMBOL(<sales_order_schedule_line>).
-        APPEND CORRESPONDING #( <sales_order_schedule_line> ) TO mapped-salesorderscheduleline ASSIGNING FIELD-SYMBOL(<mapped_sales_order_sline>).
+        APPEND CORRESPONDING #( <sales_order_schedule_line> ) TO mapped-salesorderscheduleline
+        ASSIGNING FIELD-SYMBOL(<mapped_sales_order_sline>).
         IF <sales_order_schedule_line>-SalesOrderScheduleLine IS INITIAL.
           max_schedule_line_id += 1.
           <mapped_sales_order_sline>-SalesOrderScheduleLine = max_schedule_line_id.
@@ -301,17 +340,60 @@ CLASS lhc_salesorderitem IMPLEMENTATION.
     mapped = CORRESPONDING #( DEEP mapped_local ).
   ENDMETHOD.
 
+  METHOD delete.
+  ENDMETHOD.
+
+  METHOD Copy.
+    READ ENTITY IN LOCAL MODE ZR_SalesOrderItemTP
+    ALL FIELDS
+    WITH CORRESPONDING #( keys )
+    RESULT DATA(salesorderitems)
+    FAILED failed.
+
+    DATA create TYPE TABLE FOR CREATE zr_salesordertp\\salesorder\_item.
+
+    LOOP AT keys ASSIGNING FIELD-SYMBOL(<key>).
+      READ TABLE salesorderitems ASSIGNING FIELD-SYMBOL(<salesorderitem>) WITH KEY id COMPONENTS %tky = <key>-%tky.
+      CHECK sy-subrc = 0.
+      READ TABLE create ASSIGNING FIELD-SYMBOL(<create>)
+      WITH KEY cid COMPONENTS %cid_ref = <key>-%cid_ref
+      SalesOrder = <key>-SalesOrder.
+      IF sy-subrc <> 0.
+        APPEND VALUE #( %cid_ref = <key>-%cid_ref
+                      SalesOrder = <key>-SalesOrder ) TO create ASSIGNING <create>.
+      ENDIF.
+      DO <key>-%param-numberofcopies TIMES.
+        APPEND VALUE #( product = <salesorderitem>-product
+                        orderquantity = <salesorderitem>-orderquantity
+                        orderquantityunit = <salesorderitem>-orderquantityunit
+                        netamount = <salesorderitem>-netamount
+                        transactioncurrency = <salesorderitem>-transactioncurrency
+                        ) TO <create>-%target.
+      ENDDO.
+      MODIFY ENTITY IN LOCAL MODE zr_salesordertp
+      CREATE BY \_item
+      FIELDS (  product orderquantity orderquantityunit netamount transactioncurrency )
+      AUTO FILL CID WITH create
+      MAPPED DATA(mapped_local)
+      FAILED failed
+      REPORTED reported.
+      READ ENTITY IN LOCAL MODE ZR_SalesOrderItemTP
+      FROM CORRESPONDING #( mapped_local-salesorderitem )
+      RESULT DATA(new_salesorderitems).
+      LOOP AT new_salesorderitems ASSIGNING
+      FIELD-SYMBOL(<new_salesorderitem>).
+        APPEND VALUE #( %cid_ref = <key>-%cid_ref
+                        %tky = <key>-%tky
+                        %param = CORRESPONDING #( <new_salesorderitem> ) ) TO result.
+      ENDLOOP.
+    ENDLOOP.
+
+  ENDMETHOD.
+
   METHOD get_instance_authorizations.
   ENDMETHOD.
 
   METHOD get_global_authorizations.
-  ENDMETHOD.
-
-  METHOD delete.
-  "TODO implement copy method
-  ENDMETHOD.
-
-  METHOD Copy.
   ENDMETHOD.
 
 ENDCLASS.
