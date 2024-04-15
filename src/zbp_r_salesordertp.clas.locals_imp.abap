@@ -20,6 +20,8 @@ CLASS lhc_SalesOrder DEFINITION INHERITING FROM cl_abap_behavior_handler.
       IMPORTING keys FOR ACTION SalesOrder~CreateFromQuote.
     METHODS get_instance_features FOR INSTANCE FEATURES
       IMPORTING keys REQUEST requested_features FOR SalesOrder RESULT result.
+    METHODS getnumberofitems FOR READ
+      IMPORTING keys FOR FUNCTION salesorder~getnumberofitems RESULT result.
 
 ENDCLASS.
 
@@ -118,34 +120,35 @@ CLASS lhc_SalesOrder IMPLEMENTATION.
                                      severity = zcm_salesorder=>if_abap_behv_message~severity-error
                                )
                       ) TO reported-salesorder.
+
       ENDIF.
-    ENDIF.
-    IF requested_authorizations-%update = if_abap_behv=>mk-on.
-      AUTHORITY-CHECK OBJECT 'Z_VBAK_AAT'
-        ID 'ACTVT' FIELD '02'
-        ID 'AUART' DUMMY.
-      IF sy-subrc <> 0.
-        result-%update = if_abap_behv=>auth-unauthorized.
-        APPEND VALUE #( %global = if_abap_behv=>mk-on
-                        %msg = NEW zcm_salesorder(
-                                     textid   = zcm_salesorder=>no_auth_update
-                                     severity = zcm_salesorder=>if_abap_behv_message~severity-error
-                               )
-                      ) TO reported-salesorder.
+      IF requested_authorizations-%update = if_abap_behv=>mk-on.
+        AUTHORITY-CHECK OBJECT 'Z_VBAK_AAT'
+          ID 'ACTVT' FIELD '02'
+          ID 'AUART' DUMMY.
+        IF sy-subrc <> 0.
+          result-%update = if_abap_behv=>auth-unauthorized.
+          APPEND VALUE #( %global = if_abap_behv=>mk-on
+                          %msg = NEW zcm_salesorder(
+                                       textid   = zcm_salesorder=>no_auth_update
+                                       severity = zcm_salesorder=>if_abap_behv_message~severity-error
+                                 )
+                        ) TO reported-salesorder.
+        ENDIF.
       ENDIF.
-    ENDIF.
-    IF requested_authorizations-%Delete = if_abap_behv=>mk-on.
-      AUTHORITY-CHECK OBJECT 'Z_VBAK_AAT'
-        ID 'ACTVT' FIELD '06'
-        ID 'AUART' DUMMY.
-      IF sy-subrc <> 0.
-        result-%Delete = if_abap_behv=>auth-unauthorized.
-        APPEND VALUE #( %global = if_abap_behv=>mk-on
-                        %msg = NEW zcm_salesorder(
-                                     textid   = zcm_salesorder=>no_auth_delete
-                                     severity = zcm_salesorder=>if_abap_behv_message~severity-error
-                               )
-                      ) TO reported-salesorder.
+      IF requested_authorizations-%Delete = if_abap_behv=>mk-on.
+        AUTHORITY-CHECK OBJECT 'Z_VBAK_AAT'
+          ID 'ACTVT' FIELD '06'
+          ID 'AUART' DUMMY.
+        IF sy-subrc <> 0.
+          result-%Delete = if_abap_behv=>auth-unauthorized.
+          APPEND VALUE #( %global = if_abap_behv=>mk-on
+                          %msg = NEW zcm_salesorder(
+                                       textid   = zcm_salesorder=>no_auth_delete
+                                       severity = zcm_salesorder=>if_abap_behv_message~severity-error
+                                 )
+                        ) TO reported-salesorder.
+        ENDIF.
       ENDIF.
     ENDIF.
   ENDMETHOD.
@@ -182,8 +185,8 @@ CLASS lhc_SalesOrder IMPLEMENTATION.
     "TODO implement
   ENDMETHOD.
 
-METHOD CreateFromQuote.
-  DATA keys_base TYPE TABLE FOR ACTION IMPORT zr_salesordertp~createfromquote .
+  METHOD CreateFromQuote.
+    DATA keys_base TYPE TABLE FOR ACTION IMPORT zr_salesordertp~createfromquote .
     LOOP AT keys ASSIGNING FIELD-SYMBOL(<key>).
       APPEND VALUE #( %cid                = <key>-%cid
 "                      %param-%is_draft    = <key>-%param-%is_draft
@@ -191,7 +194,7 @@ METHOD CreateFromQuote.
 *                      %param-_salesquotes = VALUE #( ( <key>-%param-salesquote ) )
                     ) TO keys_base.
     ENDLOOP.
-"added local mode
+    "added local mode
     MODIFY ENTITY IN LOCAL MODE ZR_SalesOrderTP
       EXECUTE CreateFromQuote FROM keys_base
       MAPPED   DATA(mapped_base)
@@ -205,6 +208,25 @@ METHOD CreateFromQuote.
 
   METHOD get_instance_features.
     "TODO implement
+  ENDMETHOD.
+
+  METHOD GetNumberOfItems.
+    READ ENTITY ZR_SalesOrderTP ##NO_LOCAL_MODE
+    BY \_item
+    FROM CORRESPONDING #( keys )
+    RESULT DATA(salesorderitems)
+    FAILED failed.
+
+    LOOP AT keys ASSIGNING FIELD-SYMBOL(<key>).
+      READ TABLE failed-salesorder TRANSPORTING NO FIELDS WITH KEY id COMPONENTS %tky = <key>-%tky.
+      CHECK sy-subrc <> 0.
+      APPEND VALUE #( %tky = <key>-%tky
+                      %param = REDUCE #( INIT count = 0
+                                            FOR salesorderitem IN salesorderitems
+                                          WHERE (  %tky = <key>-%tky )  ##PRIMKEY
+                                          NEXT count += count ) ) TO result.
+
+    ENDLOOP.
   ENDMETHOD.
 
 ENDCLASS.

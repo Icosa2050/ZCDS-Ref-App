@@ -1,0 +1,5 @@
+abstract;
+strict ( 2 );
+with hierarchy;
+
+scalar entity ZD_SalesOrderGetNumberOfItemsR field NumberOfItems;

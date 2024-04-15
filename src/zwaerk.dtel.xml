@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZWAERK</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>ZWAERS</DOMNAME>
+    <LOGFLAG>X</LOGFLAG>
+    <HEADLEN>05</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>20</SCRLEN3>
+    <DDTEXT>SD Document Currency</DDTEXT>
+    <REPTEXT>Crcy</REPTEXT>
+    <SCRTEXT_S>Currency</SCRTEXT_S>
+    <SCRTEXT_M>Doc. Currency</SCRTEXT_M>
+    <SCRTEXT_L>Document Currency</SCRTEXT_L>
+    <APPLCLASS>VF</APPLCLASS>
+    <DTELMASTER>E</DTELMASTER>
+    <DEFFDNAME>CURRENCY</DEFFDNAME>
+    <REFKIND>D</REFKIND>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>1</LANGU>
+    <LANGU>2</LANGU>
+    <LANGU>3</LANGU>
+    <LANGU>4</LANGU>
+    <LANGU>5</LANGU>
+    <LANGU>6</LANGU>
+    <LANGU>7</LANGU>
+    <LANGU>8</LANGU>
+    <LANGU>A</LANGU>
+    <LANGU>B</LANGU>
+    <LANGU>C</LANGU>
+    <LANGU>D</LANGU>
+    <LANGU>F</LANGU>
+    <LANGU>G</LANGU>
+    <LANGU>H</LANGU>
+    <LANGU>I</LANGU>
+    <LANGU>J</LANGU>
+    <LANGU>K</LANGU>
+    <LANGU>L</LANGU>
+    <LANGU>M</LANGU>
+    <LANGU>N</LANGU>
+    <LANGU>O</LANGU>
+    <LANGU>P</LANGU>
+    <LANGU>Q</LANGU>
+    <LANGU>R</LANGU>
+    <LANGU>S</LANGU>
+    <LANGU>T</LANGU>
+    <LANGU>U</LANGU>
+    <LANGU>V</LANGU>
+    <LANGU>W</LANGU>
+    <LANGU>d</LANGU>
+    <LANGU>뱋</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>1</DDLANGUAGE>
+     <DDTEXT>销售和分销凭证货币</DDTEXT>
+     <REPTEXT>货币</REPTEXT>
+     <SCRTEXT_S>货币</SCRTEXT_S>
+     <SCRTEXT_M>凭证货币</SCRTEXT_M>
+     <SCRTEXT_L>凭证货币</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>2</DDLANGUAGE>
+     <DDTEXT>สกุลเงินของเอกสาร SD</DDTEXT>
+     <REPTEXT>สง.</REPTEXT>
+     <SCRTEXT_S>สกุลเงิน</SCRTEXT_S>
+     <SCRTEXT_M>สกุลเงินเอกสาร</SCRTEXT_M>
+     <SCRTEXT_L>สกุลเงินในเอกสาร</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>3</DDLANGUAGE>
+     <DDTEXT>SD 문서 통화</DDTEXT>
+     <REPTEXT>통화</REPTEXT>
+     <SCRTEXT_S>통화</SCRTEXT_S>
+     <SCRTEXT_M>전표 통화</SCRTEXT_M>
+     <SCRTEXT_L>전표 통화</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>4</DDLANGUAGE>
+     <DDTEXT>Monedă document SD</DDTEXT>
+     <REPTEXT>Mdă</REPTEXT>
+     <SCRTEXT_S>Monedă</SCRTEXT_S>
+     <SCRTEXT_M>Monedă document</SCRTEXT_M>
+     <SCRTEXT_L>Monedă document</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>5</DDLANGUAGE>
+     <DDTEXT>Valuta prodajnega dokumenta</DDTEXT>
+     <REPTEXT>Val.</REPTEXT>
+     <SCRTEXT_S>Valuta</SCRTEXT_S>
+     <SCRTEXT_M>Valuta dokumen.</SCRTEXT_M>
+     <SCRTEXT_L>Valuta dokumenta</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>6</DDLANGUAGE>
+     <DDTEXT>Valuta dokumenta prodaje i distribucije</DDTEXT>
+     <REPTEXT>Val.</REPTEXT>
+     <SCRTEXT_S>Valuta</SCRTEXT_S>
+     <SCRTEXT_M>Valuta dokum.</SCRTEXT_M>
+     <SCRTEXT_L>Valuta dokumenta</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>7</DDLANGUAGE>
+     <DDTEXT>Mata Wang Dokumen SD</DDTEXT>
+     <REPTEXT>Mt wg</REPTEXT>
+     <SCRTEXT_S>Mata wang</SCRTEXT_S>
+     <SCRTEXT_M>Mt Wg Dokumen</SCRTEXT_M>
+     <SCRTEXT_L>Mata Wang Dokumen</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>8</DDLANGUAGE>
+     <DDTEXT>Валюта документа збуту</DDTEXT>
+     <REPTEXT>Вал.</REPTEXT>
+     <SCRTEXT_S>Валюта</SCRTEXT_S>
+     <SCRTEXT_M>Валюта докум.</SCRTEXT_M>
+     <SCRTEXT_L>Валюта документа</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>A</DDLANGUAGE>
+     <DDTEXT>عملة مستند SD</DDTEXT>
+     <REPTEXT>عملة</REPTEXT>
+     <SCRTEXT_S>العملة</SCRTEXT_S>
+     <SCRTEXT_M>عملة المستند</SCRTEXT_M>
+     <SCRTEXT_L>عملة المستند</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>B</DDLANGUAGE>
+     <DDTEXT>מטבע מסמך SD</DDTEXT>
+     <REPTEXT>מטבע</REPTEXT>
+     <SCRTEXT_S>מטבע</SCRTEXT_S>
+     <SCRTEXT_M>מטבע מסמך</SCRTEXT_M>
+     <SCRTEXT_L>מטבע מסמך</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>C</DDLANGUAGE>
+     <DDTEXT>Měna odbytového dokladu</DDTEXT>
+     <REPTEXT>Měna</REPTEXT>
+     <SCRTEXT_S>Měna</SCRTEXT_S>
+     <SCRTEXT_M>Měna dokladu</SCRTEXT_M>
+     <SCRTEXT_L>Měna dokladu</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DDTEXT>Währung des Vertriebsbelegs</DDTEXT>
+     <REPTEXT>Währg</REPTEXT>
+     <SCRTEXT_S>Währung</SCRTEXT_S>
+     <SCRTEXT_M>Belegwährung</SCRTEXT_M>
+     <SCRTEXT_L>Belegwährung</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>F</DDLANGUAGE>
+     <DDTEXT>Devise du document commercial</DDTEXT>
+     <REPTEXT>Dev.</REPTEXT>
+     <SCRTEXT_S>Devise</SCRTEXT_S>
+     <SCRTEXT_M>Devise doc.</SCRTEXT_M>
+     <SCRTEXT_L>Devise document</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>G</DDLANGUAGE>
+     <DDTEXT>Νόμισμα Παραστατικού SD</DDTEXT>
+     <REPTEXT>Νόμ.</REPTEXT>
+     <SCRTEXT_S>Νόμισμα</SCRTEXT_S>
+     <SCRTEXT_M>Νόμ.εγγραφής</SCRTEXT_M>
+     <SCRTEXT_L>Νόμισμα Εγγράφου</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>H</DDLANGUAGE>
+     <DDTEXT>Értékesítési bizonylat pénzneme</DDTEXT>
+     <REPTEXT>Pnem</REPTEXT>
+     <SCRTEXT_S>Pénznem</SCRTEXT_S>
+     <SCRTEXT_M>Bizl.pénznem</SCRTEXT_M>
+     <SCRTEXT_L>Bizonylat pénzneme</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>I</DDLANGUAGE>
+     <DDTEXT>Divisa del documento commerciale</DDTEXT>
+     <REPTEXT>Div.</REPTEXT>
+     <SCRTEXT_S>Divisa</SCRTEXT_S>
+     <SCRTEXT_M>Divisa doc.</SCRTEXT_M>
+     <SCRTEXT_L>Divisa documento</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>J</DDLANGUAGE>
+     <DDTEXT>販売管理伝票通貨</DDTEXT>
+     <REPTEXT>通貨</REPTEXT>
+     <SCRTEXT_S>通貨</SCRTEXT_S>
+     <SCRTEXT_M>伝票通貨</SCRTEXT_M>
+     <SCRTEXT_L>伝票通貨</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>K</DDLANGUAGE>
+     <DDTEXT>Valuta for SD-bilag</DDTEXT>
+     <REPTEXT>Val.</REPTEXT>
+     <SCRTEXT_S>Valuta</SCRTEXT_S>
+     <SCRTEXT_M>Bilagsvaluta</SCRTEXT_M>
+     <SCRTEXT_L>Bilagsvaluta</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>L</DDLANGUAGE>
+     <DDTEXT>Waluta dokumentu SD</DDTEXT>
+     <REPTEXT>Wal.</REPTEXT>
+     <SCRTEXT_S>Waluta</SCRTEXT_S>
+     <SCRTEXT_M>Waluta dokum.</SCRTEXT_M>
+     <SCRTEXT_L>Waluta dokumentu</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>M</DDLANGUAGE>
+     <DDTEXT>SD 文件幣別</DDTEXT>
+     <REPTEXT>幣別</REPTEXT>
+     <SCRTEXT_S>幣別</SCRTEXT_S>
+     <SCRTEXT_M>文件幣別</SCRTEXT_M>
+     <SCRTEXT_L>文件幣別</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>N</DDLANGUAGE>
+     <DDTEXT>Valuta van verkoopdocument</DDTEXT>
+     <REPTEXT>Val.</REPTEXT>
+     <SCRTEXT_S>Valuta</SCRTEXT_S>
+     <SCRTEXT_M>Documentvaluta</SCRTEXT_M>
+     <SCRTEXT_L>Documentvaluta</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>O</DDLANGUAGE>
+     <DDTEXT>Valuta for SD-dokument</DDTEXT>
+     <REPTEXT>Val.</REPTEXT>
+     <SCRTEXT_S>Valuta</SCRTEXT_S>
+     <SCRTEXT_M>Dokumentvaluta</SCRTEXT_M>
+     <SCRTEXT_L>Dokumentvaluta</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>P</DDLANGUAGE>
+     <DDTEXT>Moeda do documento SD</DDTEXT>
+     <REPTEXT>Moeda</REPTEXT>
+     <SCRTEXT_S>Moeda</SCRTEXT_S>
+     <SCRTEXT_M>Moeda documento</SCRTEXT_M>
+     <SCRTEXT_L>Moeda do documento</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>Q</DDLANGUAGE>
+     <DDTEXT>Mena odbytového dokladu</DDTEXT>
+     <REPTEXT>Mena</REPTEXT>
+     <SCRTEXT_S>Mena</SCRTEXT_S>
+     <SCRTEXT_M>Mena dokladu</SCRTEXT_M>
+     <SCRTEXT_L>Mena dokladu</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>R</DDLANGUAGE>
+     <DDTEXT>Валюта документа сбыта</DDTEXT>
+     <REPTEXT>Вал.</REPTEXT>
+     <SCRTEXT_S>Валюта</SCRTEXT_S>
+     <SCRTEXT_M>Валюта док-та</SCRTEXT_M>
+     <SCRTEXT_L>Валюта документа</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>S</DDLANGUAGE>
+     <DDTEXT>Moneda de documento comercial</DDTEXT>
+     <REPTEXT>Mon.</REPTEXT>
+     <SCRTEXT_S>Moneda</SCRTEXT_S>
+     <SCRTEXT_M>Moneda doc.</SCRTEXT_M>
+     <SCRTEXT_L>Moneda del documento</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>T</DDLANGUAGE>
+     <DDTEXT>SD belgesi para birimi</DDTEXT>
+     <REPTEXT>PB</REPTEXT>
+     <SCRTEXT_S>PB</SCRTEXT_S>
+     <SCRTEXT_M>Belge PB</SCRTEXT_M>
+     <SCRTEXT_L>Belge para birimi</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>U</DDLANGUAGE>
+     <DDTEXT>Myyntitositteen valuutta</DDTEXT>
+     <REPTEXT>Val.</REPTEXT>
+     <SCRTEXT_S>Valuutta</SCRTEXT_S>
+     <SCRTEXT_M>Tositevaluutta</SCRTEXT_M>
+     <SCRTEXT_L>Tositevaluutta</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>V</DDLANGUAGE>
+     <DDTEXT>SD-dokumentets valuta</DDTEXT>
+     <REPTEXT>Val.</REPTEXT>
+     <SCRTEXT_S>Valuta</SCRTEXT_S>
+     <SCRTEXT_M>Dokumentvaluta</SCRTEXT_M>
+     <SCRTEXT_L>Dokumentvaluta</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>W</DDLANGUAGE>
+     <DDTEXT>Валута по документ ПД</DDTEXT>
+     <REPTEXT>Влута</REPTEXT>
+     <SCRTEXT_S>Валута</SCRTEXT_S>
+     <SCRTEXT_M>Валута на док.</SCRTEXT_M>
+     <SCRTEXT_L>Валута на документ</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>d</DDLANGUAGE>
+     <DDTEXT>Valuta dokumenta prodaje i distribucije</DDTEXT>
+     <REPTEXT>Val.</REPTEXT>
+     <SCRTEXT_S>Valuta</SCRTEXT_S>
+     <SCRTEXT_M>Valuta dok.</SCRTEXT_M>
+     <SCRTEXT_L>Valuta dokumenta</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>뱋</DDLANGUAGE>
+     <DDTEXT>Сату және үлестіру құжатының валютасы</DDTEXT>
+     <REPTEXT>Вал.</REPTEXT>
+     <SCRTEXT_S>Валюта</SCRTEXT_S>
+     <SCRTEXT_M>Құж. валютасы</SCRTEXT_M>
+     <SCRTEXT_L>Құжат валютасы</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

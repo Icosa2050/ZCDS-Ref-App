@@ -1,0 +1,17 @@
+abstract;
+strict ( 2 );
+with hierarchy;
+
+define behavior for ZD_SalesOrderGetResult //alias <alias_name>
+{
+  association _Items;
+}
+
+define behavior for ZD_SalesOrderGetItemResult
+{
+  association _ScheduleLines;
+}
+
+define behavior for ZD_SalesOrderGetScheduleLineR
+{
+}

@@ -42,6 +42,7 @@ authorization master ( global, instance )
  action delete;
    static factory action ( features : global ) CreateFromQuote deep parameter ZD_SalesOrderCreateFromQuoteP [1];
 
+  function GetNumberOfItems deep result [1] ZD_SalesOrderGetNumberofItemsR;
 }
 
 define behavior for ZR_SalesOrderItemTP alias SalesOrderItem
@@ -67,7 +68,6 @@ authorization dependent by _SalesOrder
  action ( authorization: update) Copy
  parameter ZD_SALESORDERITEMCOPYPARAMETER
  result [1..*] $self;
-//function GetNumberOfItems deep result [1] ZD_SalesOrderGetNumberofItemsR;
 
 }
 
