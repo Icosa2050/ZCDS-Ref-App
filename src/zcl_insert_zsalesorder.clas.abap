@@ -34,7 +34,7 @@ CLASS zcl_insert_zsalesorder IMPLEMENTATION.
     CLEAR gt_zsalesorder.
 
     CLEAR gs_zsalesorder.
-    gs_zsalesorder-salesorder        = 'S1'.
+    gs_zsalesorder-salesorder        = '00000000S1'.
     gs_zsalesorder-salesordertype    = 'KL'.
     gs_zsalesorder-salesorganization = 'US'.
     gs_zsalesorder-soldtoparty = '0000000001'.
@@ -44,7 +44,7 @@ CLASS zcl_insert_zsalesorder IMPLEMENTATION.
     INSERT gs_zsalesorder INTO TABLE gt_zsalesorder.
     CLEAR gs_zsalesorder.
     GET TIME STAMP FIELD lv_time.
-    gs_zsalesorder-salesorder        = 'S2'.
+    gs_zsalesorder-salesorder        = '00000000S2'.
     gs_zsalesorder-salesordertype    = 'AG'.
     gs_zsalesorder-salesorganization = 'EU'.
     gs_zsalesorder-soldtoparty = '0000000002'.
@@ -55,7 +55,7 @@ CLASS zcl_insert_zsalesorder IMPLEMENTATION.
     CLEAR gs_zsalesorder.
 
     GET TIME STAMP FIELD lv_time.
-    gs_zsalesorder-salesorder        = 'S3'.
+    gs_zsalesorder-salesorder        = '00000000S3'.
     gs_zsalesorder-salesordertype    = 'TAF'.
     gs_zsalesorder-salesorganization = 'US'.
     gs_zsalesorder-soldtoparty = '0000000003'.
@@ -65,7 +65,7 @@ CLASS zcl_insert_zsalesorder IMPLEMENTATION.
     INSERT gs_zsalesorder INTO TABLE gt_zsalesorder.
     CLEAR gs_zsalesorder.
     GET TIME STAMP FIELD lv_time.
-    gs_zsalesorder-salesorder        = 'S4'.
+    gs_zsalesorder-salesorder        = '00000000S4'.
     gs_zsalesorder-salesordertype    = 'TA'.
     gs_zsalesorder-salesorganization = 'EU'.
     gs_zsalesorder-soldtoparty = '0000000004'.

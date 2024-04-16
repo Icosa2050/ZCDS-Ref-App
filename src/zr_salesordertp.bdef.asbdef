@@ -30,20 +30,21 @@ authorization master ( global, instance )
   update ( features : instance );
   delete;
   association _Item { create; }
-  field ( mandatory:create, readonly:update ) SalesOrder;
+  field ( mandatory : create, readonly : update ) SalesOrder;
   field ( readonly ) CreatedByUser;
   field ( readonly ) CreationDateTime;
   field ( readonly ) LastChangedByUser;
   field ( readonly ) LastChangeDateTime;
-  field (mandatory) SalesOrderType;
-  field (mandatory) SalesOrganization;
-  field (mandatory) SoldToParty;
+  field ( mandatory ) SalesOrderType;
+  field ( mandatory ) SalesOrganization;
+  field ( mandatory ) SoldToParty;
 
- action delete;
-   static factory action ( features : global ) CreateFromQuote deep parameter ZD_SalesOrderCreateFromQuoteP [1];
+  action delete;
+  static factory action ( features : global ) CreateFromQuote deep parameter ZD_SalesOrderCreateFromQuoteP [1];
 
   function GetNumberOfItems deep result [1] ZD_SalesOrderGetNumberofItemsR;
-}
+  function GetSalesOrder deep result [1] ZD_SalesOrderGetResult;
+  }
 
 define behavior for ZR_SalesOrderItemTP alias SalesOrderItem
 early numbering
@@ -56,18 +57,21 @@ authorization dependent by _SalesOrder
   action delete;
   update;
   field ( readonly ) SalesOrder;
-  field ( readonly:update ) SalesOrderItem;
+  field ( readonly : update ) SalesOrderItem;
 
   association _SalesOrder;
   association _ScheduleLine { create; }
   unmanaged association _RequestedScheduleLine
-    { create ( authorization : update ); }
+  { create ( authorization : update ); }
   unmanaged association _ConfirmedScheduleLine
-    { create ( authorization : update ); }
+  { create ( authorization : update ); }
 
- action ( authorization: update) Copy
- parameter ZD_SALESORDERITEMCOPYPARAMETER
- result [1..*] $self;
+  action ( authorization : update ) Copy
+    parameter ZD_SALESORDERITEMCOPYPARAMETER
+    result [1..*] $self;
+
+  determination CalculateTotalAmount on save { field Product, OrderQuantity, OrderQuantityUnit; }
+  determination CalculateNetAmount on modify { field NetAmount, TransactionCurrency; }
 
 }
 
@@ -80,7 +84,7 @@ authorization dependent by _SalesOrder
 {
   update;
   field ( readonly ) SalesOrder;
-  field ( readonly:update) SalesOrderItem;
+  field ( readonly : update ) SalesOrderItem;
   field ( readonly : update ) SalesOrderScheduleLine;
   association _SalesOrder;
   association _SalesOrderItem;

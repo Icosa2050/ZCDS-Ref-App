@@ -3,15 +3,14 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZBP_R_SALESORDERTP</CLSNAME>
+    <CLSNAME>ZBP_R_SALESORDERTP_TEST</CLSNAME>
     <LANGU>E</LANGU>
-    <DESCRIPT>Behavior Implementation for ZR_SALESORDERTP</DESCRIPT>
-    <CATEGORY>06</CATEGORY>
+    <DESCRIPT>test class for Product Data</DESCRIPT>
+    <CATEGORY>05</CATEGORY>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>
     <UNICODE>X</UNICODE>
-    <CLSDEFINT>ZR_SALESORDERTP</CLSDEFINT>
     <WITH_UNIT_TESTS>X</WITH_UNIT_TESTS>
    </VSEOCLASS>
   </asx:values>

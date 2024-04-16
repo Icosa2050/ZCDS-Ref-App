@@ -14,6 +14,9 @@ define root view entity ZI_Product
 {
   key product            as Product,
       product_type       as ProductType,
+      @Semantics.amount.currencyCode : 'currency'
+      price              as Price,
+      currency           as Currency,
       creation_date_time as CreationDateTime,
       _Text
 }

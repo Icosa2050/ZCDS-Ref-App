@@ -16,17 +16,16 @@ CLASS zcl_insert_zproduct_ic IMPLEMENTATION.
     DATA: lt_product_ic TYPE TABLE OF zproduct_ic.
     DATA: ls_product_ic TYPE zproduct_ic.
     SELECT * FROM zproduct_ic INTO TABLE @lt_product_ic.
-    LOOP AT lt_product_ic INTO ls_product_ic.
-      out->write( ls_product_ic ).
-      DELETE zproduct_ic FROM @ls_product_ic.
-    ENDLOOP.
-    GET TIME STAMP FIELD DATA(lv_time).
+    delete zproduct_ic from table @lt_product_ic.
+   GET TIME STAMP FIELD DATA(lv_time).
     CLEAR ls_product_ic.
     CLEAR lt_product_ic.
 
     ls_product_ic = VALUE  #(
-    product = 'P1'
+    product = '0000000000000000000000000000000000000P1'
     product_type   =   'T1'
+    price   =  100
+    currency = 'USD'
   creation_date_time  = lv_time
      ).
 
@@ -35,8 +34,11 @@ CLASS zcl_insert_zproduct_ic IMPLEMENTATION.
     GET TIME STAMP FIELD lv_time.
 
     ls_product_ic = VALUE  #(
-    product = 'P2'
+    product = '0000000000000000000000000000000000000P2'
     product_type   =   'T2'
+    price   =  200
+    currency = 'USD'
+
   creation_date_time  = lv_time
      ).
 
@@ -44,8 +46,11 @@ CLASS zcl_insert_zproduct_ic IMPLEMENTATION.
     APPEND ls_product_ic TO lt_product_ic.
 
     ls_product_ic = VALUE  #(
-    product = 'P3'
+    product = '0000000000000000000000000000000000000P3'
     product_type   =   'FERT'
+    price   =  300
+    currency = 'USD'
+
   creation_date_time  = lv_time
      ).
     " //write a comment
@@ -53,10 +58,11 @@ CLASS zcl_insert_zproduct_ic IMPLEMENTATION.
     APPEND ls_product_ic TO lt_product_ic.
 
     ls_product_ic = VALUE  #(
-    product = 'P4'
+    product = '0000000000000000000000000000000000000P4'
     product_type   =   'FERT'
     creation_date_time  = lv_time
-
+    price   =  400
+    currency = 'USD'
 
      ).
 

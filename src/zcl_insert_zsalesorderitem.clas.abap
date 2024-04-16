@@ -41,7 +41,7 @@ CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
     CLEAR ls_salesorderitem.
 
     ls_salesorderitem = VALUE  #(
-    salesorder = 'S1'
+    salesorder = '00000000S1'
     salesorderitem = '00010'
     product = 'P1'
     orderquantity = '1'
@@ -58,7 +58,7 @@ CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
 
     CLEAR ls_salesorderitem.
     ls_salesorderitem = VALUE  #(
-    salesorder = 'S1'
+    salesorder = '00000000S1'
     salesorderitem = '00020'
     product = 'P2'
     orderquantity = '1'
@@ -76,7 +76,7 @@ CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
     CLEAR ls_salesorderitem.
 
     ls_salesorderitem = VALUE  #(
-    salesorder = 'S2'
+    salesorder = '00000000S2'
     salesorderitem = '00010'
     product = 'P2'
     orderquantity = '1'
@@ -93,7 +93,7 @@ CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
 
     CLEAR ls_salesorderitem.
     ls_salesorderitem = VALUE  #(
-    salesorder = 'S2'
+    salesorder = '00000000S2'
     salesorderitem = '00020'
     product = 'P3'
     orderquantity = '1'
@@ -110,7 +110,7 @@ CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
 
     CLEAR ls_salesorderitem.
     ls_salesorderitem = VALUE  #(
-    salesorder = 'S2'
+    salesorder = '00000000S2'
     salesorderitem = '00030'
     product = 'P4'
     orderquantity = '2'
