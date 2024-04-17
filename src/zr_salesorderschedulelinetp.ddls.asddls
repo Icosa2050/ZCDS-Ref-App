@@ -18,7 +18,7 @@ define view entity ZR_SalesOrderScheduleLineTP
       ZR_SalesOrderScheduleLine.DeliveryDate,
       @Semantics.quantity.unitOfMeasure: 'OrderQuantityUnit'
       ZR_SalesOrderScheduleLine.OrderQuantity,
-      ZR_SalesOrderScheduleLine.OrderQuantityUnit,
+      ZR_SalesOrderScheduleLine.OrderQuantityUnit as OrderQuantityUnit,
       ZR_SalesOrderScheduleLine.SalesOrderScheduleLineType,
       @Semantics.user.createdBy: true
       ZR_SalesOrderScheduleLine.CreatedByUser,

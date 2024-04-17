@@ -71,6 +71,7 @@ CLASS zcl_insert_zsalesorder IMPLEMENTATION.
     gs_zsalesorder-soldtoparty = '0000000004'.
     gs_zsalesorder-createdbyuser = sy-uname.
     gs_zsalesorder-creationdatetime = lv_time.
+    gs_zsalesorder-deliveryStatus = 'C'.
     gs_zsalesorder-transactioncurrency = 'EUR'.
     INSERT gs_zsalesorder INTO TABLE gt_zsalesorder.
 

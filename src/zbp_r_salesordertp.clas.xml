@@ -12,7 +12,6 @@
     <FIXPT>X</FIXPT>
     <UNICODE>X</UNICODE>
     <CLSDEFINT>ZR_SALESORDERTP</CLSDEFINT>
-    <WITH_UNIT_TESTS>X</WITH_UNIT_TESTS>
    </VSEOCLASS>
   </asx:values>
  </asx:abap>

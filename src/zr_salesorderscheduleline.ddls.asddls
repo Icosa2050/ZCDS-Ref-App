@@ -16,7 +16,7 @@ define view entity ZR_SalesOrderScheduleLine
       DeliveryDate,
       @Semantics.quantity.unitOfMeasure: 'OrderQuantityUnit'
       OrderQuantity,
-      OrderQuantityUnit,
+      OrderQuantityUnit as OrderQuantityUnit,
       CreatedByUser,
       CreationDateTime,
       LastChangedByUser,
