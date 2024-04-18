@@ -32,6 +32,8 @@ define view entity ZR_SalesOrderItemTP
       NetAmount,
       TransactionCurrency,
       CreationDate,
+      ZR_SalesorderItem.LastChangeDateTime as LastChangeDateTime,
+      ZR_SalesorderItem.LastChangedByUser  as LastChangedByUser,
       /* Associations */
       _Product,
       _SalesOrder,

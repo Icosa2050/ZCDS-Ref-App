@@ -21,13 +21,13 @@ persistent table zsalesorder
 //with additional save
 //lock master unmanaged total etag LastChangeDateTime
 lock master
-//etag master LastChangeDateTime
+etag master LastChangeDateTime
 
 authorization master ( global, instance )
 //etag master <field_name>
 {
   create ( features : global );
-  update ( features : instance );
+  update ( features : instance, precheck );
   delete;
   association _Item { create ( features : instance ); }
   field ( mandatory : create, readonly : update ) SalesOrder;
@@ -35,6 +35,7 @@ authorization master ( global, instance )
   field ( readonly ) CreationDateTime;
   field ( readonly ) LastChangedByUser;
   field ( readonly ) LastChangeDateTime;
+  field ( readonly ) DeliveryCompleted;
   field ( mandatory ) SalesOrderType;
   field ( mandatory ) SalesOrganization;
   field ( mandatory ) SoldToParty;
@@ -61,7 +62,7 @@ early numbering
 persistent table zsalesorderitem
 lock dependent by _SalesOrder
 authorization dependent by _SalesOrder
-//etag master <field_name>
+//etag master LastChangeDateTime
 {
 
   action delete;
@@ -69,6 +70,9 @@ authorization dependent by _SalesOrder
   delete ( features : instance );
   field ( readonly ) SalesOrder;
   field ( readonly : update ) SalesOrderItem;
+  field ( readonly ) LastChangedByUser;
+  field ( readonly ) LastChangeDateTime;
+
 
   association _SalesOrder;
   association _ScheduleLine { create ( features : instance ); }

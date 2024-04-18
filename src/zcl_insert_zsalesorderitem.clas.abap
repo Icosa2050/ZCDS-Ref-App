@@ -6,7 +6,7 @@ CLASS zcl_insert_zsalesorderitem DEFINITION
   PUBLIC SECTION.
 
     INTERFACES if_oo_adt_classrun.
-
+    DATA : out TYPE REF TO if_oo_adt_classrun_out.
     METHODS: insert_salesorderitem
       RAISING
         zcx_db_message.
@@ -19,6 +19,7 @@ ENDCLASS.
 CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
     TRY.
+        me->out = out.
         insert_salesorderitem( ).
       CATCH zcx_db_message.
         out->write( 'error from insert_salesorderitem' ).
@@ -41,8 +42,8 @@ CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
     CLEAR ls_salesorderitem.
 
     ls_salesorderitem = VALUE  #(
-    salesorder = '00000000S1'
-    salesorderitem = '00010'
+    salesorder = 'TEST1'
+    salesorderitem = '00001'
     product = 'P1'
     orderquantity = '1'
     orderquantityunit = 'STK'
@@ -58,8 +59,8 @@ CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
 
     CLEAR ls_salesorderitem.
     ls_salesorderitem = VALUE  #(
-    salesorder = '00000000S1'
-    salesorderitem = '00020'
+    salesorder = 'TEST2'
+    salesorderitem = '00002'
     product = 'P2'
     orderquantity = '1'
     orderquantityunit = 'STK'
@@ -77,12 +78,12 @@ CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
 
     ls_salesorderitem = VALUE  #(
     salesorder = '00000000S2'
-    salesorderitem = '00010'
+    salesorderitem = '000001'
     product = 'P2'
     orderquantity = '1'
     orderquantityunit = 'STK'
     netamount = 300
-    transactioncurrency = 'EUR'
+    transactioncurrency = 'USD'
     creationdate        = lv_sy_datum
     createdbyuser       = lv_sy_uname
     creationdatetime = lv_time
@@ -94,12 +95,12 @@ CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
     CLEAR ls_salesorderitem.
     ls_salesorderitem = VALUE  #(
     salesorder = '00000000S2'
-    salesorderitem = '00020'
+    salesorderitem = '000002'
     product = 'P3'
     orderquantity = '1'
     orderquantityunit = 'STK'
     netamount = 400
-    transactioncurrency = 'EUR'
+    transactioncurrency = 'USD'
     creationdate        = lv_sy_datum
     createdbyuser       = sy-uname
     creationdatetime = lv_time
@@ -111,12 +112,12 @@ CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
     CLEAR ls_salesorderitem.
     ls_salesorderitem = VALUE  #(
     salesorder = '00000000S2'
-    salesorderitem = '00030'
+    salesorderitem = '000003'
     product = 'P4'
     orderquantity = '2'
     orderquantityunit = 'STK'
     netamount = 500
-    transactioncurrency = 'EUR'
+    transactioncurrency = 'USD'
     creationdate        = lv_sy_datum
     createdbyuser       = sy-uname
     creationdatetime = lv_time
@@ -136,5 +137,6 @@ CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
       RAISE EXCEPTION TYPE zcx_db_message.
     ENDIF.
     SELECT * FROM zsalesorderitem INTO TABLE @lt_salesorderitem.
+    out->write( lt_salesorderitem ).
   ENDMETHOD.
 ENDCLASS.

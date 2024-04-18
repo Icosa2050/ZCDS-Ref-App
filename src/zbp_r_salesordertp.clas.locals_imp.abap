@@ -12,12 +12,12 @@ ENDCLASS.
 CLASS lhc_salesorderscheduleline IMPLEMENTATION.
 
   METHOD VerifyQuantityUnit.
- READ ENTITY IN LOCAL MODE ZR_SalesOrderScheduleLineTP
-      FIELDS ( OrderQuantity OrderQuantityUnit )
-      WITH CORRESPONDING #( keys )
-      RESULT DATA(salesorderschedulelines).
+    READ ENTITY IN LOCAL MODE ZR_SalesOrderScheduleLineTP
+         FIELDS ( OrderQuantity OrderQuantityUnit )
+         WITH CORRESPONDING #( keys )
+         RESULT DATA(salesorderschedulelines).
 
-    SELECT UnitOfMeasure FROM I_UNITOFMEASURE WITH PRIVILEGED ACCESS
+    SELECT UnitOfMeasure FROM i_unitofmeasure WITH PRIVILEGED ACCESS
       FOR ALL ENTRIES IN @salesorderschedulelines
       WHERE UnitOfMeasure = @salesorderschedulelines-OrderQuantityUnit INTO TABLE @DATA(uoms).
 
@@ -87,6 +87,8 @@ CLASS lhc_SalesOrder DEFINITION INHERITING FROM cl_abap_behavior_handler.
       IMPORTING keys FOR SalesOrder~CalculateTotalNetAmount.
     METHODS VerifySoldToParty FOR VALIDATE ON SAVE
       IMPORTING keys FOR SalesOrder~VerifySoldToParty.
+    METHODS precheck_update FOR PRECHECK
+      IMPORTING entities FOR UPDATE SalesOrder.
 
 
 ENDCLASS.
@@ -298,12 +300,12 @@ CLASS lhc_SalesOrder IMPLEMENTATION.
   ENDMETHOD.
 
   METHOD get_global_features.
-  DATA(salesordercreationswitchedeof) = abap_false.
-  "read system configuration to check if creation is allowed
-  "...
-  if salesordercreationswitchedeof = abap_true.
-  result = CORRESPONDING #( requested_features ).
-  endif.
+    DATA(salesordercreationswitchedeof) = abap_false.
+    "read system configuration to check if creation is allowed
+    "...
+    IF salesordercreationswitchedeof = abap_true.
+      result = CORRESPONDING #( requested_features ).
+    ENDIF.
   ENDMETHOD.
 
   METHOD CreateFromQuote.
@@ -338,9 +340,9 @@ CLASS lhc_SalesOrder IMPLEMENTATION.
       IF <salesorder>-DeliveryStatus = 'C'.
         APPEND VALUE #( %tky      = <salesorder>-%tky
                         %features = CORRESPONDING #( requested_features ) ) TO result.
-"      ELSEIF <salesorder>-%is_draft = if_abap_behv=>mk-on.
-"        APPEND VALUE #( %tky      = <salesorder>-%tky
-"                        %features = VALUE #( %action-delete = if_abap_behv=>mk-on ) ) TO result.
+        "      ELSEIF <salesorder>-%is_draft = if_abap_behv=>mk-on.
+        "        APPEND VALUE #( %tky      = <salesorder>-%tky
+        "                        %features = VALUE #( %action-delete = if_abap_behv=>mk-on ) ) TO result.
       ENDIF.
     ENDLOOP.
     "TODO implement
@@ -408,9 +410,7 @@ CLASS lhc_SalesOrder IMPLEMENTATION.
                                      sold_to_party = <salesorder>-SoldToParty
                                      severity = zcm_salesorder=>if_abap_behv_message~severity-error
                                )
-
         %element-SoldToParty = if_abap_behv=>mk-on
-
         %state_area = 'VERIFYSOLDTO' ) TO reported-salesorder.
       ELSE.
         READ TABLE customers TRANSPORTING NO FIELDS WITH KEY customer = <salesorder>-SoldToParty.
@@ -422,11 +422,33 @@ CLASS lhc_SalesOrder IMPLEMENTATION.
                                        sold_to_party = <salesorder>-SoldToParty
                                        severity = zcm_salesorder=>if_abap_behv_message~severity-error
                                  )
-
           %element-SoldToParty = if_abap_behv=>mk-on
-
           %state_area = 'VERIFYSOLDTO' ) TO reported-salesorder.
         ENDIF.
+      ENDIF.
+    ENDLOOP.
+  ENDMETHOD.
+
+  METHOD precheck_update.
+    LOOP AT entities ASSIGNING FIELD-SYMBOL(<salesorder>)
+    WHERE %control-SalesOrderType = if_abap_behv=>mk-on.
+      AUTHORITY-CHECK OBJECT 'Z_VBAK_VK'
+      ID 'ACTVT' FIELD '02'
+      ID 'ZAUART' FIELD <salesorder>-SalesOrderType.
+      IF sy-subrc <> 0.
+        APPEND VALUE #( %cid = <salesorder>-%cid_ref
+                %tky = <salesorder>-%tky
+                %fail-cause = if_abap_behv=>cause-unspecific
+                %update = if_abap_behv=>mk-on
+                )
+        TO failed-salesorder.
+        APPEND VALUE #( %tky = <salesorder>-%tky
+        %msg = NEW zcm_salesorder(
+                textid = zcm_salesorder=>no_auth_update_type
+                salesorder = <salesorder>-SalesOrder
+                severity = zcm_salesorder=>if_abap_behv_message~severity-error
+                )
+        ) TO reported-salesorder.
       ENDIF.
     ENDLOOP.
 
@@ -697,18 +719,18 @@ CLASS lhc_salesorderitem IMPLEMENTATION.
   ENDMETHOD.
 
   METHOD get_instance_features.
-     READ ENTITY IN LOCAL MODE ZR_SalesOrderItemTP BY \_SalesOrder
-      FIELDS ( DeliveryStatus )
-      WITH CORRESPONDING #( keys )
-      RESULT DATA(salesorderitems)
-      FAILED failed.
+    READ ENTITY IN LOCAL MODE ZR_SalesOrderItemTP BY \_SalesOrder
+     FIELDS ( DeliveryStatus )
+     WITH CORRESPONDING #( keys )
+     RESULT DATA(salesorderitems)
+     FAILED failed.
 
-    LOOP at keys ASSIGNING FIELD-SYMBOL(<key>).
+    LOOP AT keys ASSIGNING FIELD-SYMBOL(<key>).
       READ TABLE salesorderitems ASSIGNING FIELD-SYMBOL(<salesorderitem>)
       WITH KEY id COMPONENTS %tky = <key>-%tky.
       IF <salesorderitem>-DeliveryStatus = 'C'.
-          APPEND VALUE #( %tky = <salesorderitem>-%tky
-                            %features = CORRESPONDING #( requested_features ) ) TO result.
+        APPEND VALUE #( %tky = <salesorderitem>-%tky
+                          %features = CORRESPONDING #( requested_features ) ) TO result.
       ENDIF.
     ENDLOOP.
   ENDMETHOD.
