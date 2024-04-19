@@ -1,6 +1,6 @@
 managed implementation in class zbp_r_salesordertp unique;
 strict ( 2 );
-//with draft;
+with draft;
 //extensible { with additional save; with determinations on modify; with determinations on save; with validations on save; }
 
 // Allow consumers to use PRIVILEGED mode
@@ -18,18 +18,16 @@ for disable ( modify, read ) ##WARN_OK { }
 
 define behavior for ZR_SalesOrderTP alias SalesOrder
 persistent table zsalesorder
+draft table zsalesorderd
 //with additional save
-//lock master unmanaged total etag LastChangeDateTime
-lock master
+lock master unmanaged total etag LastChangeDateTime
 etag master LastChangeDateTime
-
 authorization master ( global, instance )
-//etag master <field_name>
 {
   create ( features : global );
   update ( features : instance, precheck );
   delete;
-  association _Item { create ( features : instance ); }
+  association _Item { create ( features : instance ); with draft; }
   field ( mandatory : create, readonly : update ) SalesOrder;
   field ( readonly ) CreatedByUser;
   field ( readonly ) CreationDateTime;
@@ -41,6 +39,12 @@ authorization master ( global, instance )
   field ( mandatory ) SoldToParty;
 
   action ( features : instance ) Delete;
+  draft action Activate optimized;
+  draft action (features:instance )Edit;
+  draft action Resume;
+  draft action Discard;
+  draft determine action Prepare;
+
   static factory action ( features : global ) CreateFromQuote deep parameter ZD_SalesOrderCreateFromQuoteP [1];
 
   function GetNumberOfItems deep result [1] ZD_SalesOrderGetNumberofItemsR;
@@ -60,6 +64,7 @@ authorization master ( global, instance )
 define behavior for ZR_SalesOrderItemTP alias SalesOrderItem
 early numbering
 persistent table zsalesorderitem
+draft table zsalesorderitemd
 lock dependent by _SalesOrder
 authorization dependent by _SalesOrder
 //etag master LastChangeDateTime
@@ -74,8 +79,8 @@ authorization dependent by _SalesOrder
   field ( readonly ) LastChangeDateTime;
 
 
-  association _SalesOrder;
-  association _ScheduleLine { create ( features : instance ); }
+  association _SalesOrder { with draft; }
+  association _ScheduleLine { create ( features : instance ); with draft; }
   unmanaged association _RequestedScheduleLine
   { create ( authorization : update, features : instance ); }
   unmanaged association _ConfirmedScheduleLine
@@ -94,6 +99,7 @@ authorization dependent by _SalesOrder
 define behavior for ZR_SalesOrderScheduleLineTP alias SalesOrderScheduleLine
 early numbering
 persistent table zsalesordersline
+draft table zsalesorderslind
 lock dependent by _SalesOrder
 authorization dependent by _SalesOrder
 //etag master <field_name>
@@ -103,7 +109,7 @@ authorization dependent by _SalesOrder
   field ( readonly ) SalesOrder;
   field ( readonly : update ) SalesOrderItem;
   field ( readonly : update ) SalesOrderScheduleLine;
-  association _SalesOrder;
-  association _SalesOrderItem;
+  association _SalesOrder { with draft;}
+  association _SalesOrderItem { with draft;}
   validation VerifyQuantityUnit on save { field OrderQuantityUnit; }
 }

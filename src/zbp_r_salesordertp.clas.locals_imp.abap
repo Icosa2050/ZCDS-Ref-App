@@ -89,6 +89,8 @@ CLASS lhc_SalesOrder DEFINITION INHERITING FROM cl_abap_behavior_handler.
       IMPORTING keys FOR SalesOrder~VerifySoldToParty.
     METHODS precheck_update FOR PRECHECK
       IMPORTING entities FOR UPDATE SalesOrder.
+    METHODS lock FOR LOCK
+      IMPORTING keys FOR LOCK SalesOrder.
 
 
 ENDCLASS.
@@ -154,8 +156,9 @@ CLASS lhc_SalesOrder IMPLEMENTATION.
     FAILED failed.
 
     LOOP AT salesorders ASSIGNING FIELD-SYMBOL(<salesorder>).
+    "TODO is this right?
       IF requested_authorizations-%update = if_abap_behv=>mk-on
-      OR requested_authorizations-%update = if_abap_behv=>mk-on.
+      OR requested_authorizations-%action-Edit = if_abap_behv=>mk-on.
         AUTHORITY-CHECK OBJECT 'Z_VBAK_VK'
           ID 'ACTVT' FIELD '02'
           ID 'AUART' FIELD <salesorder>-SalesOrderType.
@@ -451,6 +454,10 @@ CLASS lhc_SalesOrder IMPLEMENTATION.
         ) TO reported-salesorder.
       ENDIF.
     ENDLOOP.
+
+  ENDMETHOD.
+
+  METHOD lock.
 
   ENDMETHOD.
 

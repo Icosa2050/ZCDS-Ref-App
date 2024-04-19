@@ -40,6 +40,13 @@
      <DDLANGUAGE>E</DDLANGUAGE>
      <DDTEXT>empty</DDTEXT>
     </DD07V>
+    <DD07V>
+     <DOMNAME>ZSTATV</DOMNAME>
+     <VALPOS>0005</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>X</DOMVALUE_L>
+     <DDTEXT>process aborted</DDTEXT>
+    </DD07V>
    </DD07V_TAB>
   </asx:values>
  </asx:abap>
