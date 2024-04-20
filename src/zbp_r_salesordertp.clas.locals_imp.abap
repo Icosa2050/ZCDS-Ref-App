@@ -731,7 +731,7 @@ CLASS lhc_salesorderitem IMPLEMENTATION.
      WITH CORRESPONDING #( keys )
      RESULT DATA(salesorderitems)
      FAILED failed.
-
+"TODO find out what these keys could mean
     LOOP AT keys ASSIGNING FIELD-SYMBOL(<key>).
       READ TABLE salesorderitems ASSIGNING FIELD-SYMBOL(<salesorderitem>)
       WITH KEY id COMPONENTS %tky = <key>-%tky.
