@@ -1,3 +1,43 @@
+CLASS lsc_zr_salesordertp DEFINITION INHERITING FROM cl_abap_behavior_saver.
+
+  PROTECTED SECTION.
+
+    METHODS save_modified REDEFINITION.
+
+ENDCLASS.
+
+CLASS lsc_zr_salesordertp IMPLEMENTATION.
+
+  METHOD save_modified.
+    DATA changed TYPE TABLE FOR EVENT ZR_SalesOrderTP~Changed.
+    DATA deleted TYPE TABLE FOR EVENT ZR_SalesOrderTP~Deleted.
+
+    IF create-salesorder IS NOT INITIAL.
+      RAISE ENTITY EVENT ZR_SalesOrderTP~Created
+        FROM CORRESPONDING #( create-salesorder MAPPING EventRaisedDateTime = CreationDateTime ).
+    ENDIF.
+
+    deleted = CORRESPONDING #( delete-salesorder ).
+
+    LOOP AT update-salesorder ASSIGNING FIELD-SYMBOL(<salesorder>).
+      IF <salesorder>-DeletionIndicator = abap_true.
+        APPEND VALUE #( SalesOrder = <salesorder>-SalesOrder ) TO deleted.
+      ELSE.
+        APPEND VALUE #( SalesOrder = <salesorder>-SalesOrder ) TO changed.
+      ENDIF.
+    ENDLOOP.
+
+    IF changed IS NOT INITIAL.
+      RAISE ENTITY EVENT ZR_SalesOrderTP~Changed FROM changed.
+    ENDIF.
+
+    IF deleted IS NOT INITIAL.
+      RAISE ENTITY EVENT ZR_SalesOrderTP~Deleted FROM deleted.
+    ENDIF.
+  ENDMETHOD.
+
+ENDCLASS.
+
 CLASS lhc_salesorderscheduleline DEFINITION INHERITING FROM cl_abap_behavior_handler.
 
   PRIVATE SECTION.
@@ -156,7 +196,7 @@ CLASS lhc_SalesOrder IMPLEMENTATION.
     FAILED failed.
 
     LOOP AT salesorders ASSIGNING FIELD-SYMBOL(<salesorder>).
-    "TODO is this right?
+      "TODO is this right?
       IF requested_authorizations-%update = if_abap_behv=>mk-on
       OR requested_authorizations-%action-Edit = if_abap_behv=>mk-on.
         AUTHORITY-CHECK OBJECT 'Z_VBAK_VK'
@@ -731,7 +771,7 @@ CLASS lhc_salesorderitem IMPLEMENTATION.
      WITH CORRESPONDING #( keys )
      RESULT DATA(salesorderitems)
      FAILED failed.
-"TODO find out what these keys could mean
+    "TODO find out what these keys could mean
     LOOP AT keys ASSIGNING FIELD-SYMBOL(<key>).
       READ TABLE salesorderitems ASSIGNING FIELD-SYMBOL(<salesorderitem>)
       WITH KEY id COMPONENTS %tky = <key>-%tky.

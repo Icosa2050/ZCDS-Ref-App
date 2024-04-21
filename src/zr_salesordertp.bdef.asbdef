@@ -19,10 +19,12 @@ for disable ( modify, read ) ##WARN_OK { }
 define behavior for ZR_SalesOrderTP alias SalesOrder
 persistent table zsalesorder
 draft table zsalesorderd
-//with additional save
+with additional save
 lock master unmanaged total etag LastChangeDateTime
 etag master LastChangeDateTime
 authorization master ( global, instance )
+//changedocuments master ( zsalesorder )
+
 {
   create ( features : global );
   update ( features : instance, precheck );
@@ -40,7 +42,7 @@ authorization master ( global, instance )
 
   action ( features : instance ) Delete;
   draft action Activate optimized;
-  draft action (features:instance )Edit;
+  draft action ( features : instance ) Edit;
   draft action Resume;
   draft action Discard;
   draft determine action Prepare;
@@ -58,6 +60,46 @@ authorization master ( global, instance )
     validation ( always ) SalesOrderItem~VerifyProduct;
     validation ( always ) SalesOrderScheduleLine~VerifyQuantityUnit;
   }
+  side effects
+  {
+    action Delete
+    affects $self,
+        entity _Item,
+        entity _item._ScheduleLine,
+        permissions ( action Delete ),
+        messages;
+    // determine actin Prepare executed on global
+    // error "execute on global" is not supported in this ABAP release.
+    // workaround: use action Prepare in on fields
+    determine action Prepare executed on
+    field SoldToParty,
+    field NetAmount,
+    field TransactionCurrency,
+    field _Item.OrderQuantity,
+    field _Item.OrderQuantityUnit,
+    field _Item.Product,
+    field _Item.NetAmount,
+    field _Item.TransactionCurrency,
+    field _Item._ScheduleLine.OrderQuantity,
+    field _Item._ScheduleLine.OrderQuantityUnit
+    affects
+        field SoldToParty,
+        field NetAmount,
+        field TransactionCurrency,
+        field _Item.OrderQuantity,
+        field _Item.OrderQuantityUnit,
+        field _Item.Product,
+        field _Item.NetAmount,
+        field _Item.TransactionCurrency,
+        field _Item._ScheduleLine.OrderQuantity,
+        field _Item._ScheduleLine.OrderQuantityUnit,
+        messages;
+
+  }
+  event Created parameter ZD_SalesOrderCreated;
+  event Changed;
+  event Deleted;
+  managed event CreatedWithSoldToParty on Created parameter ZD_SalesOrderCreatedDerived;
 
 }
 
@@ -93,7 +135,16 @@ authorization dependent by _SalesOrder
   determination CalculateTotalAmount on save { field Product, OrderQuantity, OrderQuantityUnit; }
   determination CalculateNetAmount on modify { field NetAmount, TransactionCurrency; }
   validation VerifyProduct on save { field Product; }
-
+  side effects
+  {
+    action Copy
+    affects $self,
+        entity _ScheduleLine;
+    field NetAmount
+    affects
+        field _SalesOrder.NetAmount,
+        field _SalesOrder.TransactionCurrency;
+  }
 }
 
 define behavior for ZR_SalesOrderScheduleLineTP alias SalesOrderScheduleLine
@@ -104,12 +155,12 @@ lock dependent by _SalesOrder
 authorization dependent by _SalesOrder
 //etag master <field_name>
 {
-  update (features: instance );
-  delete (features: instance );
+  update ( features : instance );
+  delete ( features : instance );
   field ( readonly ) SalesOrder;
   field ( readonly : update ) SalesOrderItem;
   field ( readonly : update ) SalesOrderScheduleLine;
-  association _SalesOrder { with draft;}
-  association _SalesOrderItem { with draft;}
+  association _SalesOrder { with draft; }
+  association _SalesOrderItem { with draft; }
   validation VerifyQuantityUnit on save { field OrderQuantityUnit; }
 }

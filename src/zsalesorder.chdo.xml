@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CHDO" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <CHDO>
+    <REPORTS_GENERATED>
+     <TCDRPS>
+      <OBJECT>ZSALESORDER</OBJECT>
+      <REPORTNAME>*CLASS_GEN*</REPORTNAME>
+      <ARBGEB>CD</ARBGEB>
+      <FEHLERNR>600</FEHLERNR>
+     </TCDRPS>
+    </REPORTS_GENERATED>
+    <OBJECTS>
+     <TCDOBS>
+      <OBJECT>ZSALESORDER</OBJECT>
+      <TABNAME>ZSALESORDER</TABNAME>
+      <MULTCASE>X</MULTCASE>
+      <DOCUDEL>X</DOCUDEL>
+      <DOCUINS>X</DOCUINS>
+      <DOCUI_IF>X</DOCUI_IF>
+     </TCDOBS>
+     <TCDOBS>
+      <OBJECT>ZSALESORDER</OBJECT>
+      <TABNAME>ZSALESORDERITEM</TABNAME>
+      <MULTCASE>X</MULTCASE>
+      <DOCUDEL>X</DOCUDEL>
+      <DOCUINS>X</DOCUINS>
+      <DOCUI_IF>X</DOCUI_IF>
+     </TCDOBS>
+     <TCDOBS>
+      <OBJECT>ZSALESORDER</OBJECT>
+      <TABNAME>ZSALESORDERSLINE</TABNAME>
+      <MULTCASE>X</MULTCASE>
+      <DOCUDEL>X</DOCUDEL>
+      <DOCUINS>X</DOCUINS>
+      <DOCUI_IF>X</DOCUI_IF>
+     </TCDOBS>
+    </OBJECTS>
+   </CHDO>
+  </asx:values>
+ </asx:abap>
+</abapGit>
