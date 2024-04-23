@@ -1,6 +1,7 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Sales Order Item'
-define view entity ZI_SalesOrderItemTP as projection  on ZR_SalesOrderItemTP
+define view entity ZI_SalesOrderItemTP 
+as projection on ZR_SalesOrderItemTP
 {
     key SalesOrder,
     key SalesOrderItem,

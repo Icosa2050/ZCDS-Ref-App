@@ -133,7 +133,7 @@ public section.
       attr4 type scx_attrname value '',
     end of NOT_IMPLEMENTED .
   data TEST type ABAP_BOOL read-only .
-  data SALESORDER type ZVBELN .
+  data SALESORDER type ZVBELN_IC .
   data USER type ZVDM_USERDESCRIPTION .
   data PRODUCT type MATNR .
   data SOLD_TO_PARTY type ZKUNAG .

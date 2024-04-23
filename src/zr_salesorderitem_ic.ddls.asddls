@@ -20,8 +20,10 @@ define view entity ZR_SalesOrderItem_IC
       NetAmount,
       TransactionCurrency,
       CreationDate,
-      LastChangeDateTime as LastChangeDateTime,
-      LastChangedByUser  as LastChangedByUser,
+      CreationDateTime,
+      CreatedByUser,
+      LastChangeDateTime,
+      LastChangedByUser,
       /* Associations */
       _Product,
       _SalesOrder,

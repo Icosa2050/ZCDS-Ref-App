@@ -35,6 +35,8 @@ define view entity ZI_SalesOrderItem
       transactioncurrency as TransactionCurrency,
       @Semantics.systemDateTime.createdAt: true
       creationdate        as CreationDate,
+      createdbyuser        as CreatedByUser,
+      creationdatetime        as CreationDateTime,
       lastchangedatetime  as LastChangeDateTime,
       lastchangedbyuser   as LastChangedByUser,
       _SalesOrder,

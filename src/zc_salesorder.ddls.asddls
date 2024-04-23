@@ -14,7 +14,7 @@ define view entity ZC_SalesOrder
 {
   key ZI_SalesOrder.SalesOrder,
       ZI_SalesOrder.SalesOrderType,
-      ZI_SalesOrder._Item as _SalesOrderItem,
       CreatedByUser,
+      ZI_SalesOrder._Item as _SalesOrderItem,
       _SalesOrder
 }

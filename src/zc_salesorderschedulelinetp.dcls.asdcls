@@ -1,0 +1,11 @@
+@EndUserText.label: 'Sales Order Schedule Line'
+@MappingRole: true
+define role ZC_SalesOrderScheduleLineTP {
+    grant
+        select
+            on
+                ZC_SalesOrderScheduleLineTP
+                    where
+                        inheriting conditions from entity ZR_SalesOrderScheduleLineTP;
+}
+

@@ -17,6 +17,7 @@ define view entity ZI_ProductStdVH
       @Search.fuzzinessThreshold: 0.8
       @ObjectModel.text.element: ['ProductName']
   key Product,
+      $session.system_language as Language,
       @Search.defaultSearchElement: true
       @Search.fuzzinessThreshold: 0.8
       @Semantics.text: true

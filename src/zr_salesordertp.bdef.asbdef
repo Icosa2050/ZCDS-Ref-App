@@ -35,7 +35,7 @@ authorization master ( global, instance )
   field ( readonly ) CreationDateTime;
   field ( readonly ) LastChangedByUser;
   field ( readonly ) LastChangeDateTime;
-  field ( readonly ) DeliveryCompleted;
+  field ( readonly ) DeliveryIsCompleted;
   field ( mandatory ) SalesOrderType;
   field ( mandatory ) SalesOrganization;
   field ( mandatory ) SoldToParty;

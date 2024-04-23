@@ -1,0 +1,11 @@
+@EndUserText.label: 'Sales Order'
+@MappingRole: true
+define role ZA_SALESORDERIP {
+    grant
+        select
+            on
+                ZA_SalesOrderTP
+                    where
+                        inheriting conditions from entity ZR_SalesOrderTP;
+                        
+}

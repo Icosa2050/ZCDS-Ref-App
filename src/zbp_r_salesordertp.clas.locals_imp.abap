@@ -247,9 +247,9 @@ CLASS lhc_SalesOrder IMPLEMENTATION.
     LOOP AT entities ASSIGNING FIELD-SYMBOL(<sales_order>).
       "get highest item from sales order items of a sales order
 
-      DATA(max_item_id) = REDUCE #(  INIT max = CONV zposnr( '000000' )
+      DATA(max_item_id) = REDUCE #(  INIT max = CONV zposnr_ic( '000000' )
                           FOR sales_order_item IN sales_order_items USING KEY entity WHERE ( salesorder = <sales_order>-salesorder )
-                          NEXT max = COND zposnr( WHEN sales_order_item-salesorderitem > max
+                          NEXT max = COND zposnr_ic( WHEN sales_order_item-salesorderitem > max
                           THEN sales_order_item-salesorderitem
                           ELSE max )
                           ).

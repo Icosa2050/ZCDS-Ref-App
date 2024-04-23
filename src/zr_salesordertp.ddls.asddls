@@ -20,7 +20,7 @@ define root view entity ZR_SalesOrderTP
       ZI_SalesOrder.NetAmount,
       ZI_SalesOrder.TransactionCurrency,
       ZI_SalesOrder.DeliveryStatus,
-      cast ( case DeliveryStatus when 'C' then 'X' else ' ' end as zlfstk preserving type ) as DeliveryCompleted,
+      cast ( case DeliveryStatus when 'C' then 'X' else ' ' end as zlfstk preserving type ) as DeliveryIsCompleted,
       //@Semantics.booleanIndicator: true
       ZI_SalesOrder.DeletionIndicator,
       @Semantics.user.createdBy: true

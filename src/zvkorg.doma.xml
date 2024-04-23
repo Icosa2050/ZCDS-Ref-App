@@ -48,25 +48,25 @@
      <VALPOS>0001</VALPOS>
      <DDLANGUAGE>D</DDLANGUAGE>
      <DOMVALUE_L>CENT</DOMVALUE_L>
-     <DDTEXT>Sales Org 01</DDTEXT>
+     <DDTEXT>Sales Org Central</DDTEXT>
     </item>
     <item>
      <VALPOS>0002</VALPOS>
      <DDLANGUAGE>D</DDLANGUAGE>
      <DOMVALUE_L>FILA</DOMVALUE_L>
-     <DDTEXT>Sales Org 02</DDTEXT>
+     <DDTEXT>Sales Org A</DDTEXT>
     </item>
     <item>
      <VALPOS>0003</VALPOS>
      <DDLANGUAGE>D</DDLANGUAGE>
      <DOMVALUE_L>FILB</DOMVALUE_L>
-     <DDTEXT>Sales Org 03</DDTEXT>
+     <DDTEXT>Sales Org B</DDTEXT>
     </item>
     <item>
      <VALPOS>0004</VALPOS>
      <DDLANGUAGE>D</DDLANGUAGE>
      <DOMVALUE_L>FILC</DOMVALUE_L>
-     <DDTEXT>Sales Org 04</DDTEXT>
+     <DDTEXT>Sales Org C</DDTEXT>
     </item>
    </DD07_TEXTS>
   </asx:values>

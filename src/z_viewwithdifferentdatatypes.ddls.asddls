@@ -38,7 +38,7 @@ define view entity Z_ViewWithDifferentDataTypes
 
       abap.char'0000000000'                                as Char0000000000,
 
-      cast( abap.char'0123456789' as zvbeln preserving type )              as CastChar0123456789,
+      cast( abap.char'0123456789' as zvbeln_ic preserving type )              as CastChar0123456789,
 
       cast( '' as abap.char(10) )                          as CastChar,
 

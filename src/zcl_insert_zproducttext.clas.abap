@@ -10,7 +10,6 @@ CLASS zcl_insert_zproducttext DEFINITION
 ENDCLASS.
 
 
-
 CLASS zcl_insert_zproducttext IMPLEMENTATION.
   METHOD if_oo_adt_classrun~main.
 *####################################################################
@@ -41,66 +40,67 @@ CLASS zcl_insert_zproducttext IMPLEMENTATION.
     CLEAR gt_zproducttext.
 
     CLEAR gs_zproducttext.
-    gs_zproducttext-product             = 'P1'.
-    gs_zproducttext-product_name        = 'Product 1 '.
+
+    gs_zproducttext-product             = '0000000000000000000000000000000000000P1'.
+    gs_zproducttext-product_name        = 'Product 1'.
     gs_zproducttext-language            = 'E'.
     INSERT gs_zproducttext INTO TABLE gt_zproducttext.
 
     CLEAR gs_zproducttext.
-    gs_zproducttext-product             = 'P1'.
+    gs_zproducttext-product             = '0000000000000000000000000000000000000P1'.
     gs_zproducttext-product_name        = 'Produkt 1'.
     gs_zproducttext-language            = 'D'.
     INSERT gs_zproducttext INTO TABLE gt_zproducttext.
 
     CLEAR gs_zproducttext.
-    gs_zproducttext-product             = 'P2'.
+    gs_zproducttext-product             = '0000000000000000000000000000000000000P2'.
     gs_zproducttext-product_name        = 'Product 2'.
     gs_zproducttext-language            = 'E'.
     INSERT gs_zproducttext INTO TABLE gt_zproducttext.
 
     CLEAR gs_zproducttext.
-    gs_zproducttext-product             = 'P2'.
+    gs_zproducttext-product             = '0000000000000000000000000000000000000P2'.
     gs_zproducttext-product_name        = 'Produkt 2'.
     gs_zproducttext-language            = 'D'.
     INSERT gs_zproducttext INTO TABLE gt_zproducttext.
 
     CLEAR gs_zproducttext.
-    gs_zproducttext-product             = 'P3'.
+    gs_zproducttext-product             = '0000000000000000000000000000000000000P3'.
     gs_zproducttext-product_name        = 'Product 3'.
     gs_zproducttext-language            = 'E'.
     INSERT gs_zproducttext INTO TABLE gt_zproducttext.
 
     CLEAR gs_zproducttext.
-    gs_zproducttext-product             = 'P3'.
+    gs_zproducttext-product             = '0000000000000000000000000000000000000P3'.
     gs_zproducttext-product_name        = 'Produkt 3'.
     gs_zproducttext-language            = 'D'.
     INSERT gs_zproducttext INTO TABLE gt_zproducttext.
 
     CLEAR gs_zproducttext.
-    gs_zproducttext-product             = 'P4'.
-    gs_zproducttext-product_name        = 'Product 4 '.
+    gs_zproducttext-product             = '0000000000000000000000000000000000000P4'.
+    gs_zproducttext-product_name        = 'Product 4'.
     gs_zproducttext-language            = 'E'.
 
     INSERT gs_zproducttext INTO TABLE gt_zproducttext.
 
     CLEAR gs_zproducttext.
-    gs_zproducttext-product             = 'P4'.
-    gs_zproducttext-product_name        = 'Produkt 4 '.
+    gs_zproducttext-product             = '0000000000000000000000000000000000000P4'.
+    gs_zproducttext-product_name        = 'Produkt 4'.
     gs_zproducttext-language            = 'D'.
 
     INSERT gs_zproducttext INTO TABLE gt_zproducttext.
     CLEAR gs_zproducttext.
 
-    gs_zproducttext-product             = 'P4'.
-    gs_zproducttext-product_name        = 'Produkt 4 '.
+    gs_zproducttext-product             = '0000000000000000000000000000000000000P4'.
+    gs_zproducttext-product_name        = 'Produkt 4'.
     gs_zproducttext-language            = 'D'.
 
     INSERT gs_zproducttext INTO TABLE gt_zproducttext.
 
     CLEAR gs_zproducttext.
-
-
+***********************************************************************************
     MODIFY zproducttext FROM TABLE @gt_zproducttext.
+***********************************************************************************
     IF ( sy-subrc <> 0 ).
       out->write( 'modifying table zproducttext failed' ).
     ENDIF.

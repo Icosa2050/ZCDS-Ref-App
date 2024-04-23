@@ -1,7 +1,7 @@
 @EndUserText.label: 'Sales Order Get Function Result'
 define root abstract entity ZD_SalesOrderGetResult
 {
-  SalesOrder           : zvbeln;
+  SalesOrder           : zvbeln_ic;
   SalesOrderType       : zauart;
   SoldToParty          : zkunag;
   SalesOrganization    : zvkorg;

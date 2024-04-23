@@ -41,6 +41,7 @@ CLASS zcl_insert_zsalesorder IMPLEMENTATION.
     ls_zsalesorder-salesorganization = '01'.
     ls_zsalesorder-distributionchannel = 'D1'.
     ls_zsalesorder-soldtoparty = 'CUSTOMER1'.
+    ls_zsalesorder-createdbyuser = '0000000001'.
     ls_zsalesorder-organizationdivision = '01'.
     ls_zsalesorder-createdbyuser = sy-uname.
 
@@ -54,7 +55,7 @@ CLASS zcl_insert_zsalesorder IMPLEMENTATION.
     ls_zsalesorder-salesorganization = '02'.
     ls_zsalesorder-distributionchannel = 'D2'.
     ls_zsalesorder-soldtoparty = 'CUSTOMER2'.
-    ls_zsalesorder-createdbyuser = sy-uname.
+    ls_zsalesorder-createdbyuser = '0000000001'.
     ls_zsalesorder-creationdatetime = lv_time.
     ls_zsalesorder-transactioncurrency = 'USD'.
     INSERT ls_zsalesorder INTO TABLE lt_zsalesorder.
@@ -67,7 +68,7 @@ CLASS zcl_insert_zsalesorder IMPLEMENTATION.
     ls_zsalesorder-soldtoparty = 'CUSTOMER2'.
     ls_zsalesorder-distributionchannel = 'D2'.
     ls_zsalesorder-organizationdivision = '01'.
-    ls_zsalesorder-createdbyuser = sy-uname.
+    ls_zsalesorder-createdbyuser = '0000000002'.
     ls_zsalesorder-creationdatetime = lv_time.
     ls_zsalesorder-transactioncurrency = 'US'.
     INSERT ls_zsalesorder INTO TABLE lt_zsalesorder.
@@ -79,7 +80,7 @@ CLASS zcl_insert_zsalesorder IMPLEMENTATION.
     ls_zsalesorder-soldtoparty = 'CUSTOMER2'.
     ls_zsalesorder-organizationdivision = '01'.
     ls_zsalesorder-distributionchannel = 'D2'.
-    ls_zsalesorder-createdbyuser = sy-uname.
+    ls_zsalesorder-createdbyuser = '0000000003'.
     ls_zsalesorder-creationdatetime = lv_time.
     ls_zsalesorder-deliveryStatus = 'C'.
     ls_zsalesorder-transactioncurrency = 'USD'.
