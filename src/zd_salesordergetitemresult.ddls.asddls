@@ -1,7 +1,7 @@
 @EndUserText.label: 'Sales Order Get Item Function Result'
 define abstract entity ZD_SalesOrderGetItemResult
 {
-  SalesOrderItem      : zposnr;
+  SalesOrderItem      : zposnr_ic;
   Product             : matnr;
   @Semantics.quantity.unitOfMeasure : 'OrderQuantityUnit'
   OrderQuantity       : zkwmeng;

@@ -557,7 +557,7 @@ CLASS lhc_salesorderitem IMPLEMENTATION.
              FOR sales_order_schedule_line IN sales_order_schedule_lines
                USING KEY entity WHERE ( SalesOrder = <sales_order_item>-SalesOrder
                AND SalesOrderItem = <sales_order_item>-SalesOrderItem )
-               NEXT max = COND zposnr( WHEN sales_order_schedule_line-SalesOrderScheduleLine > max
+               NEXT max = COND zposnr_ic( WHEN sales_order_schedule_line-SalesOrderScheduleLine > max
                THEN sales_order_schedule_line-SalesOrderScheduleLine
                ELSE max )
               ).

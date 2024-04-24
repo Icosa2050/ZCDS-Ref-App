@@ -1,0 +1,42 @@
+interface;
+use draft;
+use side effects;
+
+define behavior for ZI_SalesOrderTP alias SalesOrder
+{
+  use create;
+  use update;
+
+  use action Delete;
+  use action CreateFromQuote;
+  use action Check;
+
+  use action Activate;
+  use action Discard;
+  use action Edit;
+  use action Prepare;
+  use action Resume;
+
+  use function GetSalesOrder;
+  use function GetNumberOfItems;
+
+  use association _Item { create; with draft; }
+
+  field ( mandatory : create ) Customer;
+  field ( suppress ) DeliveryStatus;
+  field ( readonly ) NetAmount;
+
+//  use event Created;
+//  use event Changed;
+//  use event Deleted;
+}
+
+define behavior for ZI_SalesOrderItemTP alias SalesOrderItem
+{
+  use update;
+  use delete;
+
+  use action Copy;
+
+  use association _SalesOrder { with draft; }
+}
