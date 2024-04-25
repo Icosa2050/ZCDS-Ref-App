@@ -1,0 +1,81 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.typeName: 'Sales Order'
+@UI.headerInfo.typeNamePlural: 'Sales Orders'
+@UI.headerInfo.title.label: 'Sales Order'
+@UI.headerInfo.title.value: 'SalesOrder'
+annotate view ZC_SalesOrderTP with
+{
+  @UI.facet: [{
+    id:       'SalesOrderGeneralData',
+    purpose:  #STANDARD,
+    type:     #FIELDGROUP_REFERENCE,
+    label:    'General Data',
+    targetQualifier: 'GeneralData',
+    position: 10
+  },
+  {
+    id:       'SalesOrderAdminData',
+    purpose:  #STANDARD,
+    type:     #FIELDGROUP_REFERENCE,
+    label:    'Administrative Data',
+    targetQualifier: 'AdminData',
+    position: 20
+  },
+  {
+    id:       'SalesOrderItem',
+    purpose:  #STANDARD,
+    type:     #LINEITEM_REFERENCE,
+    label:    'Items',
+    position: 30,
+    targetElement: '_Item'
+  }]
+  @UI.identification: [{position: 11, importance: #HIGH,
+                        type:#FOR_ACTION, dataAction: 'DELETE', label: 'Delete' },
+                       {position: 12, importance: #HIGH,
+                        type:#FOR_ACTION, dataAction: 'CHECK', label: 'Check' }]
+  @UI.lineItem: [{position: 10, importance: #HIGH},
+                 {position: 11, importance: #HIGH,
+                  type:#FOR_ACTION, dataAction: 'DELETE', label: 'Delete'}]
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 10, importance: #HIGH }]
+  @UI.selectionField: [{position: 10}]
+  SalesOrder;
+  @UI.lineItem: [{position: 20, importance: #HIGH}]
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 20, importance: #HIGH }]
+  @UI.selectionField: [{position: 20}]
+  SoldToParty;
+  @UI.lineItem: [{position: 30, importance: #HIGH}]
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 30, importance: #HIGH }]
+  @UI.selectionField: [{position: 30}]
+  SalesOrderType;
+  @UI.lineItem: [{position: 40, importance: #HIGH}]
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 40, importance: #HIGH }]
+  @UI.selectionField: [{position: 40}]
+  SalesOrganization;
+  @UI.lineItem: [{position: 50, importance: #HIGH}]
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 50, importance: #HIGH }]
+//  @UI.selectionField: [{position: 50}]
+  DistributionChannel;
+  @UI.lineItem: [{position: 60, importance: #HIGH}]
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 60, importance: #HIGH }]
+//  @UI.selectionField: [{position: 60}]
+  OrganizationDivision;
+  @UI.lineItem: [{position: 70, importance: #HIGH}]
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 70, importance: #HIGH }]
+  NetAmount;
+  //  @UI.lineItem: [{position: 80, importance: #HIGH}]
+  //  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 80, importance: #HIGH }]
+  @UI.hidden:true
+  TransactionCurrency;
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 80, importance: #HIGH }]
+  DeliveryIsCompleted;
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 90, importance: #HIGH }]
+  DeliveryStatus;
+  @UI.fieldGroup: [{qualifier: 'AdminData', position: 110, importance: #LOW }]
+  CreatedByUser;
+  @UI.fieldGroup: [{qualifier: 'AdminData', position: 111, importance: #LOW }]
+  CreationDateTime;
+  @UI.fieldGroup: [{qualifier: 'AdminData', position: 112, importance: #LOW }]
+  LastChangedByUser;
+  @UI.fieldGroup: [{qualifier: 'AdminData', position: 113, importance: #LOW }]
+  LastChangeDateTime;
+}

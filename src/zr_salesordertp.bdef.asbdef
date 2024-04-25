@@ -27,7 +27,7 @@ authorization master ( global, instance )
 
 {
   create ( features : global );
-  update ( features : instance, precheck );
+  update ( features : instance , precheck );
   delete;
   association _Item { create ( features : instance ); with draft; }
   field ( mandatory : create, readonly : update ) SalesOrder;
@@ -47,7 +47,7 @@ authorization master ( global, instance )
   draft action Discard;
   draft determine action Prepare;
 
-  static factory action ( features : global ) CreateFromQuote deep parameter ZD_SalesOrderCreateFromQuoteP [1];
+  //static factory action ( features : global ) CreateFromQuote deep parameter ZD_SalesOrderCreateFromQuoteP [1];
 
   function GetNumberOfItems deep result [1] ZD_SalesOrderGetNumberofItemsR;
   function GetSalesOrder deep result [1] ZD_SalesOrderGetResult;
@@ -68,7 +68,7 @@ authorization master ( global, instance )
         entity _item._ScheduleLine,
         permissions ( action Delete ),
         messages;
-    // determine actin Prepare executed on global
+    // determine action Prepare executed on global
     // error "execute on global" is not supported in this ABAP release.
     // workaround: use action Prepare in on fields
     determine action Prepare executed on

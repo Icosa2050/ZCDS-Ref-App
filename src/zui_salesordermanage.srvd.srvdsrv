@@ -1,0 +1,6 @@
+@EndUserText.label: 'sales order Fiori Element App'
+define service ZUI_SALESORDERMANAGE {
+  expose ZC_SalesOrderTP;
+  expose ZC_SalesOrderItemTP;
+  expose ZC_SalesOrderScheduleLineTP;
+}

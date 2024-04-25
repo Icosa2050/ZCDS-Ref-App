@@ -1,0 +1,51 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.typeName: 'Sales Order Schedule Line'
+@UI.headerInfo.typeNamePlural: 'Sales Order Schedule Lines'
+@UI.headerInfo.title.label: 'Sales Order Schedule Line'
+@UI.headerInfo.title.value: 'SalesOrderScheduleLine'
+annotate view ZC_SalesOrderScheduleLineTP with
+{
+  @UI.facet: [{
+    id:       'SalesOrderScheduleLineGeneralData',
+    purpose:  #STANDARD,
+    type:     #FIELDGROUP_REFERENCE,
+    label:    'General Data',
+    targetQualifier: 'GeneralData',
+    position: 10
+  },
+  {
+    id:       'SalesOrderScheduleLineAdminData',
+    purpose:  #STANDARD,
+    type:     #FIELDGROUP_REFERENCE,
+    label:    'Administrative Data',
+    targetQualifier: 'AdminData',
+    position: 20
+  }]
+
+  @UI.hidden:true
+  SalesOrder;
+  @UI.hidden:true
+  SalesOrderItem;
+  @UI.lineItem: [{position: 10, importance: #HIGH}]
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 10, importance: #HIGH }]
+  @UI.selectionField: [{position: 10}]
+  SalesOrderScheduleLine;
+  @UI.lineItem: [{position: 20, importance: #HIGH}]
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 20, importance: #HIGH }]
+  DeliveryDate;
+  @UI.lineItem: [{position: 30, importance: #HIGH}]
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 30, importance: #HIGH }]
+  OrderQuantity;
+//  @UI.lineItem: [{position: 40, importance: #HIGH}]
+//  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 40, importance: #HIGH }]
+  @UI.hidden:true
+  OrderQuantityUnit;
+  @UI.fieldGroup: [{qualifier: 'AdminData', position: 110, importance: #LOW }]
+  CreatedByUser;
+  @UI.fieldGroup: [{qualifier: 'AdminData', position: 111, importance: #LOW }]
+  CreationDateTime;
+  @UI.fieldGroup: [{qualifier: 'AdminData', position: 112, importance: #LOW }]
+  LastChangedByUser;
+  @UI.fieldGroup: [{qualifier: 'AdminData', position: 113, importance: #LOW }]
+  LastChangeDateTime;
+}

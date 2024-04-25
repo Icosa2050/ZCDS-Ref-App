@@ -26,9 +26,9 @@ define behavior for ZI_SalesOrderTP alias SalesOrder
   field ( suppress ) DeliveryStatus;
   field ( readonly ) NetAmount;
 
-//  use event Created;
-//  use event Changed;
-//  use event Deleted;
+  use event Created;
+  use event Changed;
+  use event Deleted;
 }
 
 define behavior for ZI_SalesOrderItemTP alias SalesOrderItem

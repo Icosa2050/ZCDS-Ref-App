@@ -1,0 +1,68 @@
+projection implementation in class zbp_c_salesordertp unique;
+//projection;
+strict ( 2 );
+use draft;
+use side effects;
+extensible;
+
+define behavior for ZC_SalesOrderTP alias SalesOrder
+use etag
+extensible
+{
+  use create;
+  use update(augment);
+  use delete;
+
+  use action Delete;
+  //use action CreateFromQuote;
+  use function GetNumberOfItems;
+  use function GetSalesOrder;
+  use action Check;
+
+  use action Activate;
+  use action Edit;
+  use action Resume;
+  use action Discard;
+  use action Prepare;
+
+  use association _Item { create; with draft; }
+  //static factory action ( features : global ) CreateFromSalesQuote
+  //parameter ZD_SalesOrderCreateFromQuotesP [1] ;
+
+  side effects
+  {
+    determine action Prepare executed on field CreationDateTime
+    affects field _Item.OrderIsFreeOfCharge;
+  }
+}
+
+define behavior for ZC_SalesOrderItemTP alias SalesOrderItem
+{
+  use update ( augment );
+  use delete;
+
+  use action delete;
+  use action Copy;
+
+  use association _SalesOrder { with draft; }
+  use association _ScheduleLine { create; with draft; }
+  field ( modify, features : instance ) OrderIsFreeOfCharge;
+  side effects
+  {
+    field NetAmount
+    affects field OrderIsFreeOfCharge;
+    field OrderIsFreeOfCharge
+    affects field NetAmount;
+
+  }
+
+}
+
+define behavior for ZC_SalesOrderScheduleLineTP alias SalesOrderScheduleLine
+{
+  use update ( augment );
+  use delete;
+
+  use association _SalesOrder { with draft; }
+  use association _SalesOrderItem { with draft; }
+}

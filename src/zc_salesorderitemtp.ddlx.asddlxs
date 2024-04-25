@@ -1,0 +1,67 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.typeName: 'Sales Order Item'
+@UI.headerInfo.typeNamePlural: 'Sales Order Items'
+@UI.headerInfo.title.label: 'Sales Order Item'
+@UI.headerInfo.title.value: 'SalesOrderItem'
+annotate view ZC_SalesOrderItemTP with
+{
+  @UI.facet: [{
+    id:       'SalesOrderItemGeneralData',
+    purpose:  #STANDARD,
+    type:     #FIELDGROUP_REFERENCE,
+    label:    'General Data',
+    targetQualifier: 'GeneralData',
+    position: 10
+  },
+  {
+    id:       'SalesOrderItemAdminData',
+    purpose:  #STANDARD,
+    type:     #FIELDGROUP_REFERENCE,
+    label:    'Administrative Data',
+    targetQualifier: 'AdminData',
+    position: 20
+  },
+  {
+    id:       'SalesOrderScheduleLine',
+    purpose:  #STANDARD,
+    type:     #LINEITEM_REFERENCE,
+    label:    'Schedule Lines',
+    position: 30,
+    targetElement: '_ScheduleLine'
+  }]
+  @UI.identification: [{position: 10, importance: #HIGH,
+                        type:#FOR_ACTION, dataAction: 'COPY', label: 'Copy' }]
+  @UI.hidden:true
+  SalesOrder;
+  @UI.lineItem: [{position: 10, importance: #HIGH}]
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 10, importance: #HIGH }]
+  SalesOrderItem;
+  @UI.lineItem: [{position: 20, importance: #HIGH}]
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 20, importance: #HIGH }]
+  Product;
+  @UI.lineItem: [{position: 30, importance: #HIGH}]
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 30, importance: #HIGH }]
+  OrderQuantity;
+  //  @UI.lineItem: [{position: 40, importance: #HIGH}]
+  //  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 40, importance: #HIGH }]
+  @UI.hidden:true
+  OrderQuantityUnit;
+  @UI.lineItem: [{position: 50, importance: #HIGH}]
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 50, importance: #HIGH }]
+  NetAmount;
+  //  @UI.lineItem: [{position: 60, importance: #HIGH}]
+  //  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 60, importance: #HIGH }]
+  @UI.hidden:true
+  TransactionCurrency;
+  @UI.lineItem: [{position: 70, importance: #HIGH}]
+  @UI.fieldGroup: [{qualifier: 'GeneralData', position: 70, importance: #HIGH }]
+  OrderIsFreeOfCharge;
+  @UI.fieldGroup: [{qualifier: 'AdminData', position: 110, importance: #LOW }]
+  CreatedByUser;
+  @UI.fieldGroup: [{qualifier: 'AdminData', position: 111, importance: #LOW }]
+  CreationDateTime;
+  @UI.fieldGroup: [{qualifier: 'AdminData', position: 112, importance: #LOW }]
+  LastChangedByUser;
+  @UI.fieldGroup: [{qualifier: 'AdminData', position: 113, importance: #LOW }]
+  LastChangeDateTime;
+}
