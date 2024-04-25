@@ -96,6 +96,7 @@ CLASS lhc_salesorderscheduleline IMPLEMENTATION.
   METHOD get_instance_features.
   ENDMETHOD.
 
+
 ENDCLASS.
 
 
@@ -116,8 +117,8 @@ CLASS lhc_SalesOrder DEFINITION INHERITING FROM cl_abap_behavior_handler.
     METHODS get_global_features FOR GLOBAL FEATURES
       IMPORTING REQUEST requested_features FOR SalesOrder RESULT result.
 
-    METHODS CreateFromQuote FOR MODIFY
-      IMPORTING keys FOR ACTION SalesOrder~CreateFromQuote.
+    "METHODS CreateFromQuote FOR MODIFY
+    "  IMPORTING keys FOR ACTION SalesOrder~CreateFromQuote.
     METHODS get_instance_features FOR INSTANCE FEATURES
       IMPORTING keys REQUEST requested_features FOR SalesOrder RESULT result.
     METHODS getnumberofitems FOR READ
@@ -351,26 +352,26 @@ CLASS lhc_SalesOrder IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 
-  METHOD CreateFromQuote.
-    DATA keys_base TYPE TABLE FOR ACTION IMPORT zr_salesordertp~createfromquote .
-    LOOP AT keys ASSIGNING FIELD-SYMBOL(<key>).
-      APPEND VALUE #( %cid                = <key>-%cid
-"                      %param-%is_draft    = <key>-%param-%is_draft
-"TODO salesquotes and salesquote do not match???
-*                      %param-_salesquotes = VALUE #( ( <key>-%param-salesquote ) )
-                    ) TO keys_base.
-    ENDLOOP.
-    "added local mode
-    MODIFY ENTITY IN LOCAL MODE ZR_SalesOrderTP
-      EXECUTE CreateFromQuote FROM keys_base
-      MAPPED   DATA(mapped_base)
-      FAILED   DATA(failed_base)
-      REPORTED DATA(reported_base).
-    mapped   = CORRESPONDING #( DEEP mapped_base ).
-    failed   = CORRESPONDING #( DEEP failed_base ).
-    reported = CORRESPONDING #( DEEP reported_base ).
-    "TODO implement
-  ENDMETHOD.
+"  METHOD CreateFromQuote.
+"    DATA keys_base TYPE TABLE FOR ACTION IMPORT zr_salesordertp~createfromquote .
+"    LOOP AT keys ASSIGNING FIELD-SYMBOL(<key>).
+"      APPEND VALUE #( %cid                = <key>-%cid
+""                      %param-%is_draft    = <key>-%param-%is_draft
+""TODO salesquotes and salesquote do not match???
+"*                      %param-_salesquotes = VALUE #( ( <key>-%param-salesquote ) )
+"                    ) TO keys_base.
+"    ENDLOOP.
+"    "added local mode
+"    MODIFY ENTITY IN LOCAL MODE ZR_SalesOrderTP
+"      EXECUTE CreateFromQuote FROM keys_base
+"      MAPPED   DATA(mapped_base)
+"      FAILED   DATA(failed_base)
+"      REPORTED DATA(reported_base).
+"    mapped   = CORRESPONDING #( DEEP mapped_base ).
+"    failed   = CORRESPONDING #( DEEP failed_base ).
+"    reported = CORRESPONDING #( DEEP reported_base ).
+"    "TODO implement
+"  ENDMETHOD.
 
   METHOD get_instance_features.
     READ ENTITY IN LOCAL MODE ZR_SalesOrderTP

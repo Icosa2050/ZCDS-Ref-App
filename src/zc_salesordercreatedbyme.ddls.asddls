@@ -20,5 +20,3 @@ define view entity ZC_SalesOrderCreatedByMe
 //cloud
 where
   CreatedByUser = $session.user;
-//on-premise
-//where CreatedByUser = $session.user;
