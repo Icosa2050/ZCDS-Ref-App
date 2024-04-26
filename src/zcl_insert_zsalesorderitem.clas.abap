@@ -46,7 +46,7 @@ CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
     salesorderitem = '00001'
     product = 'P1'
     orderquantity = '1'
-    orderquantityunit = 'STK'
+    orderquantityunit = 'EA'
     netamount = 100
     transactioncurrency = 'USD'
     creationdate        = lv_sy_datum
@@ -63,7 +63,7 @@ CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
     salesorderitem = '00002'
     product = 'P2'
     orderquantity = '1'
-    orderquantityunit = 'STK'
+    orderquantityunit = 'EA'
     netamount = 200
     transactioncurrency = 'USD'
     creationdate        = lv_sy_datum
@@ -81,7 +81,7 @@ CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
     salesorderitem = '000001'
     product = 'P2'
     orderquantity = '1'
-    orderquantityunit = 'STK'
+    orderquantityunit = 'EA'
     netamount = 300
     transactioncurrency = 'USD'
     creationdate        = lv_sy_datum
@@ -98,7 +98,7 @@ CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
     salesorderitem = '000002'
     product = 'P3'
     orderquantity = '1'
-    orderquantityunit = 'STK'
+    orderquantityunit = 'EA'
     netamount = 400
     transactioncurrency = 'USD'
     creationdate        = lv_sy_datum
@@ -115,7 +115,7 @@ CLASS zcl_insert_zsalesorderitem IMPLEMENTATION.
     salesorderitem = '000003'
     product = 'P4'
     orderquantity = '2'
-    orderquantityunit = 'STK'
+    orderquantityunit = 'EA'
     netamount = 500
     transactioncurrency = 'USD'
     creationdate        = lv_sy_datum

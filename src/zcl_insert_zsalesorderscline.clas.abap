@@ -24,7 +24,6 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
       CATCH zcx_db_message INTO DATA(lo_error).
         out->write( lo_error->get_text( ) ).
     ENDTRY.
-       out->write( 'Data Inserted Successfully' ).
 
   ENDMETHOD.
   METHOD insert_salesorderscline.
@@ -48,11 +47,11 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
     COMMIT WORK.
     CLEAR lt_data.
     ls_data = VALUE  #(
-    salesorder = 'S1'
-    salesorderitem = '00010'
-    salesorderscheduleline = '00010'
+    salesorder = '00000000S2'
+    salesorderitem = '000001'
+    salesorderscheduleline = '00001'
     orderquantity = '1'
-    orderquantityunit = 'STK'
+    orderquantityunit = 'EA'
     createdbyuser       = lv_sy_uname
     creationdatetime = lv_time
     salesorderschedulelinetype = 'C'
@@ -64,11 +63,11 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
 
     CLEAR ls_data.
     ls_data = VALUE  #(
-    salesorder = 'S1'
-    salesorderitem = '00020'
-    salesorderscheduleline = '00020'
+    salesorder = '00000000S2'
+    salesorderitem = '000002'
+    salesorderscheduleline = '00002'
     orderquantity = '1'
-    orderquantityunit = 'STK'
+    orderquantityunit = 'EA'
     createdbyuser       = sy-uname
     deliverydate = lv_sy_datum + 10
     creationdatetime = lv_time
@@ -81,11 +80,11 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
     CLEAR ls_data.
 
     ls_data = VALUE  #(
-    salesorder = 'S2'
-    salesorderitem = '00010'
-    salesorderscheduleline = '00010'
+    salesorder = '00000000S2'
+    salesorderitem = '000001'
+    salesorderscheduleline = '00003'
     orderquantity = '1'
-    orderquantityunit = 'STK'
+    orderquantityunit = 'EA'
     createdbyuser       = lv_sy_uname
     deliverydate = lv_sy_datum + 20
     creationdatetime = lv_time
@@ -98,11 +97,11 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
 
     CLEAR ls_data.
     ls_data = VALUE  #(
-    salesorder = 'S2'
-    salesorderitem = '00020'
-    salesorderscheduleline = '00020'
+    salesorder = '00000000S2'
+    salesorderitem = '0000001'
+    salesorderscheduleline = '00004'
     orderquantity = '1'
-    orderquantityunit = 'STK'
+    orderquantityunit = 'EA'
     createdbyuser       = sy-uname
     creationdatetime = lv_time
     salesorderschedulelinetype = 'R'
@@ -114,11 +113,11 @@ CLASS zcl_insert_zsalesorderscline IMPLEMENTATION.
 
     CLEAR ls_data.
     ls_data = VALUE  #(
-    salesorder = 'S2'
-    salesorderitem = '00030'
-    salesorderscheduleline = '00030'
+    salesorder = 'TEST1'
+    salesorderitem = '000001'
+    salesorderscheduleline = '00001'
     orderquantity = '2'
-    orderquantityunit = 'STK'
+    orderquantityunit = 'EA'
     createdbyuser       = sy-uname
     deliverydate = lv_sy_datum + 30
     creationdatetime = lv_time

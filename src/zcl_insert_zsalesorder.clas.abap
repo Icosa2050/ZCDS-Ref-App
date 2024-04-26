@@ -70,9 +70,35 @@ CLASS zcl_insert_zsalesorder IMPLEMENTATION.
     ls_zsalesorder-organizationdivision = '01'.
     ls_zsalesorder-createdbyuser = '0000000002'.
     ls_zsalesorder-creationdatetime = lv_time.
-    ls_zsalesorder-transactioncurrency = 'US'.
+    ls_zsalesorder-transactioncurrency = 'USD'.
     INSERT ls_zsalesorder INTO TABLE lt_zsalesorder.
     CLEAR ls_zsalesorder.
+    GET TIME STAMP FIELD lv_time.
+    ls_zsalesorder-salesorder        = '00000000S2'.
+    ls_zsalesorder-salesordertype    = 'TAF'.
+    ls_zsalesorder-salesorganization = '02'.
+    ls_zsalesorder-soldtoparty = 'CUSTOMER2'.
+    ls_zsalesorder-distributionchannel = 'D2'.
+    ls_zsalesorder-organizationdivision = '01'.
+    ls_zsalesorder-createdbyuser = '0000000002'.
+    ls_zsalesorder-creationdatetime = lv_time.
+    ls_zsalesorder-transactioncurrency = 'USD'.
+    INSERT ls_zsalesorder INTO TABLE lt_zsalesorder.
+    CLEAR ls_zsalesorder.
+    GET TIME STAMP FIELD lv_time.
+    ls_zsalesorder-salesorder        = '00000000S1'.
+    ls_zsalesorder-salesordertype    = 'TAF'.
+    ls_zsalesorder-salesorganization = '02'.
+    ls_zsalesorder-soldtoparty = 'CUSTOMER2'.
+    ls_zsalesorder-distributionchannel = 'D2'.
+    ls_zsalesorder-organizationdivision = '01'.
+    ls_zsalesorder-createdbyuser = '0000000002'.
+    ls_zsalesorder-creationdatetime = lv_time.
+    ls_zsalesorder-transactioncurrency = 'USD'.
+    INSERT ls_zsalesorder INTO TABLE lt_zsalesorder.
+    CLEAR ls_zsalesorder.
+
+
     GET TIME STAMP FIELD lv_time.
     ls_zsalesorder-salesorder        = '00000000S4'.
     ls_zsalesorder-salesordertype    = 'TA'.

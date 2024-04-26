@@ -15,7 +15,7 @@ extensible
 
   use action Delete;
   //use action CreateFromQuote;
-  use function GetNumberOfItems;
+//  use function GetNumberOfItems;
   use function GetSalesOrder;
   use action Check;
 
