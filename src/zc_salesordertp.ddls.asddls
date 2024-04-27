@@ -1,5 +1,5 @@
 @EndUserText.label: 'Sales Order'
-@AccessControl.authorizationCheck: #CHECK
+@AccessControl.authorizationCheck: #NOT_REQUIRED
 @Metadata.allowExtensions: true
 @OData.entityType.name: 'SalesOrder_Type'
 @ObjectModel.semanticKey: ['SalesOrder']
