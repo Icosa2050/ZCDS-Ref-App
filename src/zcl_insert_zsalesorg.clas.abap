@@ -56,7 +56,7 @@ CLASS zcl_insert_zsalesorg IMPLEMENTATION.
     APPEND ls_sales_org_ic TO lt_sales_org_ic.
 
     INSERT zsalesorg FROM TABLE @lt_sales_org_ic.
-    out->write( 'after insert' ).
+    commit work.
     out->write( lt_sales_org_ic ).
 
 
@@ -105,7 +105,7 @@ CLASS zcl_insert_zsalesorg IMPLEMENTATION.
     APPEND ls_sales_org_text TO lt_sales_org_text.
 
     INSERT zsalesorg FROM TABLE @lt_sales_org_text.
-    out->write( 'after insert' ).
+    commit work.
     out->write( lt_sales_org_text ).
 
 

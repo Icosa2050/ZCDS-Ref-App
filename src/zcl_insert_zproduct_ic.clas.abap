@@ -70,6 +70,7 @@ CLASS zcl_insert_zproduct_ic IMPLEMENTATION.
 
 
     INSERT zproduct_ic FROM TABLE @lt_product_ic.
+    commit work.
     out->write( 'after insert' ).
     out->write( lt_product_ic ).
 

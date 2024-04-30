@@ -61,6 +61,7 @@ CLASS zcl_insert_zcustomer_ic IMPLEMENTATION.
 
 
     INSERT zcustomer_ic FROM TABLE @lt_product_ic.
+    COMMIT WORK.
     out->write( 'after insert' ).
     out->write( lt_product_ic ).
 
