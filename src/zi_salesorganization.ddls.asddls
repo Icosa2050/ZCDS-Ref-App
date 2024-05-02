@@ -7,12 +7,15 @@
     sizeCategory: #S,
     dataClass: #MIXED
 }
-@AbapCatalog.entityBuffer.definitionAllowed: true
-// view for table zsalesorg
-define root view entity ZI_SalesOrganization
+define view entity ZI_SalesOrganization
   as select from zsalesorg
-  composition [0..1] of ZI_SALESORGTEXT as _Text
 {
-  key salesorganization as Salesorganization,
-      _Text
+
+      @ObjectModel.text.element: ['Description']
+
+  key salesorganization as SalesOrganization,
+
+      @Semantics.text: true
+
+      description as Description
 }

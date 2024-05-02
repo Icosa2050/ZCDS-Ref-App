@@ -24,7 +24,7 @@ transient view entity ZB_SalesOrderItemQuery03
           { selectionType: #RANGE, multipleSelections: true }
           Product,
           @AnalyticsDetails.query.axis: #COLUMNS
-          _SalesOrganization._Text.SalesOrgName,
+          //_SalesOrganization.Description,
           @AnalyticsDetails.query.totals: #SHOW
           @Consumption.filter:
           { selectionType: #SINGLE, multipleSelections: true }

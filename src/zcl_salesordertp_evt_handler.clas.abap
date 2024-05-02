@@ -1,0 +1,13 @@
+CLASS zcl_salesordertp_evt_handler DEFINITION
+ PUBLIC ABSTRACT FINAL
+  FOR EVENTS OF zr_SalesorderTP.
+
+  PUBLIC SECTION.
+
+  PROTECTED SECTION.
+
+  PRIVATE SECTION.
+ENDCLASS.
+
+CLASS zcl_salesordertp_evt_handler IMPLEMENTATION.
+ENDCLASS.

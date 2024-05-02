@@ -16,9 +16,7 @@ define view entity ZI_Customer
       @ObjectModel.text.element: ['CustomerName']
 
   key customer as Customer,
-
       @Semantics.text: true
-
       name     as CustomerName,
       country  as Country
 

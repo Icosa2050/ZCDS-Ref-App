@@ -12,7 +12,7 @@ define view entity ZB_SALESORDERITEMQUERY02
       @AnalyticsDetails.query.display: #KEY_TEXT
       Material,
       @AnalyticsDetails.query.axis: #COLUMNS
-      _SalesOrganization._Text.SalesOrgName as SalesOrganizationName,
+      //_SalesOrganization.Description as SalesOrganizationName,
       @AnalyticsDetails.query.totals: #SHOW
       SoldToParty,
       @AnalyticsDetails.query.sortDirection: #ASC

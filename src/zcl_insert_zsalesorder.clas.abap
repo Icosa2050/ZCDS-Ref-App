@@ -38,7 +38,7 @@ CLASS zcl_insert_zsalesorder IMPLEMENTATION.
     CLEAR ls_zsalesorder.
     ls_zsalesorder-salesorder        = 'TEST1'.
     ls_zsalesorder-salesordertype = 'D1'.
-    ls_zsalesorder-salesorganization = '01'.
+    ls_zsalesorder-salesorganization = 'CENT'.
     ls_zsalesorder-distributionchannel = 'D1'.
     ls_zsalesorder-soldtoparty = 'CUSTOMER1'.
     ls_zsalesorder-createdbyuser = '0000000001'.
@@ -52,8 +52,9 @@ CLASS zcl_insert_zsalesorder IMPLEMENTATION.
     GET TIME STAMP FIELD lv_time.
     ls_zsalesorder-salesorder        = 'TEST2'.
     ls_zsalesorder-salesordertype    = 'T2'.
-    ls_zsalesorder-salesorganization = '02'.
+    ls_zsalesorder-salesorganization = 'CENT'.
     ls_zsalesorder-distributionchannel = 'D2'.
+    ls_zsalesorder-organizationdivision = '01'.
     ls_zsalesorder-soldtoparty = 'CUSTOMER2'.
     ls_zsalesorder-createdbyuser = '0000000001'.
     ls_zsalesorder-creationdatetime = lv_time.
@@ -64,7 +65,7 @@ CLASS zcl_insert_zsalesorder IMPLEMENTATION.
     GET TIME STAMP FIELD lv_time.
     ls_zsalesorder-salesorder        = '00000000S3'.
     ls_zsalesorder-salesordertype    = 'TAF'.
-    ls_zsalesorder-salesorganization = '02'.
+    ls_zsalesorder-salesorganization = 'FILA'.
     ls_zsalesorder-soldtoparty = 'CUSTOMER2'.
     ls_zsalesorder-distributionchannel = 'D2'.
     ls_zsalesorder-organizationdivision = '01'.
@@ -76,7 +77,7 @@ CLASS zcl_insert_zsalesorder IMPLEMENTATION.
     GET TIME STAMP FIELD lv_time.
     ls_zsalesorder-salesorder        = '00000000S2'.
     ls_zsalesorder-salesordertype    = 'TAF'.
-    ls_zsalesorder-salesorganization = '02'.
+    ls_zsalesorder-salesorganization = 'FILB'.
     ls_zsalesorder-soldtoparty = 'CUSTOMER2'.
     ls_zsalesorder-distributionchannel = 'D2'.
     ls_zsalesorder-organizationdivision = '01'.
@@ -88,7 +89,7 @@ CLASS zcl_insert_zsalesorder IMPLEMENTATION.
     GET TIME STAMP FIELD lv_time.
     ls_zsalesorder-salesorder        = '00000000S1'.
     ls_zsalesorder-salesordertype    = 'TAF'.
-    ls_zsalesorder-salesorganization = '02'.
+    ls_zsalesorder-salesorganization = 'FILC'.
     ls_zsalesorder-soldtoparty = 'CUSTOMER2'.
     ls_zsalesorder-distributionchannel = 'D2'.
     ls_zsalesorder-organizationdivision = '01'.
@@ -102,7 +103,7 @@ CLASS zcl_insert_zsalesorder IMPLEMENTATION.
     GET TIME STAMP FIELD lv_time.
     ls_zsalesorder-salesorder        = '00000000S4'.
     ls_zsalesorder-salesordertype    = 'TA'.
-    ls_zsalesorder-salesorganization = '02'.
+    ls_zsalesorder-salesorganization = 'FILC'.
     ls_zsalesorder-soldtoparty = 'CUSTOMER2'.
     ls_zsalesorder-organizationdivision = '01'.
     ls_zsalesorder-distributionchannel = 'D2'.

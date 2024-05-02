@@ -8,7 +8,7 @@ define view ZB_SalesOrderItemQuery07
   @AnalyticsDetails.query.totals: #SHOW
   @AnalyticsDetails.query.display: #KEY_TEXT
   Product,
-  _SalesOrganization._Text.SalesOrgName as SalesOrganization,
+//  _SalesOrganization._Text.SalesOrgName as SalesOrganization,
   @AnalyticsDetails.query.totals: #SHOW
   @AnalyticsDetails.query.axis: #ROWS
   SoldToParty,

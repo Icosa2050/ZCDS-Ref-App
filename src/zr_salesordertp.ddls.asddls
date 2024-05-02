@@ -9,6 +9,8 @@ define root view entity ZR_SalesOrderTP
     on $projection.CreatedByUser = _CreatedByUser.Userid
   association [1]    to ZI_USER                as _LastChangedByUser
     on $projection.LastChangedByUser = _LastChangedByUser.Userid
+  association [0..1] to ZI_SalesOrganization         as _Salesorganization
+    on $projection.SalesOrganization = _Salesorganization.SalesOrganization
 {
   key ZI_SalesOrder.SalesOrder,
       ZI_SalesOrder.SalesOrderType,
@@ -34,5 +36,6 @@ define root view entity ZR_SalesOrderTP
       _Item,
       _SoldToParty,
       _CreatedByUser,
-      _LastChangedByUser
+      _LastChangedByUser,
+      _Salesorganization
 }

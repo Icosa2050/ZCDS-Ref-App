@@ -4,9 +4,9 @@
   <asx:values>
    <SRVB>
     <METADATA>
-     <NAME>ZAPI_SALESORDER</NAME>
+     <NAME>ZUI_CSALESORDERTP</NAME>
      <TYPE>SRVB/SVB</TYPE>
-     <DESCRIPTION>SalesOrder API</DESCRIPTION>
+     <DESCRIPTION>Sales Order</DESCRIPTION>
      <LANGUAGE>EN</LANGUAGE>
      <LINKS>
       <item>
@@ -15,7 +15,7 @@
        <TITLE>Historic versions</TITLE>
       </item>
       <item>
-       <HREF>/sap/bc/adt/businessservices/odatav4/ZAPI_SALESORDER</HREF>
+       <HREF>/sap/bc/adt/businessservices/odatav4/ZUI_CSALESORDERTP</HREF>
        <REL>http://www.sap.com/categories/odatav4</REL>
        <TYPE>application/vnd.sap.adt.businessservices.odatav4.v1+xml</TYPE>
        <TITLE>ODATAV4</TITLE>
@@ -39,7 +39,7 @@
        <TITLE>SemanticVersion</TITLE>
       </item>
       <item>
-       <HREF>./zapi_salesorder</HREF>
+       <HREF>./zui_csalesordertp</HREF>
        <REL>http://www.sap.com/adt/relations/source</REL>
        <TYPE>text/html</TYPE>
        <TITLE>Landing Page (HTML)</TITLE>
@@ -50,22 +50,21 @@
     </METADATA>
     <CONTENT>
      <BIND_TYPE_IMPL>
-      <NAME>ZAPI_SALESORDER</NAME>
+      <NAME>ZUI_CSALESORDERTP</NAME>
      </BIND_TYPE_IMPL>
      <BIND_TYPE>ODATA</BIND_TYPE>
-     <BIND_TYPE_CATEGORY>1</BIND_TYPE_CATEGORY>
      <BIND_TYPE_VERSION>V4</BIND_TYPE_VERSION>
      <SERVICES>
       <item>
-       <SERVICE_NAME>ZAPI_SALESORDER</SERVICE_NAME>
+       <SERVICE_NAME>ZUI_CSALESORDERTP</SERVICE_NAME>
        <SERVICE_CONTENT>
         <item>
          <SERVICE_VERSION>0001</SERVICE_VERSION>
          <RELEASE_STATE>NOT_RELEASED</RELEASE_STATE>
          <SRVD_REF>
-          <URI>/sap/bc/adt/ddic/srvd/sources/zapi_salesorder</URI>
+          <URI>/sap/bc/adt/ddic/srvd/sources/zui_csalesordertp</URI>
           <TYPE>SRVD/SRV</TYPE>
-          <NAME>ZAPI_SALESORDER</NAME>
+          <NAME>ZUI_CSALESORDERTP</NAME>
          </SRVD_REF>
          <BIND_TYPE_DATA>
           <CONTENT>
@@ -77,7 +76,7 @@
       </item>
      </SERVICES>
     </CONTENT>
-    <CONTRACT>C2</CONTRACT>
+    <CONTRACT>C1</CONTRACT>
     <RELEASE_SUPPORTED>true</RELEASE_SUPPORTED>
     <PUBLISHED>true</PUBLISHED>
     <BINDING_CREATED>true</BINDING_CREATED>

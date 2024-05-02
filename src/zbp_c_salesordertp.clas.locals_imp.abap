@@ -11,35 +11,35 @@ ENDCLASS.
 CLASS lhc_salesorderscheduleline IMPLEMENTATION.
 
   METHOD augment_update.
-    DATA updates TYPE TABLE FOR UPDATE ZR_SalesOrderScheduleLineTP.
-    DATA: timestampl TYPE timestampl.
-    GET TIME STAMP FIELD DATA(lv_time).
-    DATA(lv_sy_datum) = cl_abap_context_info=>get_system_date( ).
-* SY-UZEIT
-    DATA(lv_sy_uzeit) = cl_abap_context_info=>get_system_time( ).
-* SY-UNAME
-    DATA(lv_sy_uname) = cl_abap_context_info=>get_user_technical_name( ).
+ "   DATA updates TYPE TABLE FOR UPDATE ZR_SalesOrderScheduleLineTP.
+ "   DATA: timestampl TYPE timestampl.
+ "   GET TIME STAMP FIELD DATA(lv_time).
+ "   DATA(lv_sy_datum) = cl_abap_context_info=>get_system_date( ).
+"* SY-UZEIT
+"    DATA(lv_sy_uzeit) = cl_abap_context_info=>get_system_time( ).
+"* SY-UNAME
+"    DATA(lv_sy_uname) = cl_abap_context_info=>get_user_technical_name( ).
+"
+"
+"    LOOP AT entities ASSIGNING FIELD-SYMBOL(<entity>).
+"
+"      APPEND VALUE #( %cid_ref = <entity>-%cid_ref
+"
+"      %is_draft = <entity>-%is_draft
+"
+"      %key = <entity>-%key
+"
+"       LastChangedByUser = lv_sy_uname
+"
+"      %control-LastChangedByUser = if_abap_behv=>mk-on
+"
+"      ) TO updates.
+"
+"    ENDLOOP.
 
-
-    LOOP AT entities ASSIGNING FIELD-SYMBOL(<entity>).
-
-      APPEND VALUE #( %cid_ref = <entity>-%cid_ref
-
-      %is_draft = <entity>-%is_draft
-
-      %key = <entity>-%key
-
-       LastChangedByUser = lv_sy_uname
-
-      %control-LastChangedByUser = if_abap_behv=>mk-on
-
-      ) TO updates.
-
-    ENDLOOP.
-
-    MODIFY AUGMENTING ENTITY ZR_SalesOrderScheduleLineTP
-    UPDATE
-    FROM updates.
+"    MODIFY AUGMENTING ENTITY ZR_SalesOrderScheduleLineTP
+"    UPDATE
+"    FROM updates.
   ENDMETHOD.
 
 ENDCLASS.
