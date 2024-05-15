@@ -7,9 +7,9 @@
     <DDLANGUAGE>E</DDLANGUAGE>
     <DOMNAME>ZVKORG</DOMNAME>
     <LOGFLAG>X</LOGFLAG>
-    <HEADLEN>05</HEADLEN>
+    <HEADLEN>18</HEADLEN>
     <SCRLEN1>10</SCRLEN1>
-    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN2>18</SCRLEN2>
     <SCRLEN3>20</SCRLEN3>
     <DDTEXT>Sales Organization</DDTEXT>
     <REPTEXT>SOrg.</REPTEXT>
@@ -149,10 +149,10 @@
     <item>
      <DDLANGUAGE>D</DDLANGUAGE>
      <DDTEXT>Verkaufsorganisation</DDTEXT>
-     <REPTEXT>VkOrg</REPTEXT>
-     <SCRTEXT_S>VerkOrg.</SCRTEXT_S>
-     <SCRTEXT_M>Verkaufsorg.</SCRTEXT_M>
-     <SCRTEXT_L>Verkaufsorganisation</SCRTEXT_L>
+     <REPTEXT>Sales Organization</REPTEXT>
+     <SCRTEXT_S>Sales Org.</SCRTEXT_S>
+     <SCRTEXT_M>Sales Organization</SCRTEXT_M>
+     <SCRTEXT_L>Sales Organization</SCRTEXT_L>
     </item>
     <item>
      <DDLANGUAGE>F</DDLANGUAGE>

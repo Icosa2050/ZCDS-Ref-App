@@ -1,0 +1,4 @@
+@EndUserText.label: 'enterprise search'
+define service ZUI_ESH_S_SALESORDER {
+  expose ZESH_S_SalesOrder;
+}

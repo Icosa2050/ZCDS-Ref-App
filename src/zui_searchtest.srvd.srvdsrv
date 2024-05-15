@@ -1,0 +1,4 @@
+@EndUserText.label: 'TEST'
+define service ZUI_SearchTest {
+  expose Z_ViewWithSearchSupport;
+}

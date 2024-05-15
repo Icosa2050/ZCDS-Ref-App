@@ -7,7 +7,7 @@
     <DDLANGUAGE>E</DDLANGUAGE>
     <DOMNAME>ZSPART</DOMNAME>
     <LOGFLAG>X</LOGFLAG>
-    <HEADLEN>02</HEADLEN>
+    <HEADLEN>08</HEADLEN>
     <SCRLEN1>10</SCRLEN1>
     <SCRLEN2>15</SCRLEN2>
     <SCRLEN3>20</SCRLEN3>
@@ -148,10 +148,10 @@
     <item>
      <DDLANGUAGE>D</DDLANGUAGE>
      <DDTEXT>Sparte</DDTEXT>
-     <REPTEXT>SP</REPTEXT>
-     <SCRTEXT_S>Sparte</SCRTEXT_S>
-     <SCRTEXT_M>Sparte</SCRTEXT_M>
-     <SCRTEXT_L>Sparte</SCRTEXT_L>
+     <REPTEXT>Division</REPTEXT>
+     <SCRTEXT_S>Division</SCRTEXT_S>
+     <SCRTEXT_M>Division</SCRTEXT_M>
+     <SCRTEXT_L>Division</SCRTEXT_L>
     </item>
     <item>
      <DDLANGUAGE>F</DDLANGUAGE>

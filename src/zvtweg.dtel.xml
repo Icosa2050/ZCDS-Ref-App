@@ -7,9 +7,9 @@
     <DDLANGUAGE>E</DDLANGUAGE>
     <DOMNAME>ZVTWEG</DOMNAME>
     <LOGFLAG>X</LOGFLAG>
-    <HEADLEN>04</HEADLEN>
+    <HEADLEN>20</HEADLEN>
     <SCRLEN1>10</SCRLEN1>
-    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN2>20</SCRLEN2>
     <SCRLEN3>20</SCRLEN3>
     <DDTEXT>Distribution Channel</DDTEXT>
     <REPTEXT>DChl</REPTEXT>
@@ -148,10 +148,10 @@
     <item>
      <DDLANGUAGE>D</DDLANGUAGE>
      <DDTEXT>Vertriebsweg</DDTEXT>
-     <REPTEXT>VWeg</REPTEXT>
-     <SCRTEXT_S>VertrWeg</SCRTEXT_S>
-     <SCRTEXT_M>Vertriebsweg</SCRTEXT_M>
-     <SCRTEXT_L>Vertriebsweg</SCRTEXT_L>
+     <REPTEXT>Distribution Channel</REPTEXT>
+     <SCRTEXT_S>Dist.</SCRTEXT_S>
+     <SCRTEXT_M>Distribution Channel</SCRTEXT_M>
+     <SCRTEXT_L>Distribution Channel</SCRTEXT_L>
     </item>
     <item>
      <DDLANGUAGE>F</DDLANGUAGE>
