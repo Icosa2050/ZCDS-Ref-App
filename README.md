@@ -1,21 +1,14 @@
 # ZCDS-Ref-App
+Core Data Services for ABAP - Complete Reference Application
+This repository contains the complete reference application for the book Core Data Services for ABAP by Renzo Colle, Ralf Dentzer, and Jan Hrastnik, members of the SAP CDS Core Team.
 
-This is the complete reference application of the Book 
+About the Book
+The book provides comprehensive coverage of Core Data Services (CDS) for ABAP, offering insights and practical examples. It can be purchased from the SAP Press link provided above.
 
-Core Data Services for ABAP
-
-written by Renzo Colle, Ralf Dentzer, Jan Hrastnik,  Members of the SAP CDS Core Team.
-
-The book can be purchased here:
-
-https://www.sap-press.com/core-data-services-for-abap_5642/
-
-90% of the source material is available as a free separate download
-
-This is all copyrighted material and for reference of buyers of the book only.
-
-Runtime is ABAP 2022 on Premise.
-
-Analytics and some behaviour features available in successor releases are not or not fully available on Premise.
-
+Source Material
+Availability: 90% of the source material is available as a free separate download.
+Usage: This repository contains copyrighted material intended for reference by buyers of the book only.
+Technical Requirements
+Runtime: The application runs on ABAP 2022 on Premise.
+Limitations: Some analytics and behavior features available in successor releases may not be fully supported on Premise.
 
