@@ -4,7 +4,7 @@ This repository contains the complete reference application for the book **Core 
 
 ## About the Book
 
-The book provides comprehensive coverage of Core Data Services (CDS) for ABAP, offering insights and practical examples. It can be purchased from the SAP Press link provided above.
+The book provides comprehensive coverage of Core Data Services (CDS) for ABAP, offering insights and practical examples. It can be purchased from the SAP Press link provided below.
 
 ## Source Material
 
