@@ -13,8 +13,8 @@ The book provides comprehensive coverage of Core Data Services (CDS) for ABAP, o
 
 ## Technical Requirements
 
-- **Runtime**: The application runs on ABAP 2022 on Premise.
-- **Limitations**: Some analytics and behavior features available in successor releases may not be fully supported on Premise.
+- **Runtime**: The application runs on ABAP 2022 on Premise. Parts have been adapted or commented out to be runnable on ABAP 2022 on Premise.
+- **Limitations**: Some analytics and behavior features available in successor releases may not be fully supported on Premise. The import might fail for CDS Views with assocications. Try to manually import them, commenting out the associations, and adding them in, activating one-by-one from the deepest child upwards. This is a limitation of CDS Views and not of ABAPGit.
 
 For more information and to purchase the book, please visit [SAP Press](https://www.sap-press.com/core-data-services-for-abap_5642/).
 
